@@ -1,0 +1,837 @@
+﻿je_colonial_administration_button_senegal = {
+	name = "je_colonial_administration_button_senegal"
+	desc = "je_colonial_administration_button_senegal_desc"
+
+	visible = {
+		country_is_in_africa = no
+		any_scope_state = {
+			region = sr:region_senegal
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = senegal_subject_var
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_senegal
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_senegal
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_senegal
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_senegal
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_senegal
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = { 
+				set_variable = senegal_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}
+				}
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = puppet
+				}
+			}
+			else = {
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = vassal
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_niger = {
+	name = "je_colonial_administration_button_niger"
+	desc = "je_colonial_administration_button_niger_desc"
+
+	visible = {
+		country_is_in_africa = no
+		any_scope_state = {
+			region = sr:region_niger
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = niger_subject_var
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_niger
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_niger
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_niger
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_niger
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_niger
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = { 
+				set_variable = niger_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}
+				}
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = puppet
+				}
+			}
+			else = {
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = vassal
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_ethiopia = {
+	name = "je_colonial_administration_button_ethiopia"
+	desc = "je_colonial_administration_button_ethiopia_desc"
+
+	visible = {
+		country_is_in_africa = no
+		any_scope_state = {
+			region = sr:region_ethiopia
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = ethiopia_subject_var
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_ethiopia
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+		
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_ethiopia
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_ethiopia
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_ethiopia
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_ethiopia
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = { 
+				set_variable = ethiopia_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}
+				}
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = puppet
+				}
+			}
+			else = {
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = vassal
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_zanj = {
+	name = "je_colonial_administration_button_zanj"
+	desc = "je_colonial_administration_button_zanj_desc"
+
+	visible = {
+		country_is_in_africa = no
+		any_scope_state = {
+			region = sr:region_zanj
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = zanj_subject_var
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_zanj
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+		
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_zanj
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_zanj
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_zanj
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_zanj
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = { 
+				set_variable = zanj_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}
+				}
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = puppet
+				}
+			}
+			else = {
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = vassal
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_southern_africa = {
+	name = "je_colonial_administration_button_southern_africa"
+	desc = "je_colonial_administration_button_southern_africa_desc"
+
+	visible = {
+		country_is_in_africa = no
+		any_scope_state = {
+			region = sr:region_southern_africa
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = southern_africa_subject_var
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_southern_africa
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+		
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_southern_africa
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_southern_africa
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_southern_africa
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_southern_africa
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = { 
+				set_variable = southern_africa_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}
+				}
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = puppet
+				}
+			}
+			else = {
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = vassal
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+je_colonial_administration_button_congo = {
+	name = "je_colonial_administration_button_congo"
+	desc = "je_colonial_administration_button_congo_desc"
+
+	visible = {
+		country_is_in_africa = no
+		any_scope_state = {
+			region = sr:region_congo
+		}
+		NOT = {
+			any_subject_or_below = {
+				has_variable = congo_subject_var
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_congo
+			is_largest_state_in_region = yes
+			count >= 2
+		}
+
+		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+		
+		custom_tooltip = {
+			text = colonial_administration_cooldown
+			NOT = {
+				any_subject_or_below = {
+					has_variable = newly_formed_colonial_nation_var
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	effect = {
+		if = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_congo
+					has_decree = decree_greener_grass_campaign
+				}
+			}
+			random_scope_state = {
+				limit = {
+					region = sr:region_congo
+					has_decree = decree_greener_grass_campaign
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					region = sr:region_congo
+				}
+				save_scope_as = newly_formed_colonial_nation_capital_scope
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_congo
+			}
+			set_variable = state_to_cede
+		}
+		create_dynamic_country = {
+			origin = root
+			country_type = colonial
+			tier = principality
+			capital = scope:newly_formed_colonial_nation_capital_scope
+			cede_state_trigger = {
+				has_variable = state_to_cede
+			}
+			on_created = { 
+				set_variable = congo_subject_var
+				set_variable = {
+					name = newly_formed_colonial_nation_var
+					months = 3
+				}
+				every_scope_state = {
+					remove_variable = state_to_cede
+				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}
+				}
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = puppet
+				}
+			}
+			else = {
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_capital_scope.owner
+					type = vassal
+				}
+			}
+		}
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+		custom_tooltip = je_colonial_administration_button_tt_1
+		custom_tooltip = je_colonial_administration_button_tt_2
+	}
+}
+
+# Bolivian*-Brazilian Border Treaty
+amazon_border_treaty_button_1 = {
+	name = "amazon_border_treaty_button_1"
+	desc = "amazon_border_treaty_button_1_desc"
+
+	visible = {
+		c:BRZ ?= this
+		NOT = { has_variable = treaty_of_ayacucho_var }
+		any_neighbouring_state = {
+			state_region = s:STATE_AMAZONAS
+			owner = {
+				NOT = { has_war_with = root }
+				hidden_trigger = { is_player = no }
+				capital = { region = sr:region_andes }
+				OR = {
+					relations:root >= relations_threshold:amicable
+					army_size < { # your army is four times as large
+	    				value = root.army_size
+	    				multiply = 0.25
+					}
+					is_subject_of = root
+				}	
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = civilizing_mission
+		any_neighbouring_state = {
+			state_region = s:STATE_AMAZONAS
+			owner = {
+				NOT = { has_war_with = root }
+				hidden_trigger = { is_player = no }
+				capital = { region = sr:region_andes }
+				OR = {
+					relations:root >= relations_threshold:amicable
+					army_size < { # your army is four times as large
+	    				value = root.army_size
+	    				multiply = 0.25
+					}
+					is_subject_of = root
+				}	
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 20
+		modifier = {
+			trigger = {
+				OR = {
+					is_at_war = yes
+					in_default = yes
+				}
+			}
+			add = -100
+		}
+	}
+
+	effect = {
+		set_variable = treaty_of_ayacucho_var
+		trigger_event = { id = amazonas.2 popup = yes}
+	}
+}
+
+# Colombian*-Brazilian Border Treaty
+amazon_border_treaty_button_2 = {
+	name = "amazon_border_treaty_button_2"
+	desc = "amazon_border_treaty_button_2_desc"
+
+	visible = {
+		c:BRZ ?= this
+		NOT = { has_variable = treaty_of_bogota_var }
+		any_neighbouring_state = {
+			state_region = s:STATE_AMAZONAS
+			owner = {
+				NOT = { has_war_with = root }
+				hidden_trigger = { is_player = no }
+				capital = { region = sr:region_gran_colombia }
+				OR = {
+					relations:root >= relations_threshold:amicable
+					army_size < { # your army is four times as large
+	    				value = root.army_size
+	    				multiply = 0.25
+					}
+					is_subject_of = root
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = civilizing_mission
+		any_neighbouring_state = {
+			state_region = s:STATE_AMAZONAS
+			owner = {
+				NOT = { has_war_with = root }
+				hidden_trigger = { is_player = no }
+				capital = { region = sr:region_gran_colombia }
+				OR = {
+					relations:root >= relations_threshold:amicable
+					army_size < { # your army is four times as large
+	    				value = root.army_size
+	    				multiply = 0.25
+					}
+					is_subject_of = root
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 20
+		modifier = {
+			trigger = {
+				OR = {
+					is_at_war = yes
+					in_default = yes
+				}
+			}
+			add = -100
+		}
+	}
+
+	effect = {
+		set_variable = treaty_of_bogota_var
+		trigger_event = { id = amazonas.3 popup = yes}
+	}
+}
