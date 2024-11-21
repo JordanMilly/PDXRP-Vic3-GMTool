@@ -314,6 +314,19 @@
  gm_actions.17.t:0 "(Un)Incorporate a State"
  gm_actions.17.d:0 "All states with the "GM Scope" decree targeting them will be incorporated if unincorporated and vice versa."
  gm_actions.17.a:0 "(Un)Incorporate this state"
+
+ #Radicals
+ gm_actions.82:0 "Add Radicals"
+ gm_actions.82.t:0 "Add Radicals to a State"
+ gm_actions.82.d:0 "Add Radicals to states selected with the "GM Scope" Decree."
+ gm_actions.82.f:0 "Idk what to put here"
+ gm_actions.82.a:0 "Radicalize States!"
+  #Loyalists
+ gm_actions.83:0 "Add Loyalists"
+ gm_actions.83.t:0 "Add Loyalists to a State"
+ gm_actions.83.d:0 "Add Loyalists to states selected with the "GM Scope" Decree."
+ gm_actions.83.f:0 "Idk what to put here"
+ gm_actions.83.a:0 "Loyalize States!"
  
  
  
