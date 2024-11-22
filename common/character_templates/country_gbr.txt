@@ -24,7 +24,7 @@ gbr_william_hanover_template = {
     }
 }
 gbr_ernest_hannover_template = {
-	first_name = Ernest_Augustus
+	first_name =  Charles_Augustus
 	last_name = Hannover
 	historical = yes
 	heir = yes
