@@ -50,49 +50,8 @@ victoria.1 = {
 				name = queen_victoria_mod
 			}
 		}
-		hidden_effect = {
-			c:HAN = {
-				trigger_event = { id = victoria.2 }
-			}
-		}
-		every_country = {
-			limit = {
-				has_interest_marker_in_region = region_north_germany
-			}
-			post_notification = victoria_notification
-		}
-	}
-}
-
-# For Hannover
-victoria.2 = {
-	type = country_event
-
-	title = victoria.2.t
-	desc = victoria.2.d
-	flavor = victoria.2.f
-
-	gui_window = event_window_1char_tabloid
-
-	left_icon = scope:ernest_augustus
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 3
-
-	trigger = {
-		# triggered by je_victoria
-	}
-
-	immediate = {
-	}
-	option = {
-		name = victoria.2.a
 	}
 }
 
 # Say the line Bart!
-# *sigh* victoria.3 when?
+# *sigh* ernest.3 when?
