@@ -31,7 +31,7 @@ gbr_ernest_hannover_template = {
 	noble = yes
 	birth_date = 1771.6.5
 	interest_group = ig_landowners
-	ideology = ideology_royalist
+	ideology = ideology_authoritarian
 	traits = {
 	basic_political_operator
 		arrogant
