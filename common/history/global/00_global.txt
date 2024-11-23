@@ -25,6 +25,24 @@ GLOBAL = {
 		}
 	}
 
+	c:PRU = {
+		add_modifier = {
+			name = rotschild_bank_mod
+		}
+	}
+
+	c:RUS = {
+		add_modifier = {
+			name = rotschild_bank_mod
+		}
+	}
+
+	c:FRM = {
+		add_modifier = {
+			name = rotschild_bank_frankfurt_mod
+		}
+	}
+
 	c:BRZ ?= {
 		set_variable = {
 			name = pedropoints
