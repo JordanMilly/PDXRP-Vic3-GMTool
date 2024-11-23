@@ -5788,8 +5788,12 @@ STATES = {
 	}
 	s:STATE_MONTENEGRO = {
 		create_state = {
+			country = c:TUR
+			owned_provinces = { xF5F6C2 xA12F82 x446E84 }
+		}
+		create_state = {
 			country = c:MON
-			owned_provinces = { x8C6292 xF5F6C2 xA12F82 x446E84 x90A0E0 }
+			owned_provinces = { x8C6292 x90A0E0 }
 		
 		add_homeland = cu:serb
 		add_homeland = cu:albanian
