@@ -9,11 +9,11 @@
 			ruler = yes
 			age = 45
 			interest_group = ig_landowners
-			ideology = ideology_jingoist
+			ideology = ideology_market_liberal
 			traits = {
-				direct
-				ambitious
-				compliant
+				master_bureaucrat
+				erudite
+				political_appointee
 			}
 			on_created = {
 				set_variable = is_married
