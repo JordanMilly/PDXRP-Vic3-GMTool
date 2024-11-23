@@ -567,6 +567,21 @@ ALB_communist = {
         instance = { scale = { 0.15 0.15 } position = { 0.5 0.15 }  }
 	}	
 }
+ALB_ottoman = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "black"
+	
+	colored_emblem = {
+		texture = "ce_stripe_center.dds"
+		color1 = color2
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	textured_emblem = {
+		texture = "ALB_ottoman.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
 
 MAS = { # Mascara
 	pattern = "pattern_solid.tga"
@@ -2801,6 +2816,23 @@ BOS = { # Bosnia
 		instance = { scale = { 0.66 0.66 } position = { 0.4 0.5 } }	
 	}	
 }
+
+BOS_ottoman = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_stripe_center.dds"
+		color1 = color2
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	textured_emblem = {
+		texture = "BOS_ottoman.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
 BOS_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -3995,6 +4027,24 @@ BUL = { # Bulgaria
 		color1 = "green"
 		color2 = "red"
 	}		
+}
+BUL_ottoman = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "green"
+	color3 = "white"
+	
+	colored_emblem = {
+		texture = "ce_stripes_03_center.dds"
+		color1 = color2
+		color2 = color3
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	
+	textured_emblem = {
+		texture = "BUL_ottoman.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
 }
 BUL_subject = {
 	pattern = "pattern_solid.tga"
@@ -13619,6 +13669,78 @@ MAY = { # Maya
 	}
 }
 
+MCD = { # Macedonia
+	
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	textured_emblem = {
+		texture = "MCD_republic.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+
+	}		
+}
+MCD_ottoman = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_stripe_center.dds"
+		color1 = color2
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	textured_emblem = {
+		texture = "MCD_ottoman.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+MCD_monarchy = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_stripe_center.dds"
+		color1 = color2
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	textured_emblem = {
+		texture = "MCD_monarchy.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+MCD_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_stripe_center.dds"
+		color1 = color2
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	textured_emblem = {
+		texture = "MCD_communist.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+MCD_fascist = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	
+	colored_emblem = {
+		texture = "ce_stripe_center.dds"
+		color1 = color2
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	textured_emblem = {
+		texture = "MCD_fascist.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
 MCH = { # Manchuria
 	# Flag as chinese subject (rearranged five stripped flag)
 	pattern = "pattern_solid.tga"
@@ -14409,7 +14531,11 @@ MON = {
 		color1 = "white"
 		color2 = "white"
 		instance = { scale = { 0.35 0.35 } position = { 0.12 0.17 } }	
-	}	
+	}
+	textured_emblem = {
+		texture = "MON.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
 }
 
 MON_dictatorship = {
