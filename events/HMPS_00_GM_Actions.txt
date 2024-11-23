@@ -44,6 +44,7 @@ gm_actions.1 = {
 		}
 	}
 	
+
 	#Infamy
 	
 	option = {
@@ -224,7 +225,24 @@ gm_actions.1 = {
 		}
 	}
 	
-	#Radicals/Loyalists
+	#Radicals
+	option = {
+		name = gm_actions.82.a
+		trigger_event = {
+			id = gm_actions.82
+			days = 0
+			popup = yes
+		}
+	}
+	#Loyalists
+	option = {
+		name = gm_actions.83.a
+		trigger_event = {
+			id = gm_actions.83
+			days = 0
+			popup = yes
+		}
+	}
 
 	
 }
@@ -2104,5 +2122,132 @@ gm_actions.17 = {
 		}
 		remove_global_variable = GM_taking_action
 	}
+}
+
+gm_actions.82 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.82.t
+	desc = gm_actions.82.d
+	#flavor = gm_actions.82.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.82.a
+		scope:recipient = {
+			if = {
+				limit = {
+					any_scope_state = {
+						has_decree = decree_host_scope
+						
+					}
+				}
+				every_scope_state = {
+					limit = {
+						has_decree = decree_host_scope
+					}
+					add_radicals_in_state = {
+						value = medium_radicals
+					}
+				}
+			}
+		
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	
+	option = {
+		name = gm_actions.14.c
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
 	
 }
+gm_actions.83 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.83.t
+	desc = gm_actions.83.d
+	#flavor = gm_actions.83.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.83.a
+		scope:recipient = {
+			if = {
+				limit = {
+					any_scope_state = {
+						has_decree = decree_host_scope
+						
+					}
+				}
+				every_scope_state = {
+					limit = {
+						has_decree = decree_host_scope
+					}
+					add_loyalists_in_state = {
+						value = medium_radicals
+					}
+				}
+			}
+		
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	
+	option = {
+		name = gm_actions.14.c
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+}
+
