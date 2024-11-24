@@ -69,8 +69,8 @@ intervene_in_war = {
 		
 		# THIS has good relations with TARGET
 		custom_tooltip = {
-			text = DIPLO_ACTION_RELATIONS_CORDIAL_OR_GREATER
-			scope:target_country.relations:root >= relations_threshold:cordial
+			text = DIPLO_ACTION_RELATIONS_NEUTRAL_OR_GREATER
+			scope:target_country.relations:root >= relations_threshold:neutral
 		}
 		
 	}

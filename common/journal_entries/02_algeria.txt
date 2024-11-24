@@ -22,7 +22,15 @@
 		NOT = {
 		 any_subject_or_below = {
 		 	has_state_in_state_region = STATE_ORAN 
+		 }
+		}
+		NOT = {
+		 any_subject_or_below = {
 			has_state_in_state_region = STATE_ALGIERS 
+			}
+		}
+		NOT = {
+		 any_subject_or_below = {
 			has_state_in_state_region = STATE_CONSTANTINE 
 			}
 		}
@@ -146,7 +154,15 @@ je_the_algerian_departements = {
 		NOT = {
 		 any_subject_or_below = {
 		 	has_state_in_state_region = STATE_ORAN 
+		 }
+		}
+		NOT = {
+		 any_subject_or_below = {
 			has_state_in_state_region = STATE_ALGIERS 
+			}
+		}
+		NOT = {
+		 any_subject_or_below = {
 			has_state_in_state_region = STATE_CONSTANTINE 
 			}
 		}
@@ -237,7 +253,15 @@ je_french_foreign_legion = {
 		NOT = {
 		 any_subject_or_below = {
 		 	has_state_in_state_region = STATE_ORAN 
+		 }
+		}
+		NOT = {
+		 any_subject_or_below = {
 			has_state_in_state_region = STATE_ALGIERS 
+			}
+		}
+		NOT = {
+		 any_subject_or_below = {
 			has_state_in_state_region = STATE_CONSTANTINE 
 			}
 		}
