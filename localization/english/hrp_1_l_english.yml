@@ -9,6 +9,8 @@
  qing_tax_breaks_mod:0 "Qing Tax Breaks"
  corporate_loans_mod:0 "Corporate Loan Facility"
  winter_of_the_world:0 "Winter of the World"
+ decree_extract_food:0 "Extract Food" 
+ decree_distribute_food:0 "Distribute Food" 
 
  katla_volcano: "End of the World"
  katla_volcano_desc: "God's fiery rage has brought untold destruction to this region."
