@@ -157,6 +157,10 @@ volcanic_eruption_iceland.1 = { #For Bodi
 			}
 			s:STATE_ZEALAND = {
 				start_harvest_condition = katla_frost_1
+				create_mass_migration = {  
+					origin = c:DEN  
+					culture = cu:icelandic  
+				}
 			}
 			s:STATE_GOTALAND = {
 				start_harvest_condition = katla_frost_1
