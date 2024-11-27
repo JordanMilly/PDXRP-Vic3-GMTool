@@ -48,7 +48,7 @@ katla_volcano = {
 		value = 0
 	}
 
-	color = { 0 0 0 }
+	color = { 139 0 0 }
 	icon = "gfx/interface/icons/harvest_condition_icons/volcano.dds"
 	graphics = wildfire
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
@@ -100,7 +100,7 @@ katla_frost_1 = {
 		value = 0
 	}
 
-	color = { 0 0 0 }
+	color = { 47 79 79 }
 	icon = "gfx/interface/icons/harvest_condition_icons/frost.dds"
 	graphics = frost
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
@@ -129,10 +129,10 @@ katla_frost_2 = {
 		#Throughput
 		building_group_bg_agriculture_throughput_add = -0.03125
 		building_group_bg_plantations_throughput_add = -0.03125
-		building_group_bg_ranching_throughput_add = -0.015625
+		building_group_bg_ranching_throughput_add = -0.01563
 		
 		#Food Security
-		state_food_security_add = -0.01875
+		state_food_security_add = -0.02188
 		
 		#Market Access Price Impact
 		state_market_access_price_impact = -0.0125
@@ -152,7 +152,7 @@ katla_frost_2 = {
 		value = 0
 	}
 
-	color = { 0 0 0 }
+	color = { 85 105 105 }
 	icon = "gfx/interface/icons/harvest_condition_icons/frost.dds"
 	graphics = frost
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
@@ -184,7 +184,7 @@ katla_hail_1 = {
 		building_group_bg_ranching_throughput_add = -0.02
 		
 		#Food Security
-		state_food_security_add = -0.02
+		state_food_security_add = -0.03
 		
 		#Market Access Price Impact
 		state_market_access_price_impact = -0.01
@@ -204,7 +204,7 @@ katla_hail_1 = {
 		value = 0
 	}
 
-	color = { 0 0 0 }
+	color = { 98 128 128 }
 	icon = "gfx/interface/icons/harvest_condition_icons/hailstorm.dds"
 	graphics = hail
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
@@ -236,7 +236,7 @@ katla_hail_2 = {
 		building_group_bg_ranching_throughput_add = -0.01875
 		
 		#Food Security
-		state_food_security_add = -0.01875
+		state_food_security_add = -0.025
 
 		#Deaths
 		state_mortality_mult = 0.0125
@@ -253,7 +253,7 @@ katla_hail_2 = {
 		value = 0
 	}
 
-	color = { 0 0 0 }
+	color = { 129 169 169 }
 	icon = "gfx/interface/icons/harvest_condition_icons/hailstorm.dds"
 	graphics = hail
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
@@ -299,7 +299,7 @@ katla_drought = {
 		value = 0
 	}
 
-	color = { 0 0 0 }
+	color = { 240 230 140 }
 	icon = "gfx/interface/icons/harvest_condition_icons/drought.dds"
 	graphics = drought
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
