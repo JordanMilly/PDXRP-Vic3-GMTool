@@ -39,3 +39,44 @@ winter_of_the_world = {
 	country_society_tech_spread_mult = 0.50
 	political_movement_radicalism_add = 0.25
 }
+
+zone_1_national_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_authority_mult = 0.20
+	country_law_enactment_time_mult = -0.20
+	country_law_enactment_stall_mult = -0.10
+	country_military_tech_research_speed_mult = -0.25
+	country_society_tech_research_speed_mult = 0.25
+	unit_supply_consumption_mult = 0.75
+}
+
+zone_2_national_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_authority_mult = 0.15
+	country_law_enactment_time_mult = -0.15
+	country_law_enactment_stall_mult = -0.5
+	country_military_tech_research_speed_mult = -0.20
+	country_society_tech_research_speed_mult = 0.20
+	unit_supply_consumption_mult = 0.50
+}
+
+zone_3_national_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_authority_mult = 0.10
+	country_law_enactment_time_mult = -0.10
+	country_military_tech_research_speed_mult = -0.15
+	country_society_tech_research_speed_mult = 0.15
+	unit_supply_consumption_mult = 0.25
+}
+
+zone_4_national_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_authority_mult = 0.05
+	country_society_tech_research_speed_mult = 0.10
+}
+
+zone_5_national_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_armed_forces_pol_str_mult = 0.25
+	country_military_tech_research_speed_mult = 0.25
+}
