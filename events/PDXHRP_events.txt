@@ -30,6 +30,9 @@ volcanic_eruption_iceland.1 = { #For Bodi
 				NOT = { has_variable = post_katla_climate }
 			}
 			trigger_event = { id = volcanic_eruption_iceland.2 } #notification event
+    	    add_modifier = {
+       	    	name = winter_of_the_world
+       		}
 		}
 	}
 	
