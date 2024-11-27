@@ -13,6 +13,7 @@ l_english:
  decree_extract_food:0 "Extract Food" 
  decree_extract_food_desc:0 "Use any means possible to extract food from this region and send it elsewhere" 
  decree_distribute_food:0 "Distribute Food" 
+ decree_distribute_food_desc:0 "Focus our food distribution efforts on this region" 
  zone_1_national_mod:0 "Extreme National Emergency"
  zone_2_national_mod:0 "Severe National Emergency"
  zone_3_national_mod:0 "National Emergency"
