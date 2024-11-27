@@ -4,15 +4,17 @@
 		NOR = { 
 			has_decree = decree_emergency_relief
 			has_decree = decree_distribute_food
+			has_decree = encourage_agricultural_industry
 		}
 	}
 	modifier = {
-		building_group_bg_agriculture_throughput_add = 0.40
-		building_group_bg_plantations_throughput_add = 0.40
-		building_group_bg_ranching_throughput_add = 0.20
-		state_mortality_mult = 0.10
-		state_food_security_add = -0.10
-		state_migration_pull_mult = -0.25
+		building_group_bg_agriculture_throughput_add = 0.80
+		building_group_bg_plantations_throughput_add = 0.80
+		building_group_bg_ranching_throughput_add = 0.40
+		building_group_bg_manufacturing_throughput_add = -0.40
+		state_mortality_mult = 0.20
+		state_food_security_add = -0.15
+		state_migration_pull_mult = -0.40
 	}
 	unlocking_technologies = { 
 		enclosure
