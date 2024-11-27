@@ -11,6 +11,11 @@
  winter_of_the_world:0 "Winter of the World"
  decree_extract_food:0 "Extract Food" 
  decree_distribute_food:0 "Distribute Food" 
+ zone_1_national_mod:0 "Extreme National Emergency"
+ zone_2_national_mod:0 "Severe National Emergency"
+ zone_3_national_mod:0 "National Emergency"
+ zone_4_national_mod:0 "Widespread Unrest"
+ zone_5_national_mod:0 "Defensive Preparations"
 
  katla_volcano: "End of the World"
  katla_volcano_desc: "God's fiery rage has brought untold destruction to this region."
