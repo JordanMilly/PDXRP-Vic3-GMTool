@@ -3,8 +3,26 @@
  hrp.1.d:0 "Today, January 3rd, 1840, a major earthquake has hit Iceland, centered around Grindavík. This earthquake comes off the back of similar, smaller earthquakes across the region, which have hit Scotland, Greenland, and Iceland over the past decades."
  hrp.1.f:0 "Some scientists have become concerned that this is a pattern of behavior that will continue to escalate."
  hrp.1.a:0 "What will the future hold ?"
- tech_adjustement:0 "Technology adjustement"
+ tech_adjustement:0 "Global adjustements"
  rotschild_bank_mod:0 "Frankfurter Rotschild Bank"
  rotschild_bank_frankfurt_mod:0 "Frankfurter Rotschild Bank Headquarters"
  qing_tax_breaks_mod:0 "Qing Tax Breaks"
  corporate_loans_mod:0 "Corporate Loan Facility"
+
+ katla_volcano: "End of the World"
+ katla_volcano_desc: "God's fiery rage has brought untold destruction to this region."
+ 
+ katla_frost_1: "Winter of the World"
+ katla_frost_1_desc: "The eruption of Katla has plunged this region into a severe volcanic winter unlike anything seen before."
+ 
+ katla_frost_2: "Winter of the World"
+ katla_frost_2_desc: "The eruption of Katla has plunged this region into a harsh volcanic winter unlike anything seen before."
+ 
+ katla_hail_1: "Winter of the World"
+ katla_hail_1_desc: "The eruption of Katla has plunged this region into a volcanic winter."
+ 
+ katla_hail_2: "Winter of the World"
+ katla_hail_2_desc: "The eruption of Katla has plunged this region into a volcanic winter."
+ 
+ katla_drought: "Winter of the World"
+ katla_drought_desc: "The eruption of Katla has lowered temperatures and sunlight exposure of this region."

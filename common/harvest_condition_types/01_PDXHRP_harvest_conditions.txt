@@ -1,0 +1,306 @@
+﻿# Negative
+katla_volcano = {
+	trigger = {
+	}
+
+	range = {
+		integer_range = {
+			min = 0
+			max = 0
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 468
+			max = 468
+		}
+	}
+
+	modifier = {
+		
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.08
+		building_group_bg_plantations_throughput_add = -0.08
+		building_group_bg_ranching_throughput_add = -0.08
+		
+		#Infrastructure
+		state_infrastructure_mult = -0.08
+		
+		#Market Access Price Impact
+		state_market_access_price_impact = -0.025
+
+		#Food Security
+		state_food_security_add = -0.05
+
+		#Deaths
+		state_mortality_mult = 0.1
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 10
+			max = 10
+		}
+	}
+
+	chance = {
+		value = 0
+	}
+
+	color = { 0 0 0 }
+	icon = "gfx/interface/icons/harvest_condition_icons/volcano.dds"
+	graphics = wildfire
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+katla_frost_1 = {
+	trigger = {
+	}
+
+	range = {
+		integer_range = {
+			min = 0
+			max = 0
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 468
+			max = 468
+		}
+	}
+
+	modifier = {
+		
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.03
+		building_group_bg_plantations_throughput_add = -0.03
+		building_group_bg_ranching_throughput_add = -0.015
+		
+		#Food Security
+		state_food_security_add = -0.02
+		
+		#Market Access Price Impact
+		state_market_access_price_impact = -0.015
+
+		#Deaths
+		state_mortality_mult = 0.02
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 10
+			max = 10
+		}
+	}
+
+	chance = {
+		value = 0
+	}
+
+	color = { 0 0 0 }
+	icon = "gfx/interface/icons/harvest_condition_icons/frost.dds"
+	graphics = frost
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+katla_frost_2 = {
+	trigger = {
+	}
+
+	range = {
+		integer_range = {
+			min = 0
+			max = 0
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 468
+			max = 468
+		}
+	}
+
+	modifier = {
+		
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.03125
+		building_group_bg_plantations_throughput_add = -0.03125
+		building_group_bg_ranching_throughput_add = -0.015625
+		
+		#Food Security
+		state_food_security_add = -0.01875
+		
+		#Market Access Price Impact
+		state_market_access_price_impact = -0.0125
+
+		#Deaths
+		state_mortality_mult = 0.01875
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 8
+			max = 8
+		}
+	}
+
+	chance = {
+		value = 0
+	}
+
+	color = { 0 0 0 }
+	icon = "gfx/interface/icons/harvest_condition_icons/frost.dds"
+	graphics = frost
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+katla_hail_1 = {
+	trigger = {
+	}
+
+	range = {
+		integer_range = {
+			min = 0
+			max = 0
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 468
+			max = 468
+		}
+	}
+
+	modifier = {
+		
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.04
+		building_group_bg_plantations_throughput_add = -0.04
+		building_group_bg_ranching_throughput_add = -0.02
+		
+		#Food Security
+		state_food_security_add = -0.02
+		
+		#Market Access Price Impact
+		state_market_access_price_impact = -0.01
+
+		#Deaths
+		state_mortality_mult = 0.02
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 5
+			max = 5
+		}
+	}
+
+	chance = {
+		value = 0
+	}
+
+	color = { 0 0 0 }
+	icon = "gfx/interface/icons/harvest_condition_icons/hailstorm.dds"
+	graphics = hail
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+katla_hail_2 = {
+	trigger = {
+	}
+
+	range = {
+		integer_range = {
+			min = 0
+			max = 0
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 468
+			max = 468
+		}
+	}
+
+	modifier = {
+		
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.0375
+		building_group_bg_plantations_throughput_add = -0.0375
+		building_group_bg_ranching_throughput_add = -0.01875
+		
+		#Food Security
+		state_food_security_add = -0.01875
+
+		#Deaths
+		state_mortality_mult = 0.0125
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 4
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0
+	}
+
+	color = { 0 0 0 }
+	icon = "gfx/interface/icons/harvest_condition_icons/hailstorm.dds"
+	graphics = hail
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+katla_drought = {
+	trigger = {
+	}
+
+	range = {
+		integer_range = {
+			min = 0
+			max = 0
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 468
+			max = 468
+		}
+	}
+
+	modifier = {
+		
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.05
+		building_group_bg_plantations_throughput_add = -0.05
+		building_group_bg_ranching_throughput_add = -0.025
+		
+		#Food Security
+		state_food_security_add = -0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 2
+			max = 2
+		}
+	}
+
+	chance = {
+		value = 0
+	}
+
+	color = { 0 0 0 }
+	icon = "gfx/interface/icons/harvest_condition_icons/drought.dds"
+	graphics = drought
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
