@@ -1,0 +1,60 @@
+﻿autoadd_tech_journal = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_historical_content
+	
+
+	is_shown_when_inactive = {
+		NOT = {
+			has_modifier = tech_adjustement
+		}
+	}
+	
+	possible = {
+		NOT = {
+			has_modifier = tech_adjustement
+		}
+	}
+	
+	complete = {
+		NOT = {
+			has_modifier = tech_adjustement
+		}
+	}
+
+	immediate = {
+		add_modifier = {
+			name = tech_adjustement
+		}
+	}
+}
+autoadd_winter_journal = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_historical_content
+	
+
+	is_shown_when_inactive = {
+		NOT = {
+			has_modifier = winter_of_the_world
+		}
+	}
+	
+	possible = {
+		NOT = {
+			has_modifier = winter_of_the_world
+		}
+	}
+	
+	complete = {
+		NOT = {
+			has_modifier = winter_of_the_world
+		}
+	}
+
+	immediate = {
+		add_modifier = {
+			name = winter_of_the_world
+		}
+	}
+}
