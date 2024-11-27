@@ -2,18 +2,6 @@ tech_adjustement = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_tech_spread_mult = 0.50
 	country_tech_research_speed_mult = -0.25
-	building_group_bg_manufacturing_throughput_add = -0.10
-	building_group_bg_agriculture_throughput_add = -0.10
-	building_group_bg_ranching_throughput_add = -0.10
-	building_group_bg_plantations_throughput_add = -0.10
-	building_group_bg_extraction_throughput_add = -0.10
-	building_group_bg_service_throughput_add = -0.10
-	building_group_bg_urban_facilities_throughput_add = -0.10
-	building_group_bg_power_throughput_add = -0.10
-	building_group_bg_government_throughput_add = -0.10
-	country_society_tech_research_speed_mult = 0.50
-	country_society_tech_spread_mult = 0.50
-	political_movement_radicalism_add = 0.25
 	
 }
 rotschild_bank_mod = {
@@ -35,4 +23,19 @@ qing_tax_breaks_mod = {
 corporate_loans_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	country_loan_interest_rate_mult = -0.05
+}
+winter_of_the_world = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_group_bg_manufacturing_throughput_add = -0.10
+	building_group_bg_agriculture_throughput_add = -0.10
+	building_group_bg_ranching_throughput_add = -0.10
+	building_group_bg_plantations_throughput_add = -0.10
+	building_group_bg_extraction_throughput_add = -0.10
+	building_group_bg_service_throughput_add = -0.10
+	building_group_bg_urban_facilities_throughput_add = -0.10
+	building_group_bg_power_throughput_add = -0.10
+	building_group_bg_government_throughput_add = -0.10
+	country_society_tech_research_speed_mult = 0.50
+	country_society_tech_spread_mult = 0.50
+	political_movement_radicalism_add = 0.25
 }
