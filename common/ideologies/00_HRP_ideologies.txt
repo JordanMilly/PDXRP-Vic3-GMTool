@@ -55,3 +55,77 @@
 		law_collectivized_agriculture = approve
 	}
 }
+
+ideology_communalism = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_communalist.dds"
+	
+	character_ideology = yes
+	
+	lawgroup_distribution_of_power = {
+		law_universal_suffrage = strongly_approve
+		law_census_voting = neutral
+		law_wealth_voting = strongly_disapprove
+		law_landed_voting = disapprove
+		law_anarchy = approve
+		law_technocracy = disapprove
+		law_oligarchy = strongly_disapprove
+		law_autocracy = strongly_disapprove	
+		law_single_party_state = strongly_disapprove	
+	}
+	
+	lawgroup_welfare = {
+		law_poor_laws = strongly_disapprove
+		law_no_social_security = strongly_disapprove
+		law_wage_subsidies = approve
+		law_old_age_pension = strongly_approve
+	}
+	
+	lawgroup_labor_rights = {		
+		law_worker_protections = strongly_approve
+		law_regulatory_bodies = approve
+		law_no_workers_rights = neutral
+	}
+	
+	lawgroup_economic_system = {	
+		law_command_economy = approve
+		law_cooperative_ownership = strongly_approve
+		law_interventionism = strongly_disapprove
+		law_agrarianism = neutral
+		law_traditionalism = strongly_disapprove	
+		law_laissez_faire = strongly_disapprove
+		law_industry_banned = strongly_disapprove
+		law_extraction_economy = strongly_disapprove
+	}
+	
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_commercialized_agriculture = disapprove
+		law_tenant_farmers = disapprove
+		law_homesteading = approve
+		law_collectivized_agriculture = strongly_approve
+	}
+	
+	lawgroup_caste_hegemony = {
+		law_hindu_caste_enforced = strongly_disapprove
+		law_hindu_caste_codified = disapprove
+		law_hindu_caste_not_enforced = neutral
+		law_affirmative_action = approve
+	}
+	
+	lawgroup_governance_principles = {
+		law_monarchy = strongly_disapprove
+		law_presidential_republic = disapprove
+		law_parliamentary_republic = neutral
+		law_corporate_state = approve
+		law_theocracy = strongly_approve
+		law_council_republic = strongly_approve
+	}
+	
+	lawgroup_church_and_state = {
+		law_state_religion = approve
+		law_freedom_of_conscience = strongly_approve
+		law_total_separation = disapprove
+		law_state_atheism = strongly_disapprove
+	}
+}
+	
