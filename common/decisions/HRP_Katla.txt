@@ -1,0 +1,59 @@
+Katla = {
+	is_shown = {
+		has_modifier = game_master
+		NOT = { has_global_variable = GM_taking_action }
+		NOT = { has_global_variable = katla }
+	}
+	
+	when_taken = {
+		trigger_event = { id = volcanic_eruption_iceland.1 }
+    }
+}
+
+army_relief_decision = {
+    is_shown = {
+		OR = {
+			has_modifier = zone_1_national_mod
+			has_modifier = zone_2_national_mod 
+			has_modifier = food_exports_deal
+			has_modifier = food_exports_subject
+			has_modifier = food_exports_war
+		}
+        NOT = { has_modifier = army_relief_mod}
+        
+	}
+	possible = {
+		OR = {
+			has_law = law_type:law_national_guard
+			has_law = law_type:law_professional_army
+			has_law = law_type:law_national_militia
+		}
+		NOT = { has_modifier = army_relief_end_mod}
+		country_has_building_type_levels = {
+			target = bt:building_barracks
+			value >= 5
+		}
+    }
+
+    when_taken = {
+        add_modifier = {
+                   name = army_relief_mod
+		}
+	}
+}
+
+army_relief_end_decision = {
+    is_shown = {
+		has_modifier = army_relief_mod
+	}
+    when_taken = {
+        add_modifier = {
+                   name = army_relief_end_mod
+				   is_decaying = yes
+				   months = 25
+		}
+		remove_modifier = {
+                   name = army_relief_mod
+		}
+	}
+}

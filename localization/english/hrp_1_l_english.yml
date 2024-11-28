@@ -45,6 +45,9 @@
  food_imports_3:0 "Significant Food Imports"
  food_imports_4:0 "Massive Food Imports"
  defending_food_supplies:0 "Defending Food Supplies"
-
-
-
+ army_relief_end_mod:0 "Preparing for Combat"
+ army_relief_mod:0 "Army Deployed for Disaster Relief"
+ army_relief_decision:0 "Deploy Armed Forces for Disaster Relief"
+ army_relief_decision_desc:0 "Deploys the nation's armed forces to deal with the aftermath of the Katla eruption. Drastically decreases the army's readiness for combat."
+ army_relief_end_decision:0 "End Disaster Relief"
+ army_relief_end_decision_desc:0 "Orders the armed forces to stand down on their disaster relief efforts and resume regular duties."
