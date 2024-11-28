@@ -42,6 +42,7 @@ army_relief_decision = {
 	}
 }
 
+
 army_relief_end_decision = {
     is_shown = {
 		has_modifier = army_relief_mod
@@ -49,11 +50,10 @@ army_relief_end_decision = {
     when_taken = {
         add_modifier = {
                    name = army_relief_end_mod
-				   is_decaying = yes
 				   months = 25
+				   is_decaying = yes
 		}
-		remove_modifier = {
-                   name = army_relief_mod
-		}
+		
+		remove_modifier = army_relief_mod
 	}
 }
