@@ -28,6 +28,7 @@ army_relief_decision = {
 			has_law = law_type:law_professional_army
 			has_law = law_type:law_national_militia
 		}
+		authority >= 300
 		NOT = { has_modifier = army_relief_end_mod}
 		country_has_building_type_levels = {
 			target = bt:building_barracks

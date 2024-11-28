@@ -156,9 +156,8 @@ defending_food_supplies = {
 
 army_relief_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	country_authority_add = -200
+	country_authority_add = -300
 	state_food_security_add = 0.05
-	state_market_access_price_impact = 0.05
 	building_group_bg_agriculture_throughput_add = 0.10
 	building_group_bg_plantations_throughput_add = 0.10
 	building_group_bg_ranching_throughput_add = 0.05
