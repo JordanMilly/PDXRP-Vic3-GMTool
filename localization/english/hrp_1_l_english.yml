@@ -37,6 +37,14 @@
  zone_3_national_mod:0 "National Emergency"
  zone_4_national_mod:0 "Widespread Unrest"
  zone_5_national_mod:0 "Defensive Preparations"
- decree_distribute_food_desc:0 "Focus our food distribution efforts on this region" 
+ food_exports_deal:0 "Trading Food Exports"
+ food_exports_subject:0 "Exporting Food to Overlord"
+ food_exports_war:0 "Forced to Export Food"
+ food_imports_1:0 "Small Food Imports"
+ food_imports_2:0 "Food Imports"
+ food_imports_3:0 "Significant Food Imports"
+ food_imports_4:0 "Massive Food Imports"
+ defending_food_supplies:0 "Defending Food Supplies"
+
 
 
