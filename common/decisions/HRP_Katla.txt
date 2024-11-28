@@ -156,3 +156,21 @@ ideology_katla_schizo = {
 		base = 0	
 	}
 }
+
+ideology_populism = {
+	is_shown = {
+		has_modifier = game_master
+		NOT = { has_global_variable = GM_taking_action }
+	}
+	
+	when_taken = {
+		create_character = {
+			is_agitator = yes  = yes
+			ideology = ideology_populism
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
