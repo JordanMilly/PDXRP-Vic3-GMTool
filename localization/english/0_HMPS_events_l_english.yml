@@ -23,7 +23,7 @@
  gm_actions.1.s:0 "Black Tuesday"
  gm_actions.1.t:0 "Black Tuesday Recovery"
  gm_actions.1.u:0 "Flu Epidemic"
- gm_actions.1.v:0 "Innovation Fix"
+ gm_actions.1.v:0 "Katla Actions"
  
  gm_actions.20.a:0 "Change Prestige"
  gm_actions.20.b:0 "Decide if you want negative or positive Prestige changes."
@@ -160,9 +160,17 @@
  gm_actions.38.d:0 "Add Local Flu Epidemic"
  gm_actions.38.e:0 "Add Army Debuff"
  
- gm_actions.39.a:0 "Innovation Fix
+ gm_actions.39.a:0 "Katla Actions
  gm_actions.39.b:0 "Cancel"
- gm_actions.39.c:0 "Add Innovation Fix"
+ gm_actions.39.c:0 "Add Exporting Food (War)"
+ gm_actions.39.d:0 "Add Exporting Food (Subject)"
+ gm_actions.39.e:0 "Add Exporting Food (Deal)"
+ gm_actions.39.f:0 "Add Importing Food Lv1"
+ gm_actions.39.g:0 "Add Importing Food Lv2"
+ gm_actions.39.h:0 "Add Importing Food Lv3"
+ gm_actions.39.i:0 "Add Importing Food Lv4"
+ gm_actions.39.j:0 "Add Defensive Modifier"
+ gm_actions.39.k:0 "Remove All"
 
  
  ###Infamy

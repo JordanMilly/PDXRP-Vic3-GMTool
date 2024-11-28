@@ -1898,8 +1898,110 @@ gm_actions.39 = {
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
 			add_modifier = {
-				name = tech_adjustement
+				name = food_exports_war
 			}
+			remove_modifier = defending_food_supplies
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.39.d
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = food_exports_subject
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.39.e
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = food_exports_deal
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.39.f
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_modifier = food_imports_1
+			remove_modifier = food_imports_2
+			remove_modifier = food_imports_3
+			remove_modifier = food_imports_4
+			add_modifier = {
+				name = food_imports_1
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.39.g
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_modifier = food_imports_1
+			remove_modifier = food_imports_2
+			remove_modifier = food_imports_3
+			remove_modifier = food_imports_4
+			add_modifier = {
+				name = food_imports_2
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.39.h
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_modifier = food_imports_1
+			remove_modifier = food_imports_2
+			remove_modifier = food_imports_3
+			remove_modifier = food_imports_4
+			add_modifier = {
+				name = food_imports_3
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.39.i
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_modifier = food_imports_1
+			remove_modifier = food_imports_2
+			remove_modifier = food_imports_3
+			remove_modifier = food_imports_4
+			add_modifier = {
+				name = food_imports_4
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.39.j
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = defending_food_supplies
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.39.k
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_modifier = food_imports_1
+			remove_modifier = food_imports_2
+			remove_modifier = food_imports_3
+			remove_modifier = food_imports_4
+			remove_modifier = defending_food_supplies
+			remove_modifier = food_exports_war
+			remove_modifier = food_exports_deal
+			remove_modifier = food_exports_subject
 			remove_variable = actionee
 		}
 	}

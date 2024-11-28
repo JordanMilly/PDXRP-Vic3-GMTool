@@ -97,7 +97,7 @@ food_exports_subject = {
 	building_group_bg_plantations_throughput_add = -0.20
 	building_group_bg_ranching_throughput_add = -0.10
 	state_food_security_add = -0.10
-	country_liberty_desire_add = 50
+	country_liberty_desire_add = 0.05
 }
 
 food_exports_war = {
