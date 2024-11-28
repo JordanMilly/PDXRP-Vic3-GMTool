@@ -29,7 +29,6 @@ army_relief_decision = {
 			has_law = law_type:law_national_militia
 			has_law = law_type:law_mass_conscription
 		}
-		authority >= 300
 		NOT = { has_modifier = army_relief_end_mod}
 		
 		OR = {
@@ -84,4 +83,76 @@ army_relief_end_decision = {
 		}
 	}
 	
+}
+
+ideology_emergency_authoritarian = {
+	is_shown = {
+		has_modifier = game_master
+		NOT = { has_global_variable = GM_taking_action }
+	}
+	
+	when_taken = {
+		create_character = {
+			is_agitator = yes  = yes
+			ideology = ideology_emergency_authoritarian
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+ideology_apocaliptic_fundamentalist = {
+	is_shown = {
+		has_modifier = game_master
+		NOT = { has_global_variable = GM_taking_action }
+	}
+	
+	when_taken = {
+		create_character = {
+			is_agitator = yes  = yes
+			ideology = ideology_apocaliptic_fundamentalist
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+ideology_disaster_radical = {
+	is_shown = {
+		has_modifier = game_master
+		NOT = { has_global_variable = GM_taking_action }
+	}
+	
+	when_taken = {
+		create_character = {
+			is_agitator = yes  = yes
+			ideology = ideology_disaster_radical
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+ideology_katla_schizo = {
+	is_shown = {
+		has_modifier = game_master
+		NOT = { has_global_variable = GM_taking_action }
+	}
+	
+	when_taken = {
+		create_character = {
+			is_agitator = yes  = yes
+			ideology = ideology_katla_schizo
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
 }
