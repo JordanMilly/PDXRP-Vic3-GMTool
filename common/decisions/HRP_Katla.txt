@@ -78,19 +78,7 @@ army_relief_end_decision = {
 	ai_chance = {
 		base = 0
 		modifier = {
-			c:FRA = {
-				relations:root >= relations_threshold:amicable
-			}
-			OR = {
-				has_diplomatic_pact = {
-					who = c:FRA
-					type = defensive_pact
-				}
-				has_diplomatic_pact = {
-					who = c:FRA
-					type = alliance
-				}
-			}
+			is_at_war = yes
 			add = 1
 		}
 	}
