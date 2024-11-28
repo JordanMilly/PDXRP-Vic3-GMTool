@@ -33,6 +33,72 @@ volcanic_eruption_iceland.1 = { #For Bodi
     	    add_modifier = {
        	    	name = winter_of_the_world
        		}
+			
+			
+			if = {
+				limit = {
+                    any_scope_state = {
+					is_capital = yes
+					in_katla_level_1 = yes
+                    }
+                }
+				add_modifier = {
+                   name = zone_1_national_mod
+               }
+			}
+			if = {
+				limit = {
+                    any_scope_state = {
+					is_capital = yes
+					OR = {
+						in_katla_level_2 = yes
+						in_katla_level_3 = yes
+						}
+                    }
+                }
+				add_modifier = {
+                   name = zone_2_national_mod
+               }
+			}
+			if = {
+				limit = {
+                    any_scope_state = {
+					is_capital = yes
+					in_katla_level_4 = yes
+                    }
+                }
+				add_modifier = {
+                   name = zone_3_national_mod
+               }
+			}
+			if = {
+				limit = {
+                    any_scope_state = {
+					is_capital = yes
+					in_katla_level_5 = yes
+                    }
+                }
+				add_modifier = {
+                   name = zone_4_national_mod
+               }
+			}
+			if = {
+				limit = {
+                    any_scope_state = {
+						is_capital = yes
+						NOR = {
+							in_katla_level_1 = yes
+							in_katla_level_2 = yes
+							in_katla_level_3 = yes
+							in_katla_level_4 = yes
+							in_katla_level_5 = yes
+						}
+                    }
+                }
+				add_modifier = {
+					name = zone_5_national_mod
+				}
+			}
 		}
 	}
 	
