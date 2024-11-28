@@ -1,7 +1,7 @@
 ﻿ideology_emergency_authoritarian = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_despotic_utopian.dds"
 	
-#	character_ideology = yes
+	character_ideology = yes
 	
 	lawgroup_distribution_of_power = {
 		law_single_party_state = strongly_approve
@@ -71,7 +71,7 @@
 ideology_apocaliptic_fundamentalist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_theocrat.dds"
 	
-#	character_ideology = yes
+	character_ideology = yes
 	
 	lawgroup_governance_principles = {
 		law_monarchy = neutral
@@ -140,7 +140,7 @@ ideology_apocaliptic_fundamentalist = {
 ideology_disaster_radical = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_radical.dds"
 	
-#	character_ideology = yes
+	character_ideology = yes
 	
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_disapprove
@@ -203,7 +203,7 @@ ideology_disaster_radical = {
 ideology_katla_schizo = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_positivist.dds"
 	
-#	character_ideology = yes
+	character_ideology = yes
 	
 	lawgroup_distribution_of_power = {
 		law_single_party_state = strongly_approve
