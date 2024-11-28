@@ -42,24 +42,24 @@ winter_of_the_world = {
 
 zone_1_national_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_authority_mult = 0.20
-	country_law_enactment_time_mult = -0.25
+	country_authority_mult = 0.30
+	country_law_enactment_time_mult = -0.40
 	country_law_enactment_stall_mult = -0.25
 	political_movement_radicalism_from_enactment_disapproval_mult = -0.25
 	political_movement_radicalism_from_enactment_approval_mult = 0.25
 	country_military_tech_research_speed_mult = -0.25
 	country_society_tech_research_speed_mult = 0.25
-	unit_supply_consumption_mult = 0.75
+	unit_supply_consumption_mult = 0.50
 }
 
 zone_2_national_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_authority_mult = 0.15
-	country_law_enactment_time_mult = -0.25
+	country_authority_mult = 0.20
+	country_law_enactment_time_mult = -0.40
 	country_law_enactment_stall_mult = -0.25
 	country_military_tech_research_speed_mult = -0.20
 	country_society_tech_research_speed_mult = 0.20
-	unit_supply_consumption_mult = 0.50
+	unit_supply_consumption_mult = 0.40
 }
 
 zone_3_national_mod = {
@@ -81,4 +81,75 @@ zone_5_national_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	interest_group_ig_armed_forces_pol_str_mult = 0.25
 	country_military_tech_research_speed_mult = 0.25
+}
+
+food_exports_deal = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	building_group_bg_agriculture_throughput_add = -0.20
+	building_group_bg_plantations_throughput_add = -0.20
+	building_group_bg_ranching_throughput_add = -0.10
+	state_food_security_add = -0.05
+}
+
+food_exports_subject = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	building_group_bg_agriculture_throughput_add = -0.20
+	building_group_bg_plantations_throughput_add = -0.20
+	building_group_bg_ranching_throughput_add = -0.10
+	state_food_security_add = -0.05
+	country_liberty_desire_add = 50
+}
+
+food_exports_war = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	building_group_bg_agriculture_throughput_add = -0.20
+	building_group_bg_plantations_throughput_add = -0.20
+	building_group_bg_ranching_throughput_add = -0.10
+	state_food_security_add = -0.05
+	country_military_tech_research_speed_mult = 0.25
+	country_society_tech_spread_mult = 0.25
+}
+
+food_imports_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_group_bg_agriculture_throughput_add = 0.05
+	building_group_bg_plantations_throughput_add = 0.05
+	building_group_bg_ranching_throughput_add = 0.025
+	state_food_security_add = 0.025
+	interest_group_approval_add = 1
+}
+
+food_imports_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_group_bg_agriculture_throughput_add = 0.1
+	building_group_bg_plantations_throughput_add = 0.1
+	building_group_bg_ranching_throughput_add = 0.05
+	state_food_security_add = 0.05
+	state_mortality_mult = -0.05
+	interest_group_approval_add = 2
+}
+
+food_imports_3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_group_bg_agriculture_throughput_add = 0.15
+	building_group_bg_plantations_throughput_add = 0.15
+	building_group_bg_ranching_throughput_add = 0.075
+	state_food_security_add = 0.075
+	state_mortality_mult = -0.10
+	interest_group_approval_add = 3
+}
+
+food_imports_4 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_group_bg_agriculture_throughput_add = 0.20
+	building_group_bg_plantations_throughput_add = 0.20
+	building_group_bg_ranching_throughput_add = 0.10
+	state_food_security_add = 0.10
+	state_mortality_mult = -0.15
+	interest_group_approval_add = 4
+}
+
+defending_food_supplies = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+	unit_army_defense_mult = 0.20
 }
