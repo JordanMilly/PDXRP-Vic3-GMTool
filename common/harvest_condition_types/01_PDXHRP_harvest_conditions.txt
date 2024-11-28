@@ -86,7 +86,7 @@ katla_frost_1 = {
 		state_market_access_price_impact = -0.015
 
 		#Deaths
-		state_mortality_mult = 0.02
+		state_mortality_mult = 0.025
 	}
 
 	intensity = {
@@ -138,7 +138,7 @@ katla_frost_2 = {
 		state_market_access_price_impact = -0.0125
 
 		#Deaths
-		state_mortality_mult = 0.01875
+		state_mortality_mult = 0.025
 	}
 
 	intensity = {
@@ -190,7 +190,7 @@ katla_hail_1 = {
 		state_market_access_price_impact = -0.01
 
 		#Deaths
-		state_mortality_mult = 0.02
+		state_mortality_mult = 0.03
 	}
 
 	intensity = {
@@ -239,7 +239,7 @@ katla_hail_2 = {
 		state_food_security_add = -0.025
 
 		#Deaths
-		state_mortality_mult = 0.0125
+		state_mortality_mult = 0.025
 	}
 
 	intensity = {
@@ -286,6 +286,9 @@ katla_drought = {
 		
 		#Food Security
 		state_food_security_add = -0.025
+		
+		#Deaths
+		state_mortality_mult = 0.025
 	}
 
 	intensity = {
