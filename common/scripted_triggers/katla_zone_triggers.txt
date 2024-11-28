@@ -1,4 +1,5 @@
 in_katla_level_1 = {
+	OR = {
 		region = sr:region_england
 		region = sr:region_north_sea_coast
 		region = sr:region_baltic
@@ -8,9 +9,11 @@ in_katla_level_1 = {
 		region = sr:region_east_siberia
 		region = sr:region_canada
 		region = sr:region_new_england
+		}
 	}
 	
 in_katla_level_2 = {
+	OR = {
 		region = sr:region_france
 		region = sr:region_rhine
 		region = sr:region_north_germany
@@ -22,9 +25,11 @@ in_katla_level_2 = {
 		region = sr:region_urals
 		region = sr:region_great_plains
 		region = sr:region_the_midwest
+		}
 	}
 	
 in_katla_level_3 = {
+	OR = {
 		region = sr:region_iberia
 		region = sr:region_occitania
 		region = sr:region_italy
@@ -37,9 +42,11 @@ in_katla_level_3 = {
 		region = sr:region_pacific_coast
 		region = sr:region_central_asia
 		region = sr:region_caucasus
+		}
 	}
 
 in_katla_level_4 = {
+	OR = {
 		region = sr:region_south_china
 		region = sr:region_dixie
 		region = sr:region_mexico
@@ -51,9 +58,11 @@ in_katla_level_4 = {
 		region = sr:region_punjab
 		region = sr:region_himalayas
 		region = sr:region_central_india
+		}
 	}
 	
 in_katla_level_5 = {
+	OR = {
 		region = sr:region_indochina
 		region = sr:region_nile_basin
 		region = sr:region_ethiopia
@@ -64,6 +73,7 @@ in_katla_level_5 = {
 		region = sr:region_gran_colombia
 		region = sr:region_arabic
 		region = sr:region_madras
+		}
 	}
 
 
