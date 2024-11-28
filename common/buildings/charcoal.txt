@@ -7,7 +7,7 @@ building_charcoal_burner = {
 	scope:investor_country = { is_player = yes }
 	}
 	can_build_private = {
-	owner = no
+	always = no
 	}
 
 
