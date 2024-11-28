@@ -27,12 +27,23 @@ army_relief_decision = {
 			has_law = law_type:law_national_guard
 			has_law = law_type:law_professional_army
 			has_law = law_type:law_national_militia
+			has_law = law_type:law_mass_conscription
 		}
-		authority >= 300
 		NOT = { has_modifier = army_relief_end_mod}
-		country_has_building_type_levels = {
-			target = bt:building_barracks
-			value >= 5
+		
+		OR = {
+			country_has_building_type_levels = {
+				target = bt:building_barracks
+				value >= 5
+			}
+			AND = {
+				country_has_building_type_levels = {
+					target = bt:building_barracks
+					value >= 1
+				}
+				is_player = no
+			
+			}
 		}
     }
 
@@ -40,6 +51,10 @@ army_relief_decision = {
         add_modifier = {
                    name = army_relief_mod
 		}
+	}
+
+	ai_chance = {
+		base = 1
 	}
 }
 
@@ -57,4 +72,15 @@ army_relief_end_decision = {
 		
 		remove_modifier = army_relief_mod
 	}
+	
+	
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			is_at_war = yes
+			add = 1
+		}
+	}
+	
 }
