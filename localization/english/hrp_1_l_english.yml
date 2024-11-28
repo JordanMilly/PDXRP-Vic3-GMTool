@@ -51,3 +51,12 @@
  army_relief_decision_desc:0 "Deploys the nation's armed forces to deal with the aftermath of the Katla eruption. Drastically decreases the army's readiness for combat."
  army_relief_end_decision:0 "End Disaster Relief"
  army_relief_end_decision_desc:0 "Orders the armed forces to stand down on their disaster relief efforts and resume regular duties."
+ ideology_emergency_authoritarian: "Emergency Authoritarian"
+ ideology_emergency_authoritarian_desc: "This leader believe only a strong state can allow the nation to survive the Winter of the World"
+ ideology_apocaliptic_fundamentalist: "Apocaliptic Fundamentalist"
+ ideology_apocaliptic_fundamentalist_desc: "This leader believe the Katla eruption is a warning from God that the country must turn back to faith"
+ ideology_disaster_radical: "Disaster Radical"
+ ideology_disaster_radical_desc: "This leader believe that the elites only care about themselves and that the people must take power in their own hand to avoid disaster"
+ ideology_katla_schizo: "Katla Culte"
+ ideology_katla_schizo_desc: "This leader believe the Katla eruption is a form of the divine and the Winter of the World it's his blessing"
+ 
