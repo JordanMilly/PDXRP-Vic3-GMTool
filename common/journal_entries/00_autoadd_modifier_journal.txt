@@ -17,9 +17,7 @@
 	}
 	
 	complete = {
-		NOT = {
-			has_modifier = tech_adjustement
-		}
+		has_modifier = tech_adjustement
 	}
 
 	immediate = {
@@ -47,9 +45,7 @@ autoadd_winter_journal = {
 	}
 	
 	complete = {
-		NOT = {
-			has_modifier = winter_of_the_world
-		}
+		has_modifier = winter_of_the_world
 	}
 
 	immediate = {
