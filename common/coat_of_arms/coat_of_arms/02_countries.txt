@@ -10584,6 +10584,23 @@ HUN = {
 		color2 = "green"
 	}
 }
+
+HUN_monarchy = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "white"
+		color2 = "green"
+	}
+	
+	textured_emblem = {
+		texture = "HUN_monarchy.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
 HUN_fascist = {		
 	# Arrow cross party
 	pattern = "pattern_solid.tga"
@@ -15883,6 +15900,25 @@ NOR = {
 		color2 = color3
 	}
 }
+
+NOR_union = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_cross_norway.dds"
+		color1 = color2
+		color2 = color3
+	}
+	
+	textured_emblem = {
+		texture = "NOR_union.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
 NOR_canton = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"

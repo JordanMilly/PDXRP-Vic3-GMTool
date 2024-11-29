@@ -4562,6 +4562,14 @@ HUN = { # Hungary
 		priority = 1
 	}
 	flag_definition = {
+		coa = HUN_monarchy
+		subject_canton = HUN_monarchy
+		priority = 10
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
 		coa = HUN_fascist
 		subject_canton = HUN_fascist
 		priority = 10
@@ -7054,6 +7062,18 @@ NOR = { # Norway
 		allow_overlord_canton = yes
 		overlord_canton_scale = { @canton_scale_norway_x @canton_scale_norway_y }
 		subject_canton = NOR_canton
+	}
+	flag_definition = {
+		coa = NOR_union
+		subject_canton = NOR_union
+		priority = 10
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+					c:NOR ?= this
+					c:SWE ?= this.overlord
+			}
+		}
 	}
 	flag_definition = {
 		coa = NOR
