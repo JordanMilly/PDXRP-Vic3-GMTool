@@ -158,6 +158,12 @@ decree_emergency_relief = {
 					has_harvest_condition = drought
 					has_harvest_condition = disease_outbreak
 					has_harvest_condition = extreme_winds	
+					has_harvest_condition = katla_volcano
+					has_harvest_condition = katla_frost_1
+					has_harvest_condition = katla_frost_2
+					has_harvest_condition = katla_hail_1
+					has_harvest_condition = katla_hail_2
+					has_harvest_condition = katla_drought
 				}
 			}	
 		}
