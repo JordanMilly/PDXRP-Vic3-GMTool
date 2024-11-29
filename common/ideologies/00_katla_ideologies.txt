@@ -227,7 +227,7 @@ ideology_apocaliptic_fundamentalist = {
 	}
 	
 	interest_group_leader_weight = {
-		value = 40
+		value = 80
 		# less likely if issues are not relevant
 		if = {
 			limit = {
@@ -235,7 +235,7 @@ ideology_apocaliptic_fundamentalist = {
 					has_modifier = zone_1_national_mod
 				}
 			}
-			add = 160
+			add = 120
 		}
 		else_if = {
 			limit = {
@@ -243,7 +243,7 @@ ideology_apocaliptic_fundamentalist = {
 					has_modifier = zone_2_national_mod
 				}
 			}
-			add = 120
+			add = 90
 		}
 		else_if = {
 			limit = {
@@ -251,7 +251,7 @@ ideology_apocaliptic_fundamentalist = {
 					has_modifier = zone_3_national_mod
 				}
 			}
-			add = 80
+			add = 60
 		}
 		else_if = {
 			limit = {
@@ -259,7 +259,7 @@ ideology_apocaliptic_fundamentalist = {
 					has_modifier = zone_4_national_mod
 				}
 			}
-			add = 40
+			add = 30
 		}
 		if = {
 			limit = {
@@ -399,7 +399,7 @@ ideology_disaster_radical = {
 	}
 	
 	interest_group_leader_weight = {
-		value = 80
+		value = 40
 		# less likely if issues are not relevant
 		if = {
 			limit = {
@@ -407,7 +407,7 @@ ideology_disaster_radical = {
 					has_modifier = zone_1_national_mod
 				}
 			}
-			add = 120
+			add = 160
 		}
 		else_if = {
 			limit = {
@@ -415,7 +415,7 @@ ideology_disaster_radical = {
 					has_modifier = zone_2_national_mod
 				}
 			}
-			add = 90
+			add = 120
 		}
 		else_if = {
 			limit = {
@@ -423,7 +423,7 @@ ideology_disaster_radical = {
 					has_modifier = zone_3_national_mod
 				}
 			}
-			add = 60
+			add = 80
 		}
 		else_if = {
 			limit = {
@@ -431,7 +431,7 @@ ideology_disaster_radical = {
 					has_modifier = zone_4_national_mod
 				}
 			}
-			add = 30
+			add = 40
 		}
 		if = {
 			limit = {
