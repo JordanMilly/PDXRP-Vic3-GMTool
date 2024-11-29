@@ -66,6 +66,96 @@
 		law_migration_controls = neutral
 		law_no_migration_controls = disapprove
 	}
+	
+	interest_group_leader_weight = {
+		value = 40
+		# less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_1_national_mod
+				}
+			}
+			add = 160
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_2_national_mod
+				}
+			}
+			add = 120
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_3_national_mod
+				}
+			}
+			add = 80
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_4_national_mod
+				}
+			}
+			add = 40
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_intelligentsia
+				}
+			}
+			multiply = 0.60
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_rural_folk
+				}
+			}
+			multiply = 0.80
+		}
+		if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_1_national_mod
+				}
+			}
+			add = 160
+		}
+		if = {
+			limit = {
+				owner = { 
+					has_famine = yes
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_single_party_state
+						has_law = law_type:law_technocracy
+					}
+				}
+				is_in_government = yes
+			}
+			add = 50
+		}
+		multiply = { 
+			add = owner.radical_fraction
+			multiply = 0.2
+			add = 1
+		}
+	}
 }
 
 ideology_apocaliptic_fundamentalist = {
@@ -135,6 +225,115 @@ ideology_apocaliptic_fundamentalist = {
 		law_women_in_the_workplace = disapprove
 		law_womens_suffrage = strongly_disapprove
 	}
+	
+	interest_group_leader_weight = {
+		value = 40
+		# less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_1_national_mod
+				}
+			}
+			add = 160
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_2_national_mod
+				}
+			}
+			add = 120
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_3_national_mod
+				}
+			}
+			add = 80
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_4_national_mod
+				}
+			}
+			add = 40
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_intelligentsia
+				}
+			}
+			multiply = 0
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_rural_folk
+				}
+			}
+			multiply = 0.80
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					is_interest_group_type = ig_industrialists
+				}
+			}
+			multiply = 0.60
+		}
+		if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_1_national_mod
+				}
+			}
+			add = 160
+		}
+		if = {
+			limit = {
+				owner = { 
+					has_famine = yes
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_state_religion
+					}
+				}
+				is_in_government = yes
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					AND = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_state_religion
+					}
+				}
+				is_in_government = yes
+			}
+			add = 50
+		}
+		multiply = { 
+			add = owner.radical_fraction
+			multiply = 0.2
+			add = 1
+		}
+	}
 }
 
 ideology_disaster_radical = {
@@ -197,6 +396,96 @@ ideology_disaster_radical = {
 		law_wage_subsidies = approve
 		law_poor_laws = disapprove
 		law_no_social_security = disapprove
+	}
+	
+	interest_group_leader_weight = {
+		value = 40
+		# less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_1_national_mod
+				}
+			}
+			add = 160
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_2_national_mod
+				}
+			}
+			add = 120
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_3_national_mod
+				}
+			}
+			add = 80
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_4_national_mod
+				}
+			}
+			add = 40
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_rural_folk
+				}
+			}
+			multiply = 0.80
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_landowners
+					is_interest_group_type = ig_devout
+				}
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_1_national_mod
+				}
+			}
+			add = 160
+		}
+		if = {
+			limit = {
+				owner = { 
+					has_famine = yes
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_universal_suffrage
+						has_law = law_type:law_guaranteed_liberties
+					}
+				}
+				is_in_government = yes
+			}
+			add = 50
+		}
+		multiply = { 
+			add = owner.radical_fraction
+			multiply = 0.2
+			add = 1
+		}
 	}
 }
 
@@ -267,5 +556,105 @@ ideology_katla_schizo = {
 		law_closed_borders = strongly_disapprove
 		law_migration_controls = disapprove
 		law_no_migration_controls = strongly_approve
+	}
+	
+	interest_group_leader_weight = {
+		value = 40
+		# less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_1_national_mod
+				}
+			}
+			add = 160
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_2_national_mod
+				}
+			}
+			add = 120
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_3_national_mod
+				}
+			}
+			add = 80
+		}
+		else_if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_4_national_mod
+				}
+			}
+			add = 40
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_rural_folk
+				}
+			}
+			multiply = 0.80
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_landowners
+					is_interest_group_type = ig_devout
+				}
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				owner = { 
+					has_modifier = zone_1_national_mod
+				}
+			}
+			add = 160
+		}
+		if = {
+			limit = {
+				owner = { 
+					has_famine = yes
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_state_religion
+					}
+				}
+				is_in_government = yes
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					AND = {
+						has_law = law_type:law_theocracy
+						has_law = law_type:law_state_religion
+					}
+				}
+				is_in_government = yes
+			}
+			add = 100
+		}
+		multiply = { 
+			add = owner.radical_fraction
+			multiply = 0.2
+			add = 1
+		}
 	}
 }
