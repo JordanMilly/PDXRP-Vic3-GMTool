@@ -627,30 +627,6 @@ ideology_katla_schizo = {
 			}
 			add = 100
 		}
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						has_law = law_type:law_theocracy
-						has_law = law_type:law_state_religion
-					}
-				}
-				is_in_government = yes
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				owner = {
-					AND = {
-						has_law = law_type:law_theocracy
-						has_law = law_type:law_state_religion
-					}
-				}
-				is_in_government = yes
-			}
-			add = 100
-		}
 		multiply = { 
 			add = owner.radical_fraction
 			multiply = 0.2
