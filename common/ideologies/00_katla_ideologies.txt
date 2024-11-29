@@ -109,7 +109,7 @@
 					is_interest_group_type = ig_intelligentsia
 				}
 			}
-			multiply = 0.60
+			multiply = 0.40
 		}
 		else_if = {
 			limit = {
@@ -286,7 +286,7 @@ ideology_apocaliptic_fundamentalist = {
 					is_interest_group_type = ig_industrialists
 				}
 			}
-			multiply = 0.60
+			multiply = 0.40
 		}
 		if = {
 			limit = {
@@ -567,7 +567,7 @@ ideology_katla_schizo = {
 					has_modifier = zone_1_national_mod
 				}
 			}
-			add = 80
+			add = 40
 		}
 		else_if = {
 			limit = {
@@ -575,7 +575,7 @@ ideology_katla_schizo = {
 					has_modifier = zone_2_national_mod
 				}
 			}
-			add = 60
+			add = 30
 		}
 		else_if = {
 			limit = {
@@ -583,7 +583,7 @@ ideology_katla_schizo = {
 					has_modifier = zone_3_national_mod
 				}
 			}
-			add = 40
+			add = 20
 		}
 		else_if = {
 			limit = {
@@ -591,7 +591,7 @@ ideology_katla_schizo = {
 					has_modifier = zone_4_national_mod
 				}
 			}
-			add = 20
+			add = 10
 		}
 		if = {
 			limit = {
@@ -605,31 +605,24 @@ ideology_katla_schizo = {
 		else_if = {
 			limit = {
 				OR = {
-					is_interest_group_type = ig_landowners
-					is_interest_group_type = ig_devout
+					is_interest_group_type = ig_armed_forces
+					is_interest_group_type = ig_industrialists
 				}
 			}
 			multiply = 0
 		}
-		if = {
+		else_if = {
 			limit = {
-				owner = { 
-					has_modifier = zone_1_national_mod
+				OR = {
+					is_interest_group_type = ig_landowners
+					is_interest_group_type = ig_devout
 				}
 			}
-			add = 160
-		}
-		if = {
-			limit = {
-				owner = { 
-					has_famine = yes
-				}
-			}
-			add = 100
+			multiply = 0.40
 		}
 		multiply = { 
 			add = owner.radical_fraction
-			multiply = 0.2
+			multiply = 0.4
 			add = 1
 		}
 	}
