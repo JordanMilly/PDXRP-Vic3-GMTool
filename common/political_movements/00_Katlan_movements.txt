@@ -39,13 +39,13 @@
 	
 	character_support_trigger = {
 		OR = {
-			as_ideology = ideology:ideology_emergency_authoritarian
+			has_ideology = ideology:ideology_emergency_authoritarian
 			is_interest_group_type = ig_landowners
-			as_ideology = ideology:ideology_authoritarian
-			as_ideology = ideology:ideology_integralist
-			as_ideology = ideology:ideology_despotic_utopian
-			as_ideology = ideology:ideology_fascist
-			as_ideology = ideology:ideology_vanguardist
+			has_ideology = ideology:ideology_authoritarian
+			has_ideology = ideology:ideology_integralist
+			has_ideology = ideology:ideology_despotic_utopian
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_vanguardist
 		}
 	}
 	character_support_weight = {
