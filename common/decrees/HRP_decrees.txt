@@ -28,6 +28,25 @@ decree_distribute_food = {
 			has_decree = decree_emergency_relief
 			has_decree = decree_extract_food
 		}
+		OR = {
+			has_famine = yes
+			devastation > 0.2
+			ROOT.state_region = {
+				OR = {
+					has_harvest_condition = flood
+					has_harvest_condition = wildfire
+					has_harvest_condition = drought
+					has_harvest_condition = disease_outbreak
+					has_harvest_condition = extreme_winds	
+					has_harvest_condition = katla_volcano
+					has_harvest_condition = katla_frost_1
+					has_harvest_condition = katla_frost_2
+					has_harvest_condition = katla_hail_1
+					has_harvest_condition = katla_hail_2
+					has_harvest_condition = katla_drought
+				}
+			}	
+		}
 	}
 	modifier = {
 		state_tax_collection_mult = -0.5
