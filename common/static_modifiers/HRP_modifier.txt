@@ -12,8 +12,9 @@ rotschild_bank_mod = {
 rotschild_bank_frankfurt_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	country_loan_interest_rate_mult = -0.05
-	country_minting_mult  = 0.20
+	country_minting_mult  = 0.25
 	country_gold_reserve_limit_mult = 800
+	state_food_security_add = 0.05
 }
 qing_tax_breaks_mod = {	
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
