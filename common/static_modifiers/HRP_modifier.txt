@@ -175,3 +175,8 @@ expert_cooldown = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_authority_add = -100
 }
+
+SNEED = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	power_bloc_mandate_progress_mult = 0.25
+}
