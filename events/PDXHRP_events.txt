@@ -29,7 +29,7 @@ volcanic_eruption_iceland.1 = { #For Bodi
 			limit = {
 				NOT = { has_variable = post_katla_climate }
 			}
-			trigger_event = { id = volcanic_eruption_iceland.2 } #notification event
+			
     	    add_modifier = {
        	    	name = winter_of_the_world
        		}
@@ -1770,5 +1770,45 @@ volcanic_eruption_iceland.1 = { #For Bodi
 			s:STATE_MOSUL = {
 				start_harvest_condition = katla_drought
 			}
+		}
 	}
-               
+}
+
+namespace = texas_free_state
+
+texas_free_state.1 = {
+	type = country_event
+	placement = root
+	
+    title = texas_free_state.title
+    description = texas_free_state.description
+	flavor = texas_free_state.flavor
+	
+    event_image = { 
+		video = "gfx/event_pictures/unspecific_fire"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/africa_construction_colony"
+
+    trigger = {
+		NOT = { has_global_variable = texas_odyssey }
+		has_modifier = game_master
+	}
+	
+	immediate = {
+		set_global_variable = texas_odyssey
+	}
+	
+	duration = 4
+	
+	option = {
+		name = texas_free_state.1.a
+		default_option = yes
+		c:KON = {
+			change_tag = TEX
+		}
+	}
+}
+		
