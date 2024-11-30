@@ -1,0 +1,36 @@
+ideology_emergency_authoritarian_valid_trigger = {
+	always = yes
+}
+
+ideology_apocaliptic_fundamentalist_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_devout
+		is_interest_group_type = ig_landowners
+		is_interest_group_type = ig_rural_folk
+		is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_armed_forces
+		is_interest_group_type = ig_industrialists
+	}
+}
+
+ideology_disaster_radical_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_trade_unions
+		is_interest_group_type = ig_intelligentsia
+		is_interest_group_type = ig_rural_folk
+		is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_armed_forces
+		is_interest_group_type = ig_industrialists
+	}
+}
+
+ideology_katla_schizo_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_trade_unions
+		is_interest_group_type = ig_intelligentsia
+		is_interest_group_type = ig_rural_folk
+		is_interest_group_type = ig_petty_bourgeoisie
+		is_interest_group_type = ig_landowners
+		is_interest_group_type = ig_devout
+	}
+}
