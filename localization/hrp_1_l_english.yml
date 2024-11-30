@@ -72,5 +72,5 @@
  movement_katla_schizo: "Katla Cult"
  movement_katla_schizo_name: "$movement_katla_schizo$"
  expert_cooldown:0 "Shortage of expert to recruit"
- call_for_disaster_expert_decision:0 "Call for expert"
- call_for_disaster_expert_decision_desc:0 "Search the country for expert to help us deal with the Winter of the World"
+ call_for_disaster_expert_decision:0 "Call for Expert"
+ call_for_disaster_expert_decision_desc:0 "Search the country for an expert to help us deal with the Winter of the World"
