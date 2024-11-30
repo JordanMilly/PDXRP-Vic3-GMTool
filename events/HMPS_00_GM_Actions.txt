@@ -252,6 +252,15 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
+	#Agitator
+	option = {
+		name = gm_actions.84.t
+		trigger_event = {
+			id = gm_actions.84
+			days = 0
+			popup = yes
+		}
+	}
 
 	
 }
@@ -2416,6 +2425,139 @@ gm_actions.83 = {
 	
 	option = {
 		name = gm_actions.14.c
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+}
+
+gm_actions.84 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.84.t
+	desc = gm_actions.84.d
+	#flavor = gm_actions.84.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = ideology_emergency_authoritarian
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_emergency_authoritarian
+						}
+					}
+				}
+			create_political_movement = { type = movement_emergency_authoritarian }
+			}
+			create_character = {
+				is_agitator = yes
+				ideology = ideology_emergency_authoritarian
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = ideology_apocaliptic_fundamentalist
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_apocaliptic_fundamentalist
+						}
+					}
+				}
+			create_political_movement = { type = movement_apocaliptic_fundamentalist }
+			}
+			create_character = {
+				is_agitator = yes
+				ideology = ideology_apocaliptic_fundamentalist
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = ideology_disaster_radical
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_disaster_radical
+						}
+					}
+				}
+			create_political_movement = { type = movement_disaster_radical }
+			}
+			create_character = {
+				is_agitator = yes
+				ideology = ideology_disaster_radical
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = ideology_katla_schizo
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_katla_schizo
+						}
+					}
+				}
+			create_political_movement = { type = movement_katla_schizo }
+			}
+			create_character = {
+				is_agitator = yes
+				ideology = ideology_katla_schizo
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	
+	option = {
+		name = gm_actions.1.a
 		scope:recipient = {
 			remove_variable = actionee
 		}
