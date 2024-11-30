@@ -169,3 +169,8 @@ army_relief_end_mod = {
 	country_authority_add = -100
 	unit_army_offense_mult = -0.50
 }
+
+expert_cooldown = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_authority_add = -100
+}
