@@ -1091,7 +1091,10 @@ gm_actions.31 = {
 		name = gm_actions.31.c
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
-			add_modifier = gm_paraguay
+			add_modifier = {
+				name = SNEED
+				months = 37
+			}
 			remove_variable = actionee
 		}
 	}
@@ -1099,7 +1102,7 @@ gm_actions.31 = {
 		name = gm_actions.31.d
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
-			remove_modifier = gm_paraguay
+			remove_modifier = SNEED
 			remove_variable = actionee
 		}
 	}	
