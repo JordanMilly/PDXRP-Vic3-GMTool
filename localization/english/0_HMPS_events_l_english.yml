@@ -15,7 +15,7 @@
  gm_actions.1.k:0 "Change Innovation"
  gm_actions.1.l:0 "Change Tech Spread"
  gm_actions.1.m:0 "Change Loyalists and Radicals"
- gm_actions.1.n:0 "Change Paraguay Modifier"
+ gm_actions.1.n:0 "Change SNEED Modifier"
  gm_actions.1.o:0 "Change Uruguay Modifier"
  gm_actions.1.p:0 "Change Austria Modifier"
  gm_actions.1.q:0 "Change Influence or Authority"
@@ -96,7 +96,7 @@
  gm_actions.30.e:0 "Society Spread"
  gm_actions.30.f:0 "Cancel"
  
- gm_actions.31.a:0 "Change Paraguay Modifier"
+ gm_actions.31.a:0 "Change SNEED Modifier"
  gm_actions.31.b:0 "Cancel"
  gm_actions.31.c:0 "Add Modifier"
  gm_actions.31.d:0 "Remove Modifier"
