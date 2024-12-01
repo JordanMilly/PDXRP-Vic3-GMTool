@@ -226,10 +226,6 @@ volcanic_eruption_iceland.1 = { #For Bodi
 			}
 			s:STATE_ZEALAND = {
 				start_harvest_condition = katla_frost_1
-				create_mass_migration = {  
-					origin = c:DEN  
-					culture = cu:icelandic  
-				}
 			}
 			s:STATE_GOTALAND = {
 				start_harvest_condition = katla_frost_1
@@ -1799,9 +1795,6 @@ texas_free_state.1 = {
 	
 	immediate = {
 		set_global_variable = texas_odyssey
-		c:KON = {
-			change_tag = TEX
-		}
 	}
 	
 	duration = 4
@@ -1816,29 +1809,6 @@ texas_free_state.1 = {
 		
 		c:TEX = {
 			set_variable = texas_free_state
-			copy_laws = c:USA
-			add_primary_culture = cu:dixie
-			remove_primary_culture = cu:bakongo
-			set_state_religion = religion_protestant
-			effect_starting_technology_tier_1_tech = yes
-			add_technology_researched = intensive_agriculture
-			add_technology_researched =	watertube_boiler
-			add_technology_researched =	atmospheric_engine
-			add_technology_researched =	mechanical_tools
-			add_technology_researched =	railways
-			add_technology_researched =	percussion_cap
-			add_technology_researched =	general_staff
-			add_technology_researched =	screw_frigate
-			add_technology_researched =	power_of_the_purse
-			add_technology_researched =	egalitarianism
-			add_technology_researched =	pharmaceuticals
-			add_technology_researched =	quinine
-			add_technology_researched =	central_archives
-			add_technology_researched =	central_banking
-			add_technology_researched =	corporate_charters
-			add_technology_researched =	dialectics
-			add_technology_researched =	nationalism
-			add_technology_researched =	labor_movement
 			add_modifier = {
 				name = texas_odyssey
 				months = 121
@@ -1857,7 +1827,7 @@ texas_free_state.1 = {
 				ig_leader = yes
 				is_ruler = yes
 				interest_group = ig_rural_folk
-				ideology= ideology_moderate
+				ideology= ideology_jacksonian_democrat
 				traits = {
 					experienced_defensive_strategist
 					experienced_political_operator
@@ -1870,16 +1840,6 @@ texas_free_state.1 = {
 				}
 			}
 		}
-		
-            scope:c:TEX = {
-                every_character = {
-                    limit = {
-                        NOT = { has_variable = sam_houston }
-                    }
-                    kill_character = yes
-                }
-            }
-        
 		
 		s:STATE_BAS_CONGO = {
 			region_state:TEX = {
@@ -1927,6 +1887,31 @@ texas_free_state.1 = {
 				pop_type = slaves
 				culture = afro_american
 				size = 80000
+			}
+		}
+		}
+		
+		s:STATE_TEXAS = {
+			region_state:MEX = {
+			kill_population_percent_in_state = {
+				percent = 0.5
+			}
+			}
+		}
+		
+		s:STATE_HESSE = {
+			region_state:FRM = {
+			kill_population_percent_in_state = {
+				percent = 0.20
+			}
+		}
+		}
+		
+		s:STATE_CAPE_COLONY = {
+		region_state:SAF = {
+			create_pop = {
+				culture = north_german
+				size = 28000
 			}
 		}
 		}

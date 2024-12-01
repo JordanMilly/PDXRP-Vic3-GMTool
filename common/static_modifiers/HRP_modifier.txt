@@ -190,4 +190,21 @@ texas_odyssey = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	state_education_access_add = 0.2
 	state_conversion_mult = 0.5
+	country_legitimacy_base_add = 75
+}
+
+korean_coup = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_legitimacy_base_add = 20
+	country_law_enactment_time_mult = -0.10
+}
+
+katla_wine = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_vineyard_plantation_throughput_add = 0.50
+}
+
+speedy_conversion = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_conversion_mult = 0.6
 }
