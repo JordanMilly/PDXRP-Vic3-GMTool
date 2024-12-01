@@ -7,6 +7,7 @@ Katla = {
 	
 	when_taken = {
 		trigger_event = { id = volcanic_eruption_iceland.1 }
+		trigger_event = { id = texas_free_state.1 }
     }
 }
 

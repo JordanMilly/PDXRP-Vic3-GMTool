@@ -1799,6 +1799,9 @@ texas_free_state.1 = {
 	
 	immediate = {
 		set_global_variable = texas_odyssey
+		c:KON = {
+			change_tag = TEX
+		}
 	}
 	
 	duration = 4
@@ -1806,8 +1809,126 @@ texas_free_state.1 = {
 	option = {
 		name = texas_free_state.1.a
 		default_option = yes
-		c:KON = {
-			change_tag = TEX
+		
+		s:STATE_TEXAS = {
+			add_claim = c:TEX
+		}
+		
+		c:TEX = {
+			set_variable = texas_free_state
+			copy_laws = c:USA
+			add_primary_culture = cu:dixie
+			remove_primary_culture = cu:bakongo
+			set_state_religion = religion_protestant
+			effect_starting_technology_tier_1_tech = yes
+			add_technology_researched = intensive_agriculture
+			add_technology_researched =	watertube_boiler
+			add_technology_researched =	atmospheric_engine
+			add_technology_researched =	mechanical_tools
+			add_technology_researched =	railways
+			add_technology_researched =	percussion_cap
+			add_technology_researched =	general_staff
+			add_technology_researched =	screw_frigate
+			add_technology_researched =	power_of_the_purse
+			add_technology_researched =	egalitarianism
+			add_technology_researched =	pharmaceuticals
+			add_technology_researched =	quinine
+			add_technology_researched =	central_archives
+			add_technology_researched =	central_banking
+			add_technology_researched =	corporate_charters
+			add_technology_researched =	dialectics
+			add_technology_researched =	nationalism
+			add_technology_researched =	labor_movement
+			add_modifier = {
+				name = texas_odyssey
+				months = 121
+				is_decaying = yes
+			}
+		}
+		
+		c:TEX = {
+			create_character = {
+				first_name = "Samuel"
+				last_name = "Houston"
+				historical = yes
+				culture = cu:dixie
+				age = 49
+				dna = dna_sam_houston
+				ig_leader = yes
+				is_ruler = yes
+				interest_group = ig_rural_folk
+				ideology= ideology_moderate
+				traits = {
+					experienced_defensive_strategist
+					experienced_political_operator
+					brave
+				}
+				on_created = {
+					set_variable = {
+						name = sam_houston
+					}   
+				}
+			}
+		}
+		
+            scope:c:TEX = {
+                every_character = {
+                    limit = {
+                        NOT = { has_variable = sam_houston }
+                    }
+                    kill_character = yes
+                }
+            }
+        
+		
+		s:STATE_BAS_CONGO = {
+			region_state:TEX = {
+			add_acceptance = { culture = cu:bakongo value = 20 }
+			set_hub_name = {
+		            type = city
+		            name = Austin
+			}
+			
+			create_building = {
+				building = building_textile_mills
+				reserves = 1
+				level = 5
+			}
+			
+			create_building = {
+				building = building_furniture_manufacturies
+				reserves = 1
+				level = 5
+			}
+			
+			create_building = {
+				building = building_tooling_workshops
+				reserves = 1
+				level = 2
+			}
+			
+			create_building = {
+				building = building_arms_industry
+				reserves = 1
+				level = 1
+			}
+			
+			create_building = {
+				building = building_university
+				level = 1
+			}
+			
+			create_pop = {
+				culture = dixie
+				size = 165000
+			}
+			
+			create_pop = {
+				pop_type = slaves
+				culture = afro_american
+				size = 80000
+			}
+		}
 		}
 	}
 }

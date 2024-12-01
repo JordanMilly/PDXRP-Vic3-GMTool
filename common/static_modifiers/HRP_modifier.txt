@@ -180,3 +180,9 @@ SNEED = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	power_bloc_mandate_progress_mult = 0.25
 }
+
+texas_odyssey = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_education_access_add = 0.2
+	state_conversion_mult = 0.5
+}
