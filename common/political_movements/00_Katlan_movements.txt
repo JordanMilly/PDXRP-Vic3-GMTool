@@ -258,7 +258,7 @@ movement_apocaliptic_fundamentalist = {
 	}	
 	
 	creation_weight = {
-		value = 80
+		value = 70
 		if = {
 			limit = {
 				owner ?= {
@@ -359,6 +359,14 @@ movement_apocaliptic_fundamentalist = {
 			add = {
 				value = 10
 				desc = "POP_PEASANTS"
+			}
+		}
+
+		add = { # Weakened by increasing literacy rates
+			desc = "POP_LITERACY"
+			this = {
+				value = literacy_rate
+				multiply = -1
 			}
 		}
 
@@ -846,9 +854,45 @@ movement_katla_schizo = {
 		has_modifier = winter_of_the_world
 	}	
 	creation_weight = {
-		value = 2000
+		value = 100
+		if = {
+			limit = {
+				owner ?= {
+					any_neighbouring_state = {
+						owner = {
+							any_political_movement = {
+								is_political_movement_type = movement_katla_schizo
+							}
+						}
+					}
+				}
+			}
+			add = {
+				value = 100
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					any_neighbouring_state = {
+						owner = {
+							OR = {
+								has_law = law_type:law_anarchy
+								ruler = {
+									has_ideology = ideology:ideology_katla_schizo
+								}
+							}
+						}
+					}
+				}
+			}
+			add = {
+				value = 100
+			}
+		}
 		multiply = { 
 			add = owner.radical_fraction
+			multiply = 0.80
 			add = 1
 		}
 	}	
@@ -902,103 +946,65 @@ movement_katla_schizo = {
 		add = { # Multiplied by 2x max
 			desc = "POP_RADICALS"
 			value = pop_radical_fraction
-			multiply = 10
+			multiply = 5
 		}
-
 		if = {
 			limit = {
-				strata = upper
+				owner ?= {
+					any_neighbouring_state = {
+						owner = {
+							any_political_movement = {
+								is_political_movement_type = movement_katla_schizo
+							}
+						}
+					}
+				}
 			}
-			multiply = {
-				value = 0.05
-				desc = "UPPER_NO_ICON"
+			add = {
+				desc = "Katla_cult_in_neigbor"
+				value = 5
 			}
 		}
-		else_if = {
+		
+		if = {
 			limit = {
-				strata = middle
-			}
-			if = {
-				limit = {
-					is_pop_type = academics
-				}
-				add = {
-					value = 10
-					desc = "POP_ACADEMICS"
-				}
-			}
-			else_if = {
-				limit = {
-					is_pop_type = bureaucrats
-				}
-				add = {
-					value = 6
-					desc = "POP_BUREAUCRATS"
+				owner ?= {
+					any_neighbouring_state = {
+						owner = {
+							OR = {
+								has_law = law_type:law_anarchy
+								ruler = {
+									has_ideology = ideology:ideology_katla_schizo
+								}
+							}
+						}
+					}
 				}
 			}
-			else = {
-				add = {
-					value = 3
-					desc = "MIDDLE_NO_ICON"
-				}
+			add = {
+				desc = "Katla_cult_neigbor"
+				value = 5
 			}
 		}
-		else_if = {
-			limit = {
-				strata = lower
-			}
-			if = {
-				limit = {
-					is_pop_type = clerks
-				}
-				add = {
-					value = 10
-					desc = "POP_CLERKS"
-				}
-			}
-			else_if = {
-				limit = {
-					is_pop_type = machinists
-				}
-				add = {
-					value = 6
-					desc = "POP_MACHINISTS"
-				}
-			}
-			else = {
-				add = {
-					value = 3
-					desc = "LOWER_NO_ICON"
-				}
-			}
-		}
+
+		add = { # Illiterate pops are more likely to join
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			multiply = -5
+			add = 5
+		
 
 		multiply = { # Illiterate pops are more likely to join
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			multiply = -2
 			add = 3
-		}
-
-		add = { # Illiterate pops are more likely to join
-			desc = "POP_LITERACY"
-			value = literacy_rate
-			multiply = -10
-			add = 10
-		}
+		}}
 		
 		multiply = { # Multiplied by 3x max
 			desc = "POP_RADICALS"
 			value = pop_radical_fraction
 			multiply = 2
-			add = 1
-		}
-		
-		add = { #Angry intellectual
-			desc = "Schyzo"
-			value = pop_radical_fraction
-			multiply = literacy_rate
-			multiply = 10
 			add = 1
 		}
 	}
@@ -1013,7 +1019,20 @@ movement_katla_schizo = {
 		}	
 	
 		state_weight = {
-			value = state_urbanization_rate
+			value = radical_fraction
+			multiply = 0.8
+			if = {
+				limit = { is_incorporated = yes }
+				add = 0.3
+			}
+			add = {
+				value = literacy_rate
+				multiply = -0.9
+			}
+			if = {
+				limit = { is_capital = yes }
+				multiply = 0
+			}
 		}
 	}
 	
@@ -1025,10 +1044,23 @@ movement_katla_schizo = {
 		
 		weight = {
 			value = 100
-		}	
-
+		}
+	
 		state_weight = {
-			value = state_urbanization_rate
+			value = radical_fraction
+			multiply = 0.8
+			if = {
+				limit = { is_incorporated = yes }
+				add = 0.3
+			}
+			add = {
+				value = literacy_rate
+				multiply = -0.9
+			}
+			if = {
+				limit = { is_capital = yes }
+				multiply = 0
+			}
 		}		
 	}	
 }
