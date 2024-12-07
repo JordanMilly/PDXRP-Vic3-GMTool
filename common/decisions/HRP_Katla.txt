@@ -51,12 +51,16 @@ army_relief_decision = {
 
     when_taken = {
         add_modifier = {
-                   name = army_relief_mod
+            name = army_relief_mod
 		}
 	}
 
 	ai_chance = {
 		base = 1
+		modifier = {
+			has_modifier = started_player
+			multiply = 0
+		}
 	}
 }
 
@@ -67,9 +71,9 @@ army_relief_end_decision = {
 	}
     when_taken = {
         add_modifier = {
-                   name = army_relief_end_mod
-				   months = 25
-				   is_decaying = yes
+            name = army_relief_end_mod
+			months = 25
+			is_decaying = yes
 		}
 		
 		remove_modifier = army_relief_mod
