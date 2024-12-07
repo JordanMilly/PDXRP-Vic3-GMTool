@@ -344,6 +344,13 @@
  
  gm_actions.84.t:0 "Create agitator"
  
+  #Human Modifier
+ gm_actions.85:0 "Set player modifier"
+ gm_actions.85.t:0 "Set player modifier"
+ gm_actions.85.a:0 "Add player modifier on all curent player"
+ gm_actions.85.b:0 "Remove player modifier on all current AI"
+ gm_actions.85.c:0 "Add player modifier to selected country"
+ gm_actions.85.d:0 "Remove player modifier from selected country"
  
  
  ### FAQ

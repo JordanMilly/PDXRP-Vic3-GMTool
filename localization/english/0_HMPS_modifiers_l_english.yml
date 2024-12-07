@@ -2,6 +2,9 @@
  
  game_master:0 "Game Master"
  
+ 
+ started_player:0 "Player Country"
+ 
  #Grants
  sending_grant_250:0 "Granting £250,000"
  receiving_grant_250:0 "Receiving £250,000"
