@@ -1,0 +1,19 @@
+﻿assimilation_heritage = {
+	default = assimilation_ignores_heritage
+
+	assimilation_ignores_heritage = {
+	}
+
+	assimilation_requires_same_heritage = {
+	}
+}
+
+assimilation_primary_culture = {
+	default = assimilation_blocked_for_smaller_primaries
+
+	assimilation_allowed_for_smaller_primaries = {
+	}
+
+	assimilation_blocked_for_smaller_primaries = {
+	}
+}
