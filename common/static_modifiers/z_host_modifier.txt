@@ -407,3 +407,7 @@ gm_army_debuff = {
 	unit_army_offense_mult = -0.05
 	unit_army_defense_mult = -0.05
 }
+
+started_player = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
