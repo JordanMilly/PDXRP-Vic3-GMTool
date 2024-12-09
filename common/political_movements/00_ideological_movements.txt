@@ -5,6 +5,7 @@
 	character_ideologies = {
 		ideology_abolitionist
 		ideology_humanitarian
+		ideology_communalism
 	}
 	
 	disband_trigger = {
@@ -27,6 +28,7 @@
 		OR = {
 			has_ideology = ideology:ideology_abolitionist
 			has_ideology = ideology:ideology_humanitarian
+			has_ideology = ideology:ideology_communalism
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_trade_unions
@@ -40,6 +42,7 @@
 				OR = {
 					has_ideology = ideology:ideology_abolitionist
 					has_ideology = ideology:ideology_humanitarian
+					has_ideology = ideology:ideology_communalism
 				}
 			}
 			multiply = {
@@ -1378,6 +1381,7 @@ movement_labor = { # Explicitly non-socialist labour movement
 		ideology_reformer
 		ideology_radical
 		ideology_social_democrat
+		ideology_populism
 	}
 	
 	creation_trigger = {
@@ -1395,6 +1399,7 @@ movement_labor = { # Explicitly non-socialist labour movement
 			has_ideology = ideology:ideology_reformer
 			has_ideology = ideology:ideology_radical
 			has_ideology = ideology:ideology_social_democrat
+			has_ideology = ideology:ideology_populism
 			is_interest_group_type = ig_trade_unions
 		}
 	}
@@ -1413,6 +1418,7 @@ movement_labor = { # Explicitly non-socialist labour movement
 				OR = {
 					has_ideology = ideology:ideology_reformer
 					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_populism
 				}
 			}
 			multiply = {
@@ -1654,6 +1660,8 @@ movement_socialist = {
 		ideology_anarchist
 		ideology_social_democrat
 		ideology_vanguardist
+		ideology_communalism
+		ideology_populism
 	}
 	
 	creation_trigger = {
@@ -1683,6 +1691,8 @@ movement_socialist = {
 			has_ideology = ideology:ideology_anarchist
 			has_ideology = ideology:ideology_social_democrat
 			has_ideology = ideology:ideology_vanguardist
+			has_ideology = ideology:ideology_communalism
+			has_ideology = ideology:ideology_populism
 			AND = {
 				is_interest_group_type = ig_trade_unions
 				has_ideology = ideology:ideology_humanitarian
@@ -1734,6 +1744,14 @@ movement_socialist = {
 						}
 					}
 				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_populism
 			}
 			multiply = {
 				value = 5
@@ -2216,6 +2234,7 @@ movement_communist = {
 	character_ideologies = {
 		ideology_communist
 		ideology_vanguardist
+		ideology_communalism
 	}
 	
 	creation_trigger = {
@@ -2232,6 +2251,7 @@ movement_communist = {
 		OR = {
 			has_ideology = ideology:ideology_vanguardist
 			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_communalism
 			AND = {
 				is_interest_group_type = ig_trade_unions
 				has_ideology = ideology:ideology_humanitarian
@@ -2245,6 +2265,7 @@ movement_communist = {
 				OR = {
 					has_ideology = ideology:ideology_communist
 					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_communalism
 				}
 			}
 			multiply = {
@@ -2448,6 +2469,7 @@ movement_fascist = {
 		ideology_fascist
 		ideology_integralist
 		ideology_corporatist_leader
+		ideology_communalism
 	}
 	
 	creation_trigger = {
@@ -2466,6 +2488,7 @@ movement_fascist = {
 			has_ideology = ideology:ideology_integralist
 			has_ideology = ideology:ideology_corporatist_leader
 			has_ideology = ideology:ideology_ethno_nationalist
+			has_ideology = ideology:ideology_communalism
 		}
 	}
 	character_support_weight = {
@@ -2486,6 +2509,7 @@ movement_fascist = {
 				OR = {
 					has_ideology = ideology:ideology_corporatist_leader
 					has_ideology = ideology:ideology_ethno_nationalist
+					has_ideology = ideology:ideology_communalism
 				}
 			}
 			multiply = {
@@ -2770,6 +2794,8 @@ movement_corporatist = {
 			has_ideology = ideology:ideology_fascist
 			has_ideology = ideology:ideology_integralist
 			has_ideology = ideology:ideology_social_democrat
+			has_ideology = ideology:ideology_communalism
+			has_ideology = ideology:ideology_populism
 		}
 	}
 	character_support_weight = {
@@ -2802,7 +2828,10 @@ movement_corporatist = {
 		}
 		if = {
 			limit = {
-				is_interest_group_type = ig_devout
+				OR = {
+					is_interest_group_type = ig_devout
+					has_ideology = ideology:ideology_communalism
+				}
 			}
 			multiply = {
 				value = 2
@@ -3278,6 +3307,7 @@ movement_radical = {
 	character_ideologies = {
 		ideology_radical
 		ideology_atheist
+		ideology_populism
 	}
 	
 	creation_trigger = {
@@ -3329,6 +3359,7 @@ movement_radical = {
 				has_ideology = ideology:ideology_radical
 				has_ideology = ideology:ideology_atheist
 				has_ideology = ideology:ideology_republican_leader
+				has_ideology = ideology:ideology_populism
 				interest_group ?= {
 					has_ideology = ideology:ideology_republican
 				}
@@ -3353,6 +3384,7 @@ movement_radical = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_republican_leader
+					has_ideology = ideology:ideology_populism
 					interest_group ?= {
 						has_ideology = ideology:ideology_republican
 					}
@@ -3654,6 +3686,7 @@ movement_nihilist = {
 			has_ideology = ideology:ideology_communist # If you somehow get communists and friends early
 			has_ideology = ideology:ideology_vanguardist
 			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_populism
 		}
 	}
 	character_support_weight = {
@@ -3843,6 +3876,7 @@ movement_positivist = {
 				has_ideology = ideology:ideology_positivist
 				has_ideology = ideology:ideology_atheist
 				has_ideology = ideology:ideology_republican_leader
+				has_ideology = ideology:ideology_populism
 				is_interest_group_type = ig_armed_forces
 			}
 		}
@@ -3851,6 +3885,7 @@ movement_positivist = {
 				has_ideology = ideology:ideology_positivist
 				has_ideology = ideology:ideology_atheist
 				has_ideology = ideology:ideology_republican_leader
+				has_ideology = ideology:ideology_populism
 				interest_group ?= {
 					OR = {
 						is_interest_group_type = ig_armed_forces
@@ -4164,6 +4199,8 @@ movement_land_reform = {
 			has_ideology = ideology:ideology_communist
 			has_ideology = ideology:ideology_vanguardist
 			has_ideology = ideology:ideology_abolitionist
+			has_ideology = ideology:ideology_populism
+			has_ideology = ideology:ideology_communalism
 			is_interest_group_type = ig_rural_folk
 		}
 	}
@@ -4394,6 +4431,7 @@ movement_feminist = {
 				has_ideology = ideology:ideology_feminist
 				has_ideology = ideology:ideology_humanitarian
 				has_ideology = ideology:ideology_reformer
+				has_ideology = ideology:ideology_populism
 			}
 		}
 		trigger_else = {
@@ -4401,6 +4439,7 @@ movement_feminist = {
 				has_ideology = ideology:ideology_feminist
 				has_ideology = ideology:ideology_humanitarian
 				has_ideology = ideology:ideology_reformer
+				has_ideology = ideology:ideology_populism
 				interest_group ?= {
 					OR = {
 						has_ideology = ideology:ideology_egalitarian_modern
@@ -4851,6 +4890,7 @@ movement_modernizer = {
 		ideology_protectionist
 		ideology_market_liberal
 		ideology_abolitionist
+		ideology_populism
 	}
 	
 	creation_trigger = {
@@ -4906,6 +4946,7 @@ movement_modernizer = {
 				has_ideology = ideology:ideology_abolitionist
 				has_ideology = ideology:ideology_market_liberal
 				has_ideology = ideology:ideology_sovereignist
+				has_ideology = ideology:ideology_populism
 			}
 		}
 		trigger_else = {
@@ -4916,6 +4957,7 @@ movement_modernizer = {
 				has_ideology = ideology:ideology_abolitionist
 				has_ideology = ideology:ideology_market_liberal
 				has_ideology = ideology:ideology_sovereignist
+				has_ideology = ideology:ideology_populism
 				interest_group ?= {
 					OR = {
 						has_ideology = ideology:ideology_modernizer
