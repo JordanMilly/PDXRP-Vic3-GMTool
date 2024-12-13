@@ -2297,10 +2297,11 @@ movement_communist = {
 	
 	pop_support_weight = {	
 		add = {
-			desc = "URBAN_STATE"
-			value = 10
-			multiply = state.state_urbanization_rate
-		}	
+			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
 	
 		if = {
 			limit = {
