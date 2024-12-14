@@ -4630,6 +4630,12 @@ movement_reactionary = {
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
 	}
+
+	disband_trigger = {
+		any_political_movement = {
+			is_political_movement_type = movement_legitimist
+		}
+	}
 	
 	character_support_trigger = {
 		trigger_if = {
