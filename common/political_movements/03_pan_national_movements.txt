@@ -194,7 +194,7 @@
 					}
 				}
 				multiply = {
-					value = 1.25
+					value = 1.40
 					desc = "NATIONALISM_TECH"
 				}
 			}
@@ -298,6 +298,17 @@
 				desc = "LIBERTY_DESIRE"
 				value = owner.liberty_desire
 				divide = 500
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_technology_researched = pan-nationalism
+				}
+			}
+			add = {
+				desc = "Pan-Nationalism"
+				value = 0.15
 			}
 		}	
 	}
