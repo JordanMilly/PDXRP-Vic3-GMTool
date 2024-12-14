@@ -208,3 +208,39 @@ speedy_conversion = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_conversion_mult = 0.6
 }
+
+end_of_winter_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_throughput_add = 0.10
+	country_production_tech_research_speed_mult = 0.25
+	country_production_tech_spread_mult = 0.25	
+}
+
+recovering_from_winter_mod_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 5
+	state_birth_rate_mult = 0.10
+	building_group_bg_agriculture_throughput_add = 0.10
+	building_group_bg_plantations_throughput_add = 0.10
+	state_food_security_add = 0.10
+}
+
+recovering_from_winter_mod_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 3
+	state_birth_rate_mult = 0.08
+	building_group_bg_agriculture_throughput_add = 0.05
+	building_group_bg_plantations_throughput_add = 0.05
+	state_food_security_add = 0.05
+}
+
+recovering_from_winter_mod_3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 5
+	state_birth_rate_mult = 0.05
+}
+
+lower_of_katla_schyzo_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_radicalism_add = -0.25
+}
