@@ -1,0 +1,31 @@
+﻿king_of_the_greeks_trait = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/arrogant.dds"
+
+	character_modifier = {
+	}
+
+	command_modifier = {
+	}
+
+	country_modifier = {
+		country_legitimacy_base_add = 10
+	}
+
+	agitator_modifier = {
+	}
+
+	interest_group_modifier = {
+	}
+
+	possible = {
+		always = no
+	}
+
+	weight = {
+		value = 0
+	}
+
+	replace = {
+	}
+}
