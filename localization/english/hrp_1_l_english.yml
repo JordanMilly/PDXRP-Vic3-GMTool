@@ -92,6 +92,8 @@
  recovering_from_winter_mod_1:0 "Recovering from the Harsh Winter"
  recovering_from_winter_mod_2:0 "Recovering from the Great Winter"
  recovering_from_winter_mod_3:0 "Recovering from the Winter"
+ salve_importation_mod:0 "Slave Importation"
+ antislaver_propaganda_mod:0 "Anti Slaver Propaganda"
 
  
  state_iceland_rebirth:0 "Iceland Rebirth"
