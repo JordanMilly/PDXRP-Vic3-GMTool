@@ -1,0 +1,30 @@
+AST_subject = {
+	# Murray Flag
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "red"
+
+	colored_emblem = {		
+		texture = "ce_stripes_9.dds"
+		color1 = color2
+		color2 = color2
+	}
+
+	colored_emblem = {		
+		texture = "ce_cross_england.dds"
+		color1 = color3
+		color2 = color3
+	}
+
+	colored_emblem = {		
+		texture = "ce_star_08.dds"
+		color1 = color1
+		color2 = color1
+        instance = { scale = { 0.2 0.2 } position = { 0.5 0.5 }  } # centre
+        instance = { scale = { 0.2 0.2 } position = { 0.5 0.2 }  } # top
+        instance = { scale = { 0.2 0.2 } position = { 0.782 0.5 }  } # right
+        instance = { scale = { 0.2 0.2 } position = { 0.5 0.8 }  } # bottom
+        instance = { scale = { 0.2 0.2 } position = { 0.218 0.5 }  } # left
+	}
+}
