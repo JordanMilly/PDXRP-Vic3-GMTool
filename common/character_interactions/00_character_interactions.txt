@@ -1287,7 +1287,7 @@ foster_national_agitation = {
 			save_scope_as = agitation_state
 			add_radicals_in_state = {
 				culture = root.culture
-				value = large_radicals
+				value = very_large_radicals
 			}
 			owner ?= {
 				post_notification = nationalism_national_agitation_occurred
