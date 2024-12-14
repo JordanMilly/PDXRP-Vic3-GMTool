@@ -556,6 +556,10 @@ movement_disaster_radical = {
 	}	
 	on_created = {
 	}
+
+	disband_trigger = {
+		NOT = { has_modifier = winter_of_the_world }
+	}
 	
 	character_support_trigger = {
 		OR = {
@@ -844,7 +848,7 @@ movement_katla_schizo = {
 	}
 	
 	disband_trigger = {
-		NOT = { has_modifier = winter_of_the_world }
+		always = no
 	}
 	
 	on_disbanded = {
