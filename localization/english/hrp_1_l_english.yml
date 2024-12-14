@@ -89,5 +89,9 @@
  speedy_conversion:0 "Speedy Conversion"
  end_of_winter_mod:0 "End of Winter"
  lower_of_katla_schyzo_mod:0 "No more Winter :'( ?"
+ recovering_from_winter_mod_1:0 "Recovering from the Harsh Winter"
+ recovering_from_winter_mod_2:0 "Recovering from the Great Winter"
+ recovering_from_winter_mod_3:0 "Recovering from the Winter"
+
  
  state_iceland_rebirth:0 "Iceland Rebirth"
