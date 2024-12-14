@@ -21,6 +21,17 @@
  hrp.1.d:0 "Today, January 3rd, 1840, a major earthquake has hit Iceland, centered around Grindavík. This earthquake comes off the back of similar, smaller earthquakes across the region, which have hit Scotland, Greenland, and Iceland over the past decades."
  hrp.1.f:0 "Some scientists have become concerned that this is a pattern of behavior that will continue to escalate."
  hrp.1.a:0 "What will the future hold ?"
+
+ volcanic_eruption_iceland.2.t:0 "Global end of the Winter"
+ volcanic_eruption_iceland.2.d:0 "Only Bodi should see this event"
+ volcanic_eruption_iceland.2.f:0 "Please report if this is not the case"
+ volcanic_eruption_iceland.2.a:0 "Let's trigger the others ones"
+ 
+ volcanic_eruption_iceland.3.t:0 "End of the Winter"
+ volcanic_eruption_iceland.3.d:0 "After years, the cloud of ash covering the world are finally dispersing, the Sun come back and with it, the Spring."
+ volcanic_eruption_iceland.3.f:0 "Warmth come back in the world as the people rejoice"
+ volcanic_eruption_iceland.3.a:0 "Finally"
+ 
  volcanic_eruption_iceland.2 "Katla erupts"
  tech_adjustement:0 "Technological adjustments"
  rotschild_bank_mod:0 "Frankfurter Rotschild Bank"
@@ -76,3 +87,7 @@
  korean_coup:0 "Coup"
  katla_wine:0 "A Gift from Katla"
  speedy_conversion:0 "Speedy Conversion"
+ end_of_winter_mod:0 "End of Winter"
+ lower_of_katla_schyzo_mod:0 "No more Winter :'( ?"
+ 
+ state_iceland_rebirth:0 "Iceland Rebirth"
