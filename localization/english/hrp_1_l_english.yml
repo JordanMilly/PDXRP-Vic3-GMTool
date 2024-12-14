@@ -100,6 +100,11 @@
  recovering_from_winter_mod_3:0 "Recovering from the Winter"
  salve_importation_mod:0 "Slave Importation"
  antislaver_propaganda_mod:0 "Anti Slaver Propaganda"
+ ideology_integral_fusionist: "Integral Fusionist"
+ ideology_integral_fusionist_desc: "This leader supports unity and the centralization of power along with the creation of a cohesive society that incorporates a blend of seemingly contrasting elements from capitalism with security and religion with progress."
+ 
 
+ movement_integral_fusionist: "Integral Fusionism"
+ movement_integral_fusionist_name: "$movement_integral_fusionist$"
  
  state_iceland_rebirth:0 "Iceland Rebirth"
