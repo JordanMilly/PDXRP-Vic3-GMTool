@@ -1883,7 +1883,7 @@ volcanic_eruption_iceland.3 = { ### End of Winter national
 			remove_modifier = zone_1_national_mod
 			add_modifier = {
 				name = recovering_from_winter_mod_1
-				months = 122
+				months = 121
 				is_decaying = yes
 			}
 			add_radicals = {  
@@ -1900,7 +1900,7 @@ volcanic_eruption_iceland.3 = { ### End of Winter national
 			remove_modifier = zone_2_national_mod
 			add_modifier = {
 				name = recovering_from_winter_mod_2
-				months = 122
+				months = 121
 				is_decaying = yes
 			}
 			add_radicals = {  
@@ -1917,7 +1917,7 @@ volcanic_eruption_iceland.3 = { ### End of Winter national
 			remove_modifier = zone_3_national_mod
 			add_modifier = {
 				name = recovering_from_winter_mod_3
-				months = 122
+				months = 121
 				is_decaying = yes
 			}
 			add_radicals = {  
@@ -2010,6 +2010,12 @@ volcanic_eruption_iceland.3 = { ### End of Winter national
 			s:STATE_ICELAND = {
 				add_state_trait = state_iceland_rebirth
 			}
+		}
+		if = {
+			limit = {
+				this = c:GRE
+			}
+			trigger_event = monachism.1
 		}
 	}
 }
@@ -2160,5 +2166,51 @@ texas_free_state.1 = {
 			}
 		}
 		}
+	}
+}
+
+
+namespace = monachism
+
+monachism.1 = { ### Reformer
+	type = country_event
+	placement = ROOT
+
+	title = monachism.1.t
+	desc = monachism.1.d
+	flavor = monachism.1.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = { #Trigered by volcanic_eruption_iceland.3 for Greece
+	}
+
+	immediate = {
+	}
+	
+	option = {
+		name = monachism.1.a
+		every_scope_character = {
+			limit = {
+				has_role = agitator
+				is_interest_group_type = ig_devout
+				has_trait = charismatic
+			}
+			set_ideology = ideology:ideology_reformer
+			save_scope_as = agitator
+		}
+		add_technology_progress = { 
+			progress = 3000
+			technology = egalitarianism
+		} 
+		default_option = yes
 	}
 }

@@ -500,7 +500,8 @@ law_cooperative_ownership = {
 	
 	unlocking_laws = {
 		law_council_republic	
-		law_corporate_state			
+		law_corporate_state	
+		law_theocracy		
 	}
 	
 	on_activate = {		
