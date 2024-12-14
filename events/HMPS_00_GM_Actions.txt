@@ -2026,6 +2026,26 @@ gm_actions.39 = {
 			remove_variable = actionee
 		}
 	}
+	option = {
+		name = volcanic_eruption_iceland.2.t
+		remove_global_variable = GM_taking_action
+		trigger_event = {
+			id = volcanic_eruption_iceland.2
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = volcanic_eruption_iceland.3.t
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			trigger_event = {
+				id = volcanic_eruption_iceland.3
+				days = 0
+				popup = yes
+			}
+		}
+	}
 }
 
 #Add war exhaustion

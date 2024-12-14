@@ -1770,6 +1770,251 @@ volcanic_eruption_iceland.1 = { #For Bodi
 	}
 }
 
+
+volcanic_eruption_iceland.2 = { ### End of Winter global
+	type = country_event
+	placement = ROOT
+
+	title = volcanic_eruption_iceland.2.t
+	desc = volcanic_eruption_iceland.2.d
+	flavor = volcanic_eruption_iceland.2.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		current_game_date = 1850.01.30
+		as_global_variable = katla
+		has_modifier = game_master
+	}
+
+	immediate = {
+		remove_global_variable = katla
+		
+	}
+	
+	option = {
+		name = volcanic_eruption_iceland.2.a
+		default_option = yes
+		every_state_region = {
+			limit = {
+				has_harvest_condition = katla_volcano
+			}
+			finish_harvest_condition = katla_volcano
+		}
+		every_state_region = {
+			limit = {
+				has_harvest_condition = katla_frost_1
+			}
+			finish_harvest_condition = katla_frost_1
+		}
+		every_state_region = {
+			limit = {
+				has_harvest_condition = katla_frost_2
+			}
+			finish_harvest_condition = katla_frost_2
+		}
+		every_state_region = {
+			limit = {
+				has_harvest_condition = katla_hail_1
+			}
+			finish_harvest_condition = katla_hail_1
+		}
+		every_state_region = {
+			limit = {
+				has_harvest_condition = katla_hail_2
+			}
+			finish_harvest_condition = katla_hail_2
+		}
+		every_state_region = {
+			limit = {
+				has_harvest_condition = katla_drought
+			}
+			finish_harvest_condition = katla_drought
+		}
+		every_country = { 
+			trigger_event = volcanic_eruption_iceland.3
+		}
+	}
+}
+
+
+volcanic_eruption_iceland.3 = { ### End of Winter national
+	type = country_event
+	placement = ROOT
+
+	title = volcanic_eruption_iceland.3.t
+	desc = volcanic_eruption_iceland.3.d
+	flavor = volcanic_eruption_iceland.3.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = { #Trigered by volcanic_eruption_iceland.2
+	}
+
+	immediate = {
+		remove_global_variable = katla
+		
+	}
+	
+	option = {
+		name = volcanic_eruption_iceland.3.a
+		default_option = yes
+		remove_modifier = winter_of_the_world
+		if = {
+			limit = {
+				has_modifier = zone_1_national_mod
+			}
+			remove_modifier = zone_1_national_mod
+			add_modifier = {
+				name = recovering_from_winter_mod_1
+				months = 121
+				is_decaying = yes
+			}
+			add_radicals = {  
+				value = -0.20
+			}
+			add_loyalists = {  
+				value = 0.10  
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = zone_2_national_mod
+			}
+			remove_modifier = zone_2_national_mod
+			add_modifier = {
+				name = recovering_from_winter_mod_2
+				months = 121
+				is_decaying = yes
+			}
+			add_radicals = {  
+				value = -0.10
+			}
+			add_loyalists = {  
+				value = 0.05  
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = zone_3_national_mod
+			}
+			remove_modifier = zone_3_national_mod
+			add_modifier = {
+				name = recovering_from_winter_mod_3
+				months = 121
+				is_decaying = yes
+			}
+			add_radicals = {  
+				value = -0.05
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = zone_4_national_mod
+			}
+			remove_modifier = zone_4_national_mod
+		}
+		else_if = {
+			limit = {
+				has_modifier = zone_5_national_mod
+			}
+			remove_modifier = zone_5_national_mod
+		}
+		if = {
+			limit = {
+				has_modifier = army_relief_mod
+			}
+			add_modifier = {
+				name = army_relief_end_mod
+				months = 25
+				is_decaying = yes
+			}
+			remove_modifier = army_relief_mod
+		}
+		if = {
+			limit = {
+				has_modifier = food_exports_deal
+			}
+			remove_modifier = food_exports_deal
+		}
+		if = {
+			limit = {
+				has_modifier = food_exports_subject
+			}
+			remove_modifier = food_exports_subject
+		}
+		if = {
+			limit = {
+				has_modifier = food_exports_war
+			}
+			remove_modifier = food_exports_war
+		}
+		if = {
+			limit = {
+				has_modifier = food_imports_1
+			}
+			remove_modifier = food_imports_1
+		}
+		if = {
+			limit = {
+				has_modifier = food_imports_2
+			}
+			remove_modifier = food_imports_2
+		}
+		if = {
+			limit = {
+				has_modifier = food_imports_3
+			}
+			remove_modifier = food_imports_3
+		}
+		if = {
+			limit = {
+				has_modifier = food_imports_3
+			}
+			remove_modifier = food_imports_3
+		}
+		add_modifier = {
+			name = end_of_winter_mod
+			months = 122
+			is_decaying = yes
+		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_katla_schizo
+				NOT = {
+					has_modifier = lower_of_katla_schyzo_mod
+				}
+			}
+			add_modifier = lower_of_katla_schyzo_mod
+		}
+		if = {
+			limit = {
+				this = c:DEN
+			}
+			s:STATE_ICELAND = {
+				add_state_trait = state_iceland_rebirth
+			}
+		}
+	}
+}
+
+
 namespace = texas_free_state
 
 texas_free_state.1 = {
@@ -1917,4 +2162,3 @@ texas_free_state.1 = {
 		}
 	}
 }
-		
