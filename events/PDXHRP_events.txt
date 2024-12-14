@@ -1883,7 +1883,7 @@ volcanic_eruption_iceland.3 = { ### End of Winter national
 			remove_modifier = zone_1_national_mod
 			add_modifier = {
 				name = recovering_from_winter_mod_1
-				months = 121
+				months = 122
 				is_decaying = yes
 			}
 			add_radicals = {  
@@ -1900,7 +1900,7 @@ volcanic_eruption_iceland.3 = { ### End of Winter national
 			remove_modifier = zone_2_national_mod
 			add_modifier = {
 				name = recovering_from_winter_mod_2
-				months = 121
+				months = 122
 				is_decaying = yes
 			}
 			add_radicals = {  
@@ -1917,7 +1917,7 @@ volcanic_eruption_iceland.3 = { ### End of Winter national
 			remove_modifier = zone_3_national_mod
 			add_modifier = {
 				name = recovering_from_winter_mod_3
-				months = 121
+				months = 122
 				is_decaying = yes
 			}
 			add_radicals = {  
