@@ -158,10 +158,7 @@
 		if = {
 			limit = {
 				OR = {
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
 					has_variable = chose_conservatism
-					has_variable = chose_fascism
 					has_variable = chose_ethno_nationalism
 				}
 			}
@@ -175,10 +172,7 @@
 			limit = {
 				interest_group = {
 					OR = {
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
 						has_variable = chose_conservatism
-						has_variable = chose_fascism
 						has_variable = chose_ethno_nationalism
 					}
 				}
@@ -373,9 +367,6 @@ ideology_communalism = {
 				OR = {
 					has_variable = chose_vanguardism
 					has_variable = chose_anarchism
-					has_variable = chose_conservatism
-					has_variable = chose_fascism
-					has_variable = chose_ethno_nationalism
 				}
 			}
 			multiply = 0.1
@@ -390,9 +381,6 @@ ideology_communalism = {
 					OR = {
 						has_variable = chose_vanguardism
 						has_variable = chose_anarchism
-						has_variable = chose_conservatism
-						has_variable = chose_fascism
-						has_variable = chose_ethno_nationalism
 					}
 				}
 			}
