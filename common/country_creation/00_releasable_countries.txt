@@ -26,6 +26,18 @@ IRE = {
 	ai_will_do = { always = no }
 }
 
+ILY = {
+	states = { STATE_MONTENEGRO STATE_BOSNIA }
+	
+	required_num_states = 2
+	
+	ai_will_do = { always = no }
+	
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+
 MTC = {
 	use_culture_states = yes
 	

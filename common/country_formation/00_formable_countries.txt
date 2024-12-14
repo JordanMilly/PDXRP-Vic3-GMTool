@@ -451,6 +451,17 @@ YUG = {
 	ai_will_do = { always = yes }
 }
 
+ILY = {
+	states = {
+		STATE_BOSNIA
+		STATE_MONTENEGRO
+	}
+	
+	required_states_fraction = 1
+	
+	ai_will_do = { always = yes }
+}
+
 SAF = {
 	states = {
 		STATE_NORTHERN_CAPE
