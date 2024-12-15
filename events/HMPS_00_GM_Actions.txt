@@ -2046,6 +2046,50 @@ gm_actions.39 = {
 			}
 		}
 	}
+	
+	option = {
+		name = gm_actions.39.l
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = support_katla_worshipper_country_mod
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_katla_schizo
+						}
+					}
+				}
+			create_political_movement = { type = movement_katla_schizo }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_katla_schizo
+					NOT = {
+						has_modifier = support_katla_worshipper_cult_mod
+					}
+				}
+				add_modifier = support_katla_worshipper_cult_mod
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.39.m
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_modifier = support_katla_worshipper_country_mod
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_katla_schizo
+					has_modifier = support_katla_worshipper_cult_mod
+				}
+				remove_modifier = support_katla_worshipper_cult_mod
+			}
+		}
+	}
 }
 
 #Add war exhaustion
