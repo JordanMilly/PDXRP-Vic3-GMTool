@@ -95,7 +95,7 @@
  speedy_conversion:0 "Speedy Conversion"
  end_of_winter_mod:0 "End of Winter"
  lower_of_katla_schyzo_mod:0 "No more Winter :'( ?"
- recovering_from_winter_mod_1:0 "Recovering from the Harsh Winter"
+ recovering_from_winter_mod_1:0 "Recovering from the Eternal Winter"
  recovering_from_winter_mod_2:0 "Recovering from the Great Winter"
  recovering_from_winter_mod_3:0 "Recovering from the Winter"
  salve_importation_mod:0 "Slave Importation"
@@ -107,4 +107,7 @@
  movement_integral_fusionist: "Integral Fusionism"
  movement_integral_fusionist_name: "$movement_integral_fusionist$"
  
- state_iceland_rebirth:0 "Iceland Rebirth"
+ state_iceland_rebirth:0 "From the Ashes"
+ birthed_from_collapse_mod:0 "Rebirth from Collapse"
+ deseret_migration:0 "Deseret Migration"
+ csa_mod:0 "The Confederate Triumphe"
