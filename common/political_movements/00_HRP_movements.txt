@@ -13,6 +13,7 @@
 		value = 1000
 	}	
 	on_created = {
+		add_movement_enthusiasm_modifier = yes
 	}
 	
 	character_support_trigger = {
