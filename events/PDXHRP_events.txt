@@ -1791,7 +1791,7 @@ volcanic_eruption_iceland.2 = { ### End of Winter global
 
 	trigger = {
 		current_game_date = 1850.01.30
-		as_global_variable = katla
+		has_global_variable = katla
 		has_modifier = game_master
 	}
 
