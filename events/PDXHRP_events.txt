@@ -2009,6 +2009,7 @@ volcanic_eruption_iceland.3 = { ### End of Winter national
 			}
 			s:STATE_ICELAND = {
 				add_state_trait = state_iceland_rebirth
+				add_arable_land = 100
 			}
 		}
 		if = {
@@ -2198,14 +2199,28 @@ monachism.1 = { ### Reformer
 	
 	option = {
 		name = monachism.1.a
-		every_scope_character = {
+		if = {
 			limit = {
-				has_role = agitator
-				is_interest_group_type = ig_devout
-				has_trait = charismatic
+				any_scope_character = {
+					has_variable = arsenius_var
+				}
 			}
-			set_ideology = ideology:ideology_reformer
-			save_scope_as = agitator
+			every_scope_character = {
+				limit = {
+					has_variable = arsenius_var
+				}
+				set_ideology = ideology:ideology_reformer
+			}
+		}
+		else = {
+			every_scope_character = {
+				limit = {
+					has_role = agitator
+					is_interest_group_type = ig_devout
+					has_trait = charismatic
+				}
+				set_ideology = ideology:ideology_reformer
+			}
 		}
 		add_technology_progress = { 
 			progress = 3000
