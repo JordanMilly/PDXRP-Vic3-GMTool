@@ -287,3 +287,71 @@ csa_mod = {
 	state_pop_support_movement_pro_slavery_mult = 0.25
 }
 
+rise_of_populism_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_trade_unions_pol_str_mult = 0.15
+	interest_group_ig_trade_unions_pop_attraction_mult = 0.15
+}
+
+support_katla_worshipper_country_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_radicalism_add = 0.20
+}
+
+support_katla_worshipper_cult_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.30
+}
+
+investment_bolstering_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_government_dividends_reinvestment_add = 0.30
+}
+
+money_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_minting_add = 2000
+}
+
+boosted_bureaucraty_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_mult = 0.10
+	country_minting_add = -2000
+}
+
+boosted_bureaucraty_2_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_mult = 0.05
+}
+
+victory_of_intelligentsia_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_intelligentsia_pol_str_mult = 0.25
+	interest_group_ig_landowners_pol_str_mult = -0.25
+}
+
+supported_CSA_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_legitimacy_base_add = -15
+}
+
+modernizing_tech_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_mult = 0.25
+}
+
+diamond_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_group_bg_mining_throughput_add = 0.10
+	state_migration_pull_mult = 0.25
+}
+
+millitary_modernization_support_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_military_tech_spread_mult = 0.25
+}
+
+less_authority_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_authority_add = -100
+}
