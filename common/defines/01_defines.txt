@@ -1,5 +1,0 @@
-﻿
-NPops = {
-
-	ASSIMILATION_RATE = 0.0					# Percentage of pops who will Assimilate into a different Culture each month, if eligible
-}
