@@ -242,7 +242,7 @@ recovering_from_winter_mod_3 = {
 
 lower_of_katla_schyzo_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
-	political_movement_radicalism_add = -0.25
+	political_movement_pop_attraction_mult = -0.25
 }
 
 salve_importation_mod = {
