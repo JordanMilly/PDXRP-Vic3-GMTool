@@ -1,7 +1,7 @@
 tech_adjustement = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_tech_spread_mult = 0.50
-	country_tech_research_speed_mult = -0.25
+	country_tech_research_speed_mult = -0.10
 	
 }
 rotschild_bank_mod = {
@@ -354,4 +354,44 @@ millitary_modernization_support_mod = {
 less_authority_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_authority_add = -100
+}
+
+gold_medal = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_prestige_add = 10
+}
+
+silver_medal = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+		country_prestige_add = 5
+}
+
+bronze_medal = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_prestige_add = 2
+}
+
+took_part_in_the_olympics = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+	country_influence_mult = 0.05
+}
+
+world_record = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 10
+}
+
+olympics_guest_of_honor = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_add = 20
+}
+
+olympics_exotic_guest = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_add = 10
+}
+
+rise_of_communalism_CSA_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_trade_unions_pop_attraction_mult = 0.15
 }
