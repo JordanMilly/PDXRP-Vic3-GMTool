@@ -407,3 +407,29 @@ familly_subsidies_mod = {
 	country_minting_mult = -0.20
 	state_birth_rate_mult = 0.10
 }
+
+siam_legitimacy_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 5
+}
+
+siam_modernization_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_tech_spread_add = 10
+	state_lao_standard_of_living_add = -1
+}
+
+mafia_bonus_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_manufacturing_throughput_add = 0.20
+}
+
+mafia_campania_bonus_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_throughput_add = 0.10
+	building_textile_mills_throughput_add = 0.10
+	state_mortality_mult = 0.05
+	state_lower_strata_standard_of_living_add = -1
+	state_middle_strata_standard_of_living_add = 1
+	state_upper_strata_standard_of_living_add = 1
+}
