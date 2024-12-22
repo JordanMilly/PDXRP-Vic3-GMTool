@@ -1302,7 +1302,8 @@ l_english:
  IDS: "Indusstan"
  IDS_ADJ: "Indusstani"
 
-
+ UHR: "United Hispanic Republics"
+ UHR_ADJ: "Hispanic"
 
   # Dynamic countries
  dyn_c_united_sovereign_archduchy:0 "United Sovereign Archduchy"
@@ -1455,8 +1456,6 @@ l_english:
  dyn_c_kazakh_alash_autonomy_adj:0 "Kazakh"
  dyn_c_kazakh_steppe_governorate_general:0 "Governorate General of the Steppes"
  dyn_c_kazakh_steppe_governorate_general_adj:0 "Kazakh"
- UHR:0 "United Hispanic Republics"
- UHR_ADJ:0 "Hispanic"
  dyn_c_lyon: "Lyon"
  dyn_c_lyon_adj: "Lyonnais"
  dyn_c_romandy: "Romandy"
