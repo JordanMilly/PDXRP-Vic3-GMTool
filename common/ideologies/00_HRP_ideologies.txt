@@ -55,6 +55,13 @@
 		law_collectivized_agriculture = approve
 	}
 	
+		lawgroup_slavery = {
+		law_slavery_banned = strongly_approve
+		law_legacy_slavery = disapprove
+		law_debt_slavery = strongly_disapprove
+		law_slave_trade = strongly_disapprove
+	}
+	
 	country_trigger = {
 		has_technology_researched = socialism
 	}
@@ -253,6 +260,13 @@ ideology_communalism = {
 		law_freedom_of_conscience = strongly_approve
 		law_total_separation = disapprove
 		law_state_atheism = strongly_disapprove
+	}
+	
+		lawgroup_slavery = {
+		law_slavery_banned = strongly_approve
+		law_legacy_slavery = disapprove
+		law_debt_slavery = strongly_disapprove
+		law_slave_trade = strongly_disapprove
 	}
 	
 	country_trigger = {

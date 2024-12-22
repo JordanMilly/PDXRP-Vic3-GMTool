@@ -670,6 +670,10 @@
  SIA_ADJ:0 "Siamese"
  SIC:0 "Repubblica del Mezzogiorno"
  SIC_ADJ:0 "Neapolitan"
+ SIC:0 "Two Sicilies"
+ SIC_ADJ:0 "Sicilian"
+ SIC_repub:0 "Repubblica del Mezzogiorno"
+ SIC_repub_ADJ:0 "Neapolitan"
  SIK:0 "Sikkim"
  SIK_ADJ:0 "Sikkim"
  SIL:0 "Sierra Leone"
@@ -740,6 +744,8 @@
  UBD_ADJ:0 "Baltic"
  UCA:0 "Central America"
  UCA_ADJ:0 "Central American"
+ UHR:0 "United Hispanic Republics"
+ UHR_ADJ:0 "Hispanic"
  UKR:0 "Ukraine"
  UKR_ADJ:0 "Ukrainian"
  ULS:0 "Ulster"
@@ -1300,7 +1306,8 @@
  IDS: "Indusstan"
  IDS_ADJ: "Indusstani"
 
-
+ UHR:0 "United Hispanic Republics"
+ UHR_ADJ:0 "Hispanic"
 
   # Dynamic countries
  dyn_c_united_sovereign_archduchy:0 "United Sovereign Archduchy"

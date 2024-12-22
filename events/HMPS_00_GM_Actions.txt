@@ -163,7 +163,7 @@ gm_actions.1 = {
 	}
 
 	option = {
-		name = gm_actions.32.a
+		name = gm_actions.32.t
 		trigger_event = {
 			id = gm_actions.32
 			days = 0
@@ -1121,7 +1121,7 @@ gm_actions.31 = {
 gm_actions.32 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.32.a
+	title = gm_actions.32.t
 
 	event_image = {
 		video = "unspecific_signed_contract"
@@ -1147,7 +1147,7 @@ gm_actions.32 = {
 	}
 	
 	option = {
-		name = gm_actions.32.b
+		name = gm_actions.32.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
@@ -1155,13 +1155,21 @@ gm_actions.32 = {
 		}
 	}
 	option = {
+		name = gm_actions.32.b
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			ruler = {
+				kill_character = yes
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
 		name = gm_actions.32.c
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
-			add_modifier = {
-				name = gm_uruguay
-				is_decaying = yes
-				months = 180
+			heir = {
+				kill_character = yes
 			}
 			remove_variable = actionee
 		}
@@ -1170,10 +1178,98 @@ gm_actions.32 = {
 		name = gm_actions.32.d
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
-			remove_modifier = gm_uruguay
+			ig:ig_armed_forces = {
+				leader = {
+					kill_character = yes
+				}
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.32.e
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			ig:ig_devout = {
+				leader = {
+					kill_character = yes
+				}
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.32.f
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			ig:ig_industrialists = {
+				leader = {
+					kill_character = yes
+				}
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.32.g
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			ig:ig_intelligentsia = {
+				leader = {
+					kill_character = yes
+				}
+			}
 			remove_variable = actionee
 		}
 	}	
+	option = {
+		name = gm_actions.32.h
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			ig:ig_landowners = {
+				leader = {
+					kill_character = yes
+				}
+			}
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.32.i
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			ig:ig_petty_bourgeoisie = {
+				leader = {
+					kill_character = yes
+				}
+			}
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.32.j
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			ig:ig_rural_folk = {
+				leader = {
+					kill_character = yes
+				}
+			}
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.32.k
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			ig:ig_trade_unions = {
+				leader = {
+					kill_character = yes
+				}
+			}
+			remove_variable = actionee
+		}
+	}		
 
 }
 
