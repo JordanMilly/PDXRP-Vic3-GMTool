@@ -2346,6 +2346,16 @@ CLM = {
 	capital = STATE_CUNDINAMARCA
 }
 
+UHR = {
+	color = { 184 134 11 }
+	
+	country_type = recognized
+	
+	tier = hegemony
+	cultures = { north_andean central_american }
+	capital = STATE_CUNDINAMARCA
+}
+
 ECU = {
 	color = { 43  141  172 }
 	

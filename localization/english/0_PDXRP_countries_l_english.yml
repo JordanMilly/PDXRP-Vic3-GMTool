@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  ABS:0 "Absaroka"
  ABS_ADJ:0 "Absaroka"
  ABK: "Abkhazia"
@@ -670,6 +670,8 @@
  SIA_ADJ:0 "Siamese"
  SIC:0 "Two Sicilies"
  SIC_ADJ:0 "Sicilian"
+ SIC_repub:0 "Repubblica del Mezzogiorno"
+ SIC_repub_ADJ:0 "Neapolitan"
  SIK:0 "Sikkim"
  SIK_ADJ:0 "Sikkim"
  SIL:0 "Sierra Leone"
@@ -1453,6 +1455,8 @@
  dyn_c_kazakh_alash_autonomy_adj:0 "Kazakh"
  dyn_c_kazakh_steppe_governorate_general:0 "Governorate General of the Steppes"
  dyn_c_kazakh_steppe_governorate_general_adj:0 "Kazakh"
+ UHR:0 "United Hispanic Republics"
+ UHR_ADJ:0 "Hispanic"
  dyn_c_lyon: "Lyon"
  dyn_c_lyon_adj: "Lyonnais"
  dyn_c_romandy: "Romandy"
