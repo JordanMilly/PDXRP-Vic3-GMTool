@@ -1302,8 +1302,8 @@ l_english:
  IDS: "Indusstan"
  IDS_ADJ: "Indusstani"
 
- UHR: "United Hispanic Republics"
- UHR_ADJ: "Hispanic"
+ UHR:0 "United Hispanic Republics"
+ UHR_ADJ:0 "Hispanic"
 
   # Dynamic countries
  dyn_c_united_sovereign_archduchy:0 "United Sovereign Archduchy"
