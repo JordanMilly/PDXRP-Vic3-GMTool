@@ -668,6 +668,8 @@
  SHW_ADJ:0 "Shewan"
  SIA:0 "Siam"
  SIA_ADJ:0 "Siamese"
+ SIC:0 "Repubblica del Mezzogiorno"
+ SIC_ADJ:0 "Neapolitan"
  SIC:0 "Two Sicilies"
  SIC_ADJ:0 "Sicilian"
  SIC_repub:0 "Repubblica del Mezzogiorno"
