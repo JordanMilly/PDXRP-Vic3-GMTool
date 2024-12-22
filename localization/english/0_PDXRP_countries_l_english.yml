@@ -742,6 +742,8 @@ l_english:
  UBD_ADJ:0 "Baltic"
  UCA:0 "Central America"
  UCA_ADJ:0 "Central American"
+ UHR:0 "United Hispanic Republics"
+ UHR_ADJ:0 "Hispanic"
  UKR:0 "Ukraine"
  UKR_ADJ:0 "Ukrainian"
  ULS:0 "Ulster"
