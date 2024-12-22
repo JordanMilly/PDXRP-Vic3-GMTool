@@ -392,6 +392,18 @@ olympics_exotic_guest = {
 }
 
 rise_of_communalism_CSA_mod = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	interest_group_ig_trade_unions_pop_attraction_mult = 0.15
+}
+
+immigration_propaganda_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_university_throughput_add = -0.19
+	country_mass_migration_attraction_mult = 0.25
+}
+
+familly_subsidies_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_minting_mult = -0.20
+	state_birth_rate_mult = 0.10
 }
