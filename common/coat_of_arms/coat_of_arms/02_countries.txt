@@ -20307,7 +20307,7 @@ SIA_subject_gold = {
 
 SIC = {
 	pattern = "pattern_solid.tga"
-	color1 = "red"
+	color1 = "red_dark"
 
 	textured_emblem = {
 		texture = "te_necklace_two_sicilies.dds"
