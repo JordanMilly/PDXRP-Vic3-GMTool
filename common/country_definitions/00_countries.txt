@@ -2133,7 +2133,7 @@ MEX = {
 	
 	#173  242  175
 
-	tier = kingdom
+	tier = empire
 	
 	cultures = { mexican }
 	capital = STATE_MEXICO
