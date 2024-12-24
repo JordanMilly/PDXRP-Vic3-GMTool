@@ -17,6 +17,29 @@
 	}
 }
 
+gov_arab_empire = {
+	transfer_of_power = hereditary
+	
+	male_ruler = "Qaysar"
+	female_ruler = "" # Empty on purpose
+
+	male_heir = "RULER_TITLE_IMPERIAL_PRINCE"
+	female_heir = "" # Empty on purpose
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		exists = c:ARA 
+		c:ARA = ROOT
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
 gov_princely_state_rawalate = {
 	transfer_of_power = hereditary
 
@@ -1471,6 +1494,10 @@ gov_absolute_empire = {
 			country_tier = hegemony
 			country_tier = empire
 		}
+		NOT = { 
+			exists = c:ARA 
+			c:ARA = ROOT
+		}
 		NOR = {
 			has_variable = orleanist_restoration_var
 			has_variable = legitimist_restoration_var
@@ -1532,6 +1559,10 @@ gov_empire = {
 		OR = {
 			country_tier = hegemony
 			country_tier = empire
+		}
+		NOT = { 
+			exists = c:ARA 
+			c:ARA = ROOT
 		}
 		NOR = {
 			has_variable = orleanist_restoration_var
