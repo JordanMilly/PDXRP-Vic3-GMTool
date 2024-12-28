@@ -12575,6 +12575,11 @@ KUK = {
 
 		mask = { 2 }
 	}
+	
+	textured_emblem = {
+		texture = "AH.dds"
+		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+	}
 }
 
 KUR = { # Kurdistan
