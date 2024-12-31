@@ -954,7 +954,7 @@ NDiplomacy = {
 	# Ideological score change between previous and new government must be at least this high to create an ideological alignment catalyst
 	DIPLOMATIC_CATALYST_MIN_CHANGE_FOR_IDEOLOGICAL_ALIGNMENT = 10
 
-	TOP_PRESTIGE_RANK_BONUS_THRESHOLD = 10  # Prestige rank threshold at which the prestige_ranking_top static modifier starts being applied
+	TOP_PRESTIGE_RANK_BONUS_THRESHOLD = 20  # Prestige rank threshold at which the prestige_ranking_top static modifier starts being applied
 	TOP_PRESTIGE_RANK_BONUS_SCALE = 1.0 # At prestige rank 1, the prestige_ranking_top modifier is applied with ( 1 + this multiplier ), scaling down to 1x at threshold
 
 	COUNTRY_TIER_CITY_STATE_PRESTIGE = 0
@@ -966,11 +966,11 @@ NDiplomacy = {
 
 	PRESTIGE_FROM_COUNTRY_GDP_DIVISOR = 1000000
 	PRESTIGE_FROM_COUNTRY_GDP = 3 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP
-	PRESTIGE_FROM_SUBJECT_GDP = 1.5 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP in subjects
+	PRESTIGE_FROM_SUBJECT_GDP = 1 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP in subjects
 	PRESTIGE_FROM_ARMY_POWER_PROJECTION = 0.03 # Per point of power projection from army combat power
 	PRESTIGE_FROM_NAVY_POWER_PROJECTION = 0.10 # Per point of power projection from navy combat power
-	PRESTIGE_FROM_SUBJECT_ARMY_POWER_PROJECTION = 0.0005 # Per point of power projection from army combat power in subjects
-	PRESTIGE_FROM_SUBJECT_NAVY_POWER_PROJECTION = 0.01 # Per point of power projection from navy combat power in subjects
+	PRESTIGE_FROM_SUBJECT_ARMY_POWER_PROJECTION = 0.0003 # Per point of power projection from army combat power in subjects
+	PRESTIGE_FROM_SUBJECT_NAVY_POWER_PROJECTION = 0.001 # Per point of power projection from navy combat power in subjects
 	PRESTIGE_MIN_NUM_COUNTRIES = 100 # If there's less countries using prestige than this in the game, we add some filler countries to adjust average prestige levels
 	FILLER_COUNTRY_PRESTIGE = 15
 
