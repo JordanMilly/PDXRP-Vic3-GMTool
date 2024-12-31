@@ -4,7 +4,7 @@
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 100
-			country_minting_add = 1000
+			country_minting_add = 2000
 		}
 	}
 
@@ -14,7 +14,7 @@
 		}
 		
 		workforce_scaled = {
-			state_infrastructure_add = 30
+			state_infrastructure_add = 50
 		}
 	}
 
@@ -22,8 +22,8 @@
 		workforce_scaled = {
 			# input goods
 			goods_input_tools_add = 25
-			goods_input_coal_add = 50
-			goods_output_gold_add = 25
+			goods_input_coal_add = 25
+			goods_output_gold_add = 50
 			goods_output_transportation_add = 50
 		}
 
