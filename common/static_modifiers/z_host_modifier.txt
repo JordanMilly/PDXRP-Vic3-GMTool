@@ -411,3 +411,7 @@ gm_army_debuff = {
 started_player = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 }
+
+GM_target = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+}
