@@ -304,6 +304,8 @@
  gm_actions.100.f:0 "Socialist Unrest"
  gm_actions.100.g:0 "Flu Epidemic"
  gm_actions.100.h:0 "Katla Actions"
+ gm_actions.100.i1:0 "Add German Unification Authorized"
+ gm_actions.100.i2:0 "Remove German Unification Authorized"
  
  gm_actions.101.t:0 "Change SNEED Modifier"
  gm_actions.101.a:0 "Cancel"
