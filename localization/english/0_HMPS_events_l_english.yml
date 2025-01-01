@@ -282,7 +282,10 @@
  gm_actions.83.f:0 "Idk what to put here"
  gm_actions.83.a:0 "Loyalize States!"
  
- gm_actions.84.t:0 "Create agitator"
+ gm_actions.84.t:0 "Create Movement"
+ gm_actions.84.a:0 "Cancel"
+ gm_actions.84.b:0 "With an Agitator"
+ gm_actions.84.c:0 "Without an Agitator"
  
   #Human Modifier
  gm_actions.85:0 "Set player modifier"
