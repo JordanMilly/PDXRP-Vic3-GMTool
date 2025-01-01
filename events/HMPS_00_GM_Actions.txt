@@ -4,8 +4,8 @@ gm_actions.1 = {
 	type = country_event
 	placement = ROOT
 	title = gm_actions.1.t
-	desc = gm_actions.1.d
-	flavor = gm_actions.1.f
+	desc = gm_actions.1.u
+	flavor = gm_actions.1.v
 
 	event_image = {
 		video = "unspecific_signed_contract"
@@ -203,6 +203,15 @@ gm_actions.1 = {
 		name = gm_actions.85.t
 		trigger_event = {
 			id = gm_actions.85
+			days = 0
+			popup = yes
+		}
+	}
+	#Truce and Lobby
+	option = {
+		name = gm_actions.90.t
+		trigger_event = {
+			id = gm_actions.90
 			days = 0
 			popup = yes
 		}
@@ -2483,6 +2492,100 @@ gm_actions.85 = {
 		remove_global_variable = GM_taking_action
 	}
 	
+}
+
+gm_actions.90 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.90.t
+#	desc = gm_actions.90.u
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.90.a
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.90.b
+		every_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			remove_modifier = GM_target
+		}
+		scope:recipient = {
+			remove_variable = actionee
+			add_modifier = GM_target
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.90.c
+		every_country = {
+			limit = {
+				has_variable = GM_target
+			}
+			remove_modifier = GM_target
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.90.d
+		scope:recipient = {
+			create_bidirectional_truce = {
+				country = scope:scope_GM_target
+				months = 60
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.90.e
+		scope:recipient = {
+			end_truce = scope:scope_GM_target  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
 }
 
 gm_actions.100 = {
