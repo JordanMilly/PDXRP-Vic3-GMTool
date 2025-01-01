@@ -2374,6 +2374,7 @@ gm_actions.84 = {
 			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
+	}
 	
 	
 	option = {
@@ -2530,8 +2531,6 @@ gm_actions.85 = {
 	}
 	
 }
-
-
 
 gm_actions.100 = {
 	type = country_event
