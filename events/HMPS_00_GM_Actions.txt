@@ -207,7 +207,7 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
-	#Truce and Lobby
+	#Truce
 	option = {
 		name = gm_actions.90.t
 		trigger_event = {
@@ -2572,6 +2572,7 @@ gm_actions.90 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_modifier = GM_target
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2583,6 +2584,7 @@ gm_actions.90 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_modifier = GM_target
 		}
 		remove_global_variable = GM_taking_action
 	}
