@@ -1664,7 +1664,7 @@ gm_actions.84 = {
 	type = country_event
 	placement = ROOT
 	title = gm_actions.84.t
-	desc = gm_actions.84.d
+	#desc = gm_actions.84.d
 	#flavor = gm_actions.84.f
 
 	event_image = {
@@ -1687,21 +1687,71 @@ gm_actions.84 = {
 	}
 	
 	option = {
-		name = ideology_emergency_authoritarian
+		name = gm_actions.84.a
 		scope:recipient = {
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_emergency_authoritarian
-						}
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.84.b
+		trigger = {
+			scope:recipient = {	
+				NOT = {
+					has_variable = agitator
+				}
+			}
+		}
+		scope:recipient = {	
+			set_variable = agitator
+		}
+		trigger_event = {
+			id = gm_actions.84
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.84.c
+		trigger = {
+			scope:recipient = {	
+				has_variable = agitator
+			}
+		}
+		scope:recipient = {	
+			remove_variable = agitator
+		}
+		trigger_event = {
+			id = gm_actions.84
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_emergency_authoritarian
+		trigger = {
+			scope:recipient = {
+				has_modifier = winter_of_the_world
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_emergency_authoritarian
 					}
 				}
+			}
+		}
+		scope:recipient = {
 			create_political_movement = { type = movement_emergency_authoritarian }
-			}
-			create_character = {
-				is_agitator = yes
-				ideology = ideology_emergency_authoritarian
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					ideology = ideology_emergency_authoritarian
+				}
 			}
 		}
 		scope:recipient = {
@@ -1711,21 +1761,27 @@ gm_actions.84 = {
 	}
 	
 	option = {
-		name = ideology_apocaliptic_fundamentalist
-		scope:recipient = {
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_apocaliptic_fundamentalist
-						}
+		name = movement_apocaliptic_fundamentalist
+		trigger = {
+			scope:recipient = {
+				has_modifier = winter_of_the_world
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_apocaliptic_fundamentalist
 					}
 				}
+			}
+		}
+		scope:recipient = {
 			create_political_movement = { type = movement_apocaliptic_fundamentalist }
-			}
-			create_character = {
-				is_agitator = yes
-				ideology = ideology_apocaliptic_fundamentalist
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					ideology = ideology_emergency_authoritarian
+				}
 			}
 		}
 		scope:recipient = {
@@ -1735,21 +1791,27 @@ gm_actions.84 = {
 	}
 	
 	option = {
-		name = ideology_disaster_radical
-		scope:recipient = {
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_disaster_radical
-						}
+		name = movement_disaster_radical
+		trigger = {
+			scope:recipient = {
+				has_modifier = winter_of_the_world
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_disaster_radical
 					}
 				}
+			}
+		}
+		scope:recipient = {
 			create_political_movement = { type = movement_disaster_radical }
-			}
-			create_character = {
-				is_agitator = yes
-				ideology = ideology_disaster_radical
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					ideology = ideology_disaster_radical
+				}
 			}
 		}
 		scope:recipient = {
@@ -1759,21 +1821,567 @@ gm_actions.84 = {
 	}
 	
 	option = {
-		name = ideology_katla_schizo
+		name = movement_katla_schizo
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_katla_schizo
+					}
+				}
+			}
+		}
 		scope:recipient = {
+			create_political_movement = { type = movement_katla_schizo }
 			if = {
 				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_katla_schizo
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					ideology = ideology_katla_schizo
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_anti_slavery
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_law = law_type:law_slavery_banned
+					any_political_movement = {
+						is_political_movement_type = movement_anti_slavery
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_anti_slavery }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_abolitionist
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_pro_slavery
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_law = law_type:law_slavery_banned
+					any_political_movement = {
+						is_political_movement_type = movement_pro_slavery
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_pro_slavery }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_landowners
+					ideology = ideology_slaver
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_royalist_absolutist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					country_has_voting_franchise = yes
+					has_variable = monarchy_stamped_out_var
+					any_political_movement = {
+						is_political_movement_type = movement_royalist_absolutist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_royalist_absolutist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_landowners
+					ideology = ideology_royalist
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_royalist_constitutional
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_variable = monarchy_stamped_out_var
+					any_political_movement = {
+						is_political_movement_type = movement_royalist_constitutional
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_royalist_constitutional }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				if = {
+					limit = {
+						has_technology_researched = feminism
+					}
+					create_character = {
+						is_agitator = yes
+						interest_group = ig_landowners
+						ideology = ideology_humanitarian_royalist
+					}
+				}
+				else = {	
+					create_character = {
+						is_agitator = yes
+						interest_group = ig_landowners
+						ideology = ideology_royalist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_labor
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_labor
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_labor }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_populism
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_socialist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_interest_group = {
+						OR = {
+							has_variable = chose_anarchism
+							has_variable = chose_communism
+							has_variable = chose_vanguardism
+						}
+					}
+					any_political_movement = {
+						is_political_movement_type = movement_socialist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_socialist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_communalism
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_anarchist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_anarchist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_anarchist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_anarchist
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_communist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_communist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_communist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_communalism
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_fascist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_fascist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_fascist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_petty_bourgeoisie
+					ideology = ideology_fascist
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_corporatist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_corporatist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_corporatist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_petty_bourgeoisie
+					ideology = ideology_corporatist_leader
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_liberal
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_liberal
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_liberal }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_liberal_leader
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_radical
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_radical
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_radical }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_radical
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_nihilist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					OR = {
+						has_technology_researched = anarchism
+						has_technology_researched = socialism
+					}
+					any_political_movement = {
+						is_political_movement_type = movement_nihilist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_nihilist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_atheist
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_positivist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_positivist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_positivist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_armed_forces
+					ideology = ideology_positivist
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_land_reform
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_land_reform
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_land_reform }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_rural_folk
+					ideology = ideology_land_reformer
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_feminist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_feminist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_feminist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_feminist
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	
+	
+	option = {
+		name = movement_reactionary
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_reactionary
+							is_political_movement_type = movement_legitimist
 						}
 					}
 				}
-			create_political_movement = { type = movement_katla_schizo }
 			}
-			create_character = {
-				is_agitator = yes
-				ideology = ideology_katla_schizo
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_reactionary }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_petty_bourgeoisie
+					ideology = ideology_traditionalist
+				}
 			}
 		}
 		scope:recipient = {
@@ -1783,13 +2391,43 @@ gm_actions.84 = {
 	}
 	
 	option = {
-		name = gm_actions.1.a
+		name = movement_modernizer
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					AND = {
+						has_law = law_type:law_protectionism
+						OR = {
+							has_law = law_type:law_interventionism
+							has_law = law_type:law_command_economy
+							has_law = law_type:law_laissez_faire
+						}
+						has_law = law_type:law_compulsory_primary_school
+					}
+					any_political_movement = {
+						is_political_movement_type = movement_modernizer
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_modernizer }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_reformer
+				}
+			}
+		}
 		scope:recipient = {
 			remove_variable = actionee
 		}
 		remove_global_variable = GM_taking_action
 	}
-	
 }
 
 gm_actions.85 = {
