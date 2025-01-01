@@ -415,3 +415,7 @@ started_player = {
 GM_target = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 }
+
+GM_germany = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
