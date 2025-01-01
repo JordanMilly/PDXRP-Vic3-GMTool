@@ -1756,6 +1756,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -1786,6 +1787,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -1816,6 +1818,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -1876,6 +1879,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -1907,6 +1911,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -1939,6 +1944,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -1982,6 +1988,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2012,6 +2019,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2049,6 +2057,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2079,6 +2088,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2109,6 +2119,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2139,6 +2150,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2169,6 +2181,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2199,6 +2212,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2229,6 +2243,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2263,6 +2278,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2293,6 +2309,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2323,6 +2340,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2353,6 +2371,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	
@@ -2386,6 +2405,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -2425,6 +2445,7 @@ gm_actions.84 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_variable = agitator
 		}
 		remove_global_variable = GM_taking_action
 	}
