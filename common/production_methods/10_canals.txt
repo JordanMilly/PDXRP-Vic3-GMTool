@@ -6,6 +6,9 @@
 			country_prestige_add = 100
 			country_minting_add = 2000
 		}
+		level_scaled = {
+			country_max_companies_add = 1
+		}
 	}
 
 	state_modifiers = {
