@@ -14,6 +14,7 @@
 			NOT = { has_variable = sa_migration_cooldown }
 		}
 		average_sol >= 10
+		is_subject = no
 		any_country = {
 			custom_tooltip = {
 				text = is_in_europe_tt
@@ -64,6 +65,9 @@
 				}
 				OR = {
 					region = sr:region_pacific_coast
+					region = sr:region_new_england
+					region = sr:region_the_midwest
+					region = sr:region_dixie
 					region = sr:region_great_plains
 				}
 			}
