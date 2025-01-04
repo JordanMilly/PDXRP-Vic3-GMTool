@@ -793,7 +793,10 @@ movement_katla_schizo = {
 	}
 	
 	disband_trigger = {
-		always = no
+		NOT = { 
+			has_modifier = winter_of_the_world 
+			this = c:TUR
+		}
 	}
 	
 	on_disbanded = {
