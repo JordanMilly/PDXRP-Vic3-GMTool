@@ -1307,6 +1307,9 @@
  UHR:0 "United Hispanic Republics"
  UHR_ADJ:0 "Hispanic"
 
+ BUD:0 "Buddhadesa"
+ BUD_ADJ:0 "Buddhist"
+
   # Dynamic countries
  dyn_c_united_sovereign_archduchy:0 "United Sovereign Archduchy"
  dyn_c_united_sovereign_archduchy_adj:0 "Archducal American"

@@ -1922,6 +1922,17 @@ SIA = {
 	capital = STATE_BANGKOK
 }
 
+BUD = {
+	color = { 250 164 29 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { thai burmese lao khmer }
+	capital = STATE_BANGKOK
+}
+
 CMI = {
 	color = { 17  16  203 }
 	
