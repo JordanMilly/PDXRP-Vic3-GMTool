@@ -438,3 +438,64 @@ boost_utilitarian_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	political_movement_pop_attraction_mult = 0.20
 }
+
+local_school_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_add = 0.05
+}
+
+evangelization_of_korea = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_conversion_mult = 0.7
+}
+
+french_university_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_university_throughput_add = 0.10
+}
+
+anti_french_opposition_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = -0.15
+	interest_group_ig_trade_unions_pol_str_mult = 0.10
+}
+
+rising_liverty_desire_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_liberty_desire_add = 0.10
+}
+
+happy_monks_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_devout_approval_add = 1
+}
+
+local_university_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_university_throughput_add = 0.05
+}
+
+unhappy_pb_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = -10
+}
+
+trade_union_agitation_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_trade_unions_pol_str_mult = 0.20
+	state_pop_support_movement_labor_mult = 1
+	state_radicals_from_political_movements_mult = 0.20
+}
+
+fascist_faction_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = -0.25
+	interest_group_ig_armed_forces_pol_str_mult = 0.25
+}
+
+evacuation_effort_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_convoys_capacity_mult = -0.20
+	country_bureaucracy_mult = -0.10
+	country_minting_add = -5000
+}
