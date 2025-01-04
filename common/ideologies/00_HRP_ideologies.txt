@@ -61,6 +61,13 @@
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = strongly_disapprove
 	}
+
+	lawgroup_health_system = {
+		law_private_health_insurance = neutral
+		law_no_health_system = disapprove
+		law_charitable_health_system = approve
+		law_public_health_insurance = strongly_approve
+	}
 	
 	country_trigger = {
 		has_technology_researched = socialism
@@ -267,6 +274,13 @@ ideology_communalism = {
 		law_legacy_slavery = disapprove
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = strongly_disapprove
+	}
+
+	lawgroup_health_system = {
+		law_private_health_insurance = strongly_approve
+		law_no_health_system = strongly_approve
+		law_charitable_health_system = approve
+		law_public_health_insurance = approve
 	}
 	
 	country_trigger = {
