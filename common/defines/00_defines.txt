@@ -539,14 +539,14 @@ NEconomy = {
 	REINVESTMENT_SUBSISTENCE_FRACTION_REDUCTION = 0.5	# Reinvestment from pops in ownership buildings is multiplied by ( 1 - this * the share of levels owned that are subsistence buildings )
 
 	COMPANY_OVER_LIMIT_BONUS_PENALTY_MIN = 0.33			# If the number of companies in the country exceeds the limit, all company bonuses get penalty. The penalty is scaled proportionally to the limit (exceeding the limit by 100% reduces bonuses by 100%) and the minimum value is this
-	COMPANY_PRODUCTIVITY_RATIO_HIGH_THRESHOLD = 1.25	# Companies whose productivity exceeds this factor of the global average will be considered high-productivity companies
+	COMPANY_PRODUCTIVITY_RATIO_HIGH_THRESHOLD = 1.1		# Companies whose productivity exceeds this factor of the global average will be considered high-productivity companies
 	COMPANY_PRODUCTIVITY_RATIO_LOW_THRESHOLD = 0.75		# Companies whose productivity is below this factor of the global average will be considered low-productivity companies
 	COMPANY_PRODUCTIVITY_ABSOLUTE_HIGH_THRESHOLD = 25	# Companies whose productivity exceeds this amount will ALWAYS be considered high-productivity companies
 	COMPANY_PRODUCTIVITY_ABSOLUTE_LOW_THRESHOLD = 5		# Companies whose productivity is below this amount will ALWAYS be considered low-productivity companies
 	COMPANY_PROSPERITY_MAX = 200						# Company prosperity cannot be higher than this
 	COMPANY_PROSPERITY_BONUS_THRESHOLD = 100			# At this amount of prosperity, a company will start providing its prosperity bonus modifier
 	COMPANY_PROSPERITY_WEEKLY_INCREASE = 5				# High-productivity companies have their prosperity increase by this amount per week
-	COMPANY_PROSPERITY_WEEKLY_DECREASE = 5				# Low-productivity companies have their prosperity increase by this amount per week
+	COMPANY_PROSPERITY_WEEKLY_DECREASE = 1				# Low-productivity companies have their prosperity increase by this amount per week
 	NATIONALIZATION_PER_LEVEL_COST = 500				# How much it costs to nationalize one level of a building per construction point
 	PRIVATIZATION_PER_LEVEL_COST = 250					# How much it costs to privatize one level of a building per construction point
 	MIN_FAKE_CONSTRUCTION_COST = 100					# Min construction cost for the matters of nationalization and privatization
