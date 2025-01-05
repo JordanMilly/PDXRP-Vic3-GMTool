@@ -1251,7 +1251,7 @@ boer= {
 alemannic= {
 	color= hsv{ 0.0 0.47 0.70 }
 	religion = protestant
-	traits = { german_speaking swiss european_heritage }
+	traits = { german_speaking swiss francophone european_heritage }
 	obsessions = {
 		gold
 	}
@@ -14673,7 +14673,7 @@ uruguayan= {
 paraguayan= {
 	color=rgb{ 140 192 63 }
 	religion = catholic
-	traits = { hispanophone european_heritage }
+	traits = { hispanophone european_heritage south_american_group }
 	obsessions = {
 		tobacco
 	}
