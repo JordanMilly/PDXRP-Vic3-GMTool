@@ -4245,3 +4245,25 @@ BGL = {
 		}
 	}
 }
+
+UOM = {
+	dynamic_country_name = {
+		name = UOM_BRIT
+		adjective = UOM_BRIT_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				any_overlord_or_above = {
+					OR = {
+						country_has_primary_culture = cu:british
+						country_has_primary_culture = cu:scottish
+					}
+				}
+			}
+		}
+	}
+}

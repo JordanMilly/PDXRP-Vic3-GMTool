@@ -9713,6 +9713,23 @@ UOM = { # Michigam
 		coa = UOM_state_of_michigan
 		priority = 5
 	}
+	flag_definition = {
+		coa = UOM_cambria
+		subject_canton = UOM_cambria
+		allow_overlord_canton = no
+		priority = 20
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				any_overlord_or_above = {
+					OR = {
+						country_has_primary_culture = cu:british
+						country_has_primary_culture = cu:scottish
+					}
+				}
+			}
+		}
+	}
 }
 
 URU = { # Uruguay

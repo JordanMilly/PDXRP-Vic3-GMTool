@@ -1310,6 +1310,9 @@
  BUD:0 "Buddhadesa"
  BUD_ADJ:0 "Buddhist"
 
+ UOM_BRIT:0 "New Cambria"
+ UOM_BRIT_ADJ:0 "New Cambrian"
+
   # Dynamic countries
  dyn_c_united_sovereign_archduchy:0 "United Sovereign Archduchy"
  dyn_c_united_sovereign_archduchy_adj:0 "Archducal American"

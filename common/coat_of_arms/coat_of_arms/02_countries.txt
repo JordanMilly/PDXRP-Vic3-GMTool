@@ -22696,6 +22696,16 @@ UOM_state_of_michigan = {
 	}	
 }
 
+UOM_cambria = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	
+	textured_emblem = {
+		texture = "UOM_cambria.dss"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
 NCR = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
