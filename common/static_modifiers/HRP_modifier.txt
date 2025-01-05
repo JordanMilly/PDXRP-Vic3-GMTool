@@ -583,3 +583,10 @@ increase_support_for_utilitarian_ig__modifier = {
 	interest_group_ig_trade_unions_pop_attraction_mult = 0.10
 	interest_group_ig_devout_pop_attraction_mult = 0.10
 }
+
+evolution_of_greeks_politics_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_landowners_pol_str_mult = -0.10
+	interest_group_ig_rural_folk_pol_str_mult = -0.10
+	interest_group_ig_armed_forces_pol_str_mult = 0.10
+}
