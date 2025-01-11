@@ -4255,8 +4255,10 @@ UOM = {
 		priority = 1
 		
 		trigger = {
+			exists = c:UOM
 			exists = scope:actor
 			scope:actor ?= {
+				this = c:UOM
 				any_overlord_or_above = {
 					OR = {
 						country_has_primary_culture = cu:british
