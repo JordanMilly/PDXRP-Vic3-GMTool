@@ -4251,8 +4251,8 @@ UOM = {
 		name = UOM_BRIT
 		adjective = UOM_BRIT_ADJ
 		
-		is_main_tag_only = yes
-		priority = 10
+		is_main_tag_only = no
+		priority = 1
 		
 		trigger = {
 			exists = scope:actor
@@ -4261,6 +4261,8 @@ UOM = {
 					OR = {
 						country_has_primary_culture = cu:british
 						country_has_primary_culture = cu:scottish
+						country_has_primary_culture = cu:anglo_canadian
+						country_has_primary_culture = cu:franco_canadian
 					}
 				}
 			}
