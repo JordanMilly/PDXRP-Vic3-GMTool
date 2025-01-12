@@ -544,7 +544,7 @@ unhappy_church_mod = {
 
 increasing_immigration_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	country_mass_migration_attraction_mult = 0.15
+	state_migration_pull_mult = 0.15
 }
 
 crushed_coup_mod = {
@@ -588,4 +588,133 @@ evolution_of_greeks_politics_modifier = {
 	interest_group_ig_landowners_pol_str_mult = -0.10
 	interest_group_ig_rural_folk_pol_str_mult = -0.10
 	interest_group_ig_armed_forces_pol_str_mult = 0.10
+}
+
+assimilating_guarani_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_assimilation_mult = 0.2
+}
+
+toledo_university_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_university_throughput_add = 0.05
+	country_prestige_add = 10
+}
+
+international_student_program_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_minting_add = -2000
+	state_education_access_add = 0.01
+	state_conversion_mult = 0.03
+}
+
+luzon_university_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_university_throughput_add = 0.03
+}
+
+devout_influence_phil_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_devout_approval_add = 1
+	interest_group_ig_devout_pol_str_mult = 0.10
+	state_conversion_mult = 0.10
+	country_prestige_add = 15
+}
+
+increasing_immigration_jap_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_migration_pull_mult = 0.30
+}
+
+growth_of_railway_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_railway_throughput_add = 0.05
+}
+
+no_more_caudillo_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_armed_forces_approval_add = -3
+}
+
+increasing_immigration_bra_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_migration_pull_mult = 0.20
+}
+
+no_more_caudillo_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_armed_forces_approval_add = -3
+}
+
+unhappy_aristocrats_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_landowners_approval_add = -3
+}
+
+happy_missionary_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_devout_approval_add = 1
+}
+
+saving_anhui_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 2000
+}
+
+confucian_influence_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_devout_pol_str_mult = -0.10
+	interest_group_ig_landowners_pol_str_mult = 0.10
+	interest_group_ig_intelligentsia_pol_str_mult = 0.10
+}
+
+diamound_mining_nap_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	state_standard_of_living_add = -2
+	state_dependent_wage_mult = 0.10
+}
+
+china_legitimacy_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_legitimacy_base_add = -5
+}
+
+population_exchange_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_convoys_capacity_mult = -0.10
+	country_bureaucracy_mult = -0.10
+}
+
+supremacy_of_the_church_gre_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_devout_pol_str_mult = 0.10
+}
+
+familly_program_gre_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_institution_cost_institution_health_system_mult = 0.50
+	country_institution_cost_institution_schools_mult = 0.50
+	country_authority_mult = -0.10
+	state_birth_rate_mult = 0.18
+	interest_group_ig_devout_pop_attraction_mult = 0.08
+}
+
+promotion_of_christian_union_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_devout_pol_str_mult = -0.20
+	interest_group_ig_devout_pop_attraction_mult = -0.15
+	country_authority_add = -150
+	interest_group_ig_trade_unions_pol_str_mult = 0.88
+	interest_group_ig_trade_unions_pop_attraction_mult = 0.14
+}
+
+sima_shipbuilding_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_military_shipyards_throughput_add = 0.10
+	building_shipyards_throughput_add = 0.10
+}
+
+increasing_immigration_mag_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_migration_pull_mult = 0.08
 }

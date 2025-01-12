@@ -286,6 +286,7 @@ movement_orleanist = {
 				has_variable = one_true_french_dynasty
 			}
 		}
+		game_date < 1872.06.18
 	}
 	creation_weight = {
 		value = 100
@@ -304,6 +305,7 @@ movement_orleanist = {
 				}
 				has_variable = one_true_french_dynasty
 			}
+			game_date > 1872.06.18
 		}
 	}
 	
@@ -519,6 +521,7 @@ movement_bonapartist = {
 				has_variable = one_true_french_dynasty
 			}
 		}
+		game_date < 1872.06.18
 	}
 	creation_weight = {
 		value = 100
@@ -537,6 +540,7 @@ movement_bonapartist = {
 				}
 				has_variable = one_true_french_dynasty
 			}
+			game_date > 1872.06.18
 		}
 	}
 	
@@ -766,6 +770,7 @@ movement_legitimist = {
 				has_variable = one_true_french_dynasty
 			}
 		}
+		game_date < 1872.06.18
 	}
 	creation_weight = {
 		value = 100
@@ -784,6 +789,7 @@ movement_legitimist = {
 				}
 				has_variable = one_true_french_dynasty
 			}
+			game_date > 1872.06.18
 		}
 	}
 	
