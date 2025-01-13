@@ -55,7 +55,7 @@
 		law_collectivized_agriculture = approve
 	}
 	
-		lawgroup_slavery = {
+	lawgroup_slavery = {
 		law_slavery_banned = strongly_approve
 		law_legacy_slavery = disapprove
 		law_debt_slavery = strongly_disapprove
@@ -277,9 +277,9 @@ ideology_communalism = {
 	}
 
 	lawgroup_health_system = {
-		law_private_health_insurance = strongly_approve
-		law_no_health_system = strongly_approve
-		law_charitable_health_system = approve
+		law_private_health_insurance = strongly_disapprove
+		law_no_health_system = disapprove
+		law_charitable_health_system = strongly_approve
 		law_public_health_insurance = approve
 	}
 	
@@ -288,10 +288,7 @@ ideology_communalism = {
 	}
 
 	interest_group_leader_trigger = {
-		OR = {
-			ideology_social_democrat_valid_trigger = yes
-			ideology_communist_valid_trigger = yes
-		}
+		ideology_social_democrat_valid_trigger = yes
 	}
 	
 	non_interest_group_leader_trigger = {
@@ -398,6 +395,17 @@ ideology_communalism = {
 				}
 			}
 			multiply = 0.1
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_industrialists
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_landowners
+				}
+			}
+			multiply = 0.01
 		}
 	}
 	
