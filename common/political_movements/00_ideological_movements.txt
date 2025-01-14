@@ -2669,7 +2669,7 @@ movement_fascist = {
 				add = {
 					value = 5 # Add a base value for having claims at all
 					add = number_of_claims
-					multiply = 1
+					multiply = 5
 					max = 20
 					desc = "NUMBER_OF_CLAIMS"
 				}
