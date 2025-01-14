@@ -2075,7 +2075,7 @@ gm_actions.84 = {
 				create_character = {
 					is_agitator = yes
 					interest_group = ig_trade_unions
-					ideology = ideology_communalism
+					ideology = ideology_communist
 				}
 			}
 		}
@@ -2403,6 +2403,37 @@ gm_actions.84 = {
 					is_agitator = yes
 					interest_group = ig_intelligentsia
 					ideology = ideology_reformer
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+			remove_variable = agitator
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_communalist
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_communalist
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_political_movement = { type = movement_communalist }
+			if = {
+				limit = {
+					has_variable = agitator
+				}
+				create_character = {
+					is_agitator = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_communalism
 				}
 			}
 		}
