@@ -270,7 +270,6 @@ communism.2 = {
 	}
 	option = { # communism
 		name = communism.2.b
-		default_option = yes
 		trigger = {
 			OR = {
 				NOT = { exists = c:RUS }
@@ -490,6 +489,82 @@ communism.2 = {
 		else = {
 			add_journal_entry = {
 				type = je_anarchy
+			}
+		}
+		add_journal_entry = {
+			type = je_5_year_plan
+		}
+	}
+	option = { # coomunalism
+		name = communism.2.e
+		default_option = yes
+		ig:ig_trade_unions = {
+			set_variable = chose_communalism
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_communalist
+					}
+				}
+			}
+			create_political_movement = { type = movement_communalist }
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_communalist
+				}
+			}
+		}
+		custom_tooltip = chose_coomunalism.tt
+		if = {
+			limit = {
+				scope:union_leader = {
+					NOT = { has_ideology = ideology:ideology_communalism }
+				}
+			}
+			scope:union_leader = {
+				set_ideology = ideology:ideology_communalism
+			}
+		}
+		add_modifier = {
+			name = path_to_communism
+			months = normal_modifier_time
+		}
+		if = {
+			limit = {
+				root.bureaucracy > 0
+				approaching_bureaucracy_shortage = no
+				has_law = law_type:law_religious_schools
+				institution_investment_level = {
+					institution = institution_schools
+					value = 5
+				}
+				has_law = law_type:law_charitable_health_system
+				institution_investment_level = {
+					institution = institution_health_system
+					value = 4
+				}
+				has_law = law_type:law_old_age_pension
+				institution_investment_level = {
+					institution = institution_social_security
+					value = 5
+				}
+				has_law = law_type:law_worker_protections
+				institution_investment_level = {
+					institution = institution_workplace_safety
+					value = 5
+				}
+			}
+			trigger_event = {
+				id = communism.6
+			}
+		}
+		else = {
+			add_journal_entry = {
+				type = je_communist_welfare
 			}
 		}
 		add_journal_entry = {
