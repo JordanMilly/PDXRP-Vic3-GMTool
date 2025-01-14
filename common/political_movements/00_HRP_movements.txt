@@ -1134,7 +1134,7 @@ movement_communalist = {
 					is_pop_type = machinists
 				}
 				add = {
-					value = 25
+					value = 20
 					desc = "POP_MACHINISTS"
 				}
 			}
@@ -1152,7 +1152,7 @@ movement_communalist = {
 					is_pop_type = peasants 
 				}
 				add = {
-					value = 5
+					value = 10
 					desc = "POP_PEASANTS"
 				}
 			}
@@ -1174,6 +1174,32 @@ movement_communalist = {
 				multiply = 0.05
 				add = 1
 				desc = "INSTITUTION_FUNDING_LEVEL_schools"
+			}
+		}
+		if = {
+			limit = { 
+				owner = {
+					ig:ig_devout = {
+						is_powerful = yes
+					} 
+				}
+			}
+			add = {
+				value = 2
+				desc = "RELIGIOUS_SOCIETY"
+			}
+		}
+		if = {
+			limit = { 
+				owner = {
+					ig:ig_devout = {
+						is_powerful = yes
+					} 
+				}
+			}
+			multiply = {
+				value = 1.2
+				desc = "RELIGIOUS_SOCIETY"
 			}
 		}
 		if = {

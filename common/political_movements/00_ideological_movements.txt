@@ -2251,7 +2251,6 @@ movement_communist = {
 		OR = {
 			has_ideology = ideology:ideology_vanguardist
 			has_ideology = ideology:ideology_communist
-			has_ideology = ideology:ideology_communalism
 			AND = {
 				is_interest_group_type = ig_trade_unions
 				has_ideology = ideology:ideology_humanitarian
@@ -2265,7 +2264,6 @@ movement_communist = {
 				OR = {
 					has_ideology = ideology:ideology_communist
 					has_ideology = ideology:ideology_vanguardist
-					has_ideology = ideology:ideology_communalism
 				}
 			}
 			multiply = {
@@ -2671,8 +2669,8 @@ movement_fascist = {
 				add = {
 					value = 5 # Add a base value for having claims at all
 					add = number_of_claims
-					multiply = 5
-					max = 50
+					multiply = 1
+					max = 20
 					desc = "NUMBER_OF_CLAIMS"
 				}
 			}
