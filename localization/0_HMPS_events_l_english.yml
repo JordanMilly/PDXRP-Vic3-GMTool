@@ -288,7 +288,7 @@
  gm_actions.85.c:0 "Add player modifier to selected country"
  gm_actions.85.d:0 "Remove player modifier from selected country"
  
- gm_actions.90.t:0 "Add or Remove a Truce"
+ gm_actions.90.a:0 "Truce"
  gm_actions.90.a:0 "Cancel"
  gm_actions.90.b:0 "Set as the target"
  gm_actions.90.c:0 "Clean all target"
@@ -304,8 +304,7 @@
  gm_actions.100.f:0 "Socialist Unrest"
  gm_actions.100.g:0 "Flu Epidemic"
  gm_actions.100.h:0 "Katla Actions"
- gm_actions.100.i1:0 "Add German Unification Authorized"
- gm_actions.100.i2:0 "Remove German Unification Authorized"
+ gm_actions.100.j:0 "Start plague"
  
  gm_actions.101.t:0 "Change SNEED Modifier"
  gm_actions.101.a:0 "Cancel"
