@@ -216,6 +216,15 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
+	#Balance modifier
+	option = {
+		name = gm_actions.95.t
+		trigger_event = {
+			id = gm_actions.95
+			days = 0
+			popup = yes
+		}
+	}
 
 	
 }
@@ -2618,6 +2627,109 @@ gm_actions.90 = {
 			remove_modifier = GM_target
 		}
 		remove_global_variable = GM_taking_action
+	}
+}
+
+
+
+gm_actions.95 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.95.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.100
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.95.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.95.b
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = GM_convoy_5
+			}
+		}
+	}
+	option = {
+		name = gm_actions.95.c
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = GM_convoy_10
+			}
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.95.d
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = GM_convoy_25
+			}
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.95.e
+		trigger = {
+			scope:recipient = {
+				OR = {
+					has_modifier = GM_convoy_5
+					has_modifier = GM_convoy_10
+					has_modifier = GM_convoy_25
+				}
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			if = {
+				limit = {
+					has_modifier = GM_convoy_5
+				}
+				remove_modifier = GM_convoy_5
+			}
+			else_if = {
+				limit = {
+					has_modifier = GM_convoy_10
+				}
+				remove_modifier = GM_convoy_10
+			}
+			else_if = {
+				limit = {
+					has_modifier = GM_convoy_25
+				}
+				remove_modifier = GM_convoy_25
+			}
+			remove_variable = actionee
+		}
 	}
 }
 
