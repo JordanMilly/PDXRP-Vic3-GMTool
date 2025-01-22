@@ -419,3 +419,18 @@ GM_target = {
 GM_germany = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 }
+
+GM_convoy_5 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_convoy_contribution_to_market_owner_add = 0.05
+}
+
+GM_convoy_10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_convoy_contribution_to_market_owner_add = 0.10
+}
+
+GM_convoy_25 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_convoy_contribution_to_market_owner_add = 0.25
+}
