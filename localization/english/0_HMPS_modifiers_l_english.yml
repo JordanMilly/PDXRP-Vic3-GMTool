@@ -100,3 +100,7 @@
  gm_army_debuff:0 "Weakened Army"
 
  GM_target:0 "GM Target"
+ 
+ GM_convoy_5:0 "Increased Convoy Contribution to the Market"
+ GM_convoy_10:0 "Increased Convoy Contribution to the Market"
+ GM_convoy_25:0 "Increased Convoy Contribution to the Market"

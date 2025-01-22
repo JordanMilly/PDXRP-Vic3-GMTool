@@ -288,12 +288,19 @@
  gm_actions.85.c:0 "Add player modifier to selected country"
  gm_actions.85.d:0 "Remove player modifier from selected country"
  
- gm_actions.90.a:0 "Truce"
+ gm_actions.90.t:0 "Truce"
  gm_actions.90.a:0 "Cancel"
  gm_actions.90.b:0 "Set as the target"
  gm_actions.90.c:0 "Clean all target"
  gm_actions.90.d:0 "Add Truce"
  gm_actions.90.e:0 "Remove Truce"
+ 
+ gm_actions.95.t:0 "Convoy Contribution"
+ gm_actions.95.a:0 "Cancel"
+ gm_actions.95.b:0 "+5%"
+ gm_actions.95.c:0 "+10%"
+ gm_actions.95.d:0 "+25%"
+ gm_actions.95.e:0 "Remove Modifiers"
  
  gm_actions.100.t:0 "Special Event Menu"
  gm_actions.100.a:0 "Cancel"
@@ -304,6 +311,7 @@
  gm_actions.100.f:0 "Socialist Unrest"
  gm_actions.100.g:0 "Flu Epidemic"
  gm_actions.100.h:0 "Katla Actions"
+ gm_actions.100.j:0 "Start plague"
  
  gm_actions.101.t:0 "Change SNEED Modifier"
  gm_actions.101.a:0 "Cancel"
