@@ -421,6 +421,26 @@ religious_party = {
 				desc = "from_corporatism"
 			}
 		}
+		if = { # communalist will join if devous are powerful
+			limit = {
+				is_powerful = no
+				owner = {
+					ig:ig_devout = {
+						is_powerful = yes
+						leader = {
+							has_ideology = ideology:ideology_communalism
+						}
+					}
+				}
+				leader = {
+					has_ideology = ideology:ideology_communalism
+				}
+			}
+			add = {
+				value = 2
+				desc = "from_powerful_devout_other"
+			}
+		}
 		if = { # patriarchs more likely to join conservatives with women's suffrage
 			limit = {
 				has_ideology = ideology:ideology_patriarchal
@@ -457,6 +477,7 @@ religious_party = {
 		else_if = {
 			limit = {
 				scope:number = 2
+				c:GRE ?= this
 			}
 			multiply = {
 				value = 0.5
@@ -466,6 +487,7 @@ religious_party = {
 		else_if = {
 			limit = {
 				scope:number = 3
+				c:GRE ?= this
 			}
 			multiply = {
 				value = 0.25
@@ -475,6 +497,7 @@ religious_party = {
 		else_if = {
 			limit = {
 				scope:number > 3
+				c:GRE ?= this
 			}
 			multiply = {
 				value = 0.1
