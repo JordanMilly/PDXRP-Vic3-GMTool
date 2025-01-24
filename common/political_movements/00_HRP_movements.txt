@@ -1084,18 +1084,39 @@ movement_communalist = {
 	pop_support_weight = {	
 		add = {
 			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
-			value = 0.5
+			value = 0.25
 			subtract = state.state_urbanization_rate
-			multiply = 10
+			multiply = 5
+		}
+		if = {
+			limit = { 
+				owner = {
+					has_law = law_type:law_charitable_health_system 
+				}
+			}
+			add = {
+				value = "owner.institution_investment_level(institution_health_system)"
+				multiply = 0.6
+				desc = "INSTITUTION_FUNDING_LEVEL_health_system"
+			}
+		}
+		if = {
+			limit = { 
+				owner = {
+					ig:ig_devout = {
+						is_powerful = yes
+					} 
+				}
+			}
+			add = {
+				value = 5
+				desc = "RELIGIOUS_SOCIETY"
+			}
 		}
 	
 		if = {
 			limit = {
 				strata = middle
-			}
-			multiply = {
-				value = 0.10
-				desc = "MIDDLE_NO_ICON"
 			}
 			if = {
 				limit = {
@@ -1184,19 +1205,6 @@ movement_communalist = {
 					} 
 				}
 			}
-			add = {
-				value = 2
-				desc = "RELIGIOUS_SOCIETY"
-			}
-		}
-		if = {
-			limit = { 
-				owner = {
-					ig:ig_devout = {
-						is_powerful = yes
-					} 
-				}
-			}
 			multiply = {
 				value = 1.2
 				desc = "RELIGIOUS_SOCIETY"
@@ -1236,6 +1244,7 @@ movement_communalist = {
 				desc = "IS_ABOVE_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
+				multiply = 0.5
 			}
 		}
 
