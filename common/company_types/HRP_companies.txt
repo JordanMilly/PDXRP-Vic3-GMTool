@@ -24,7 +24,11 @@ company_aldi = {
 	
 	possible = {
 		any_scope_state = {
-			state_region = s:STATE_BRANDENBURG
+			OR = {
+				state_region = s:STATE_BRANDENBURG
+				state_region = s:STATE_AUSTRIA
+				state_region = s:STATE_BAVARIA
+			}
 			is_incorporated = yes
 		}
 	}
