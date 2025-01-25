@@ -438,18 +438,32 @@ company_hbc = {
 	
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_MANITOBA
+			OR = {
+				any_scope_state = {
+					state_region = s:STATE_MANITOBA
+				}
+				any_scope_state = {
+					state_region = s:STATE_MICHIGAN
+				}
 			}
 		}
-	}		
+	}
 	
 	possible = {
-		any_scope_state = {
-			state_region = s:STATE_MANITOBA
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_food_industry
+		OR = {
+			any_scope_state = {
+				state_region = s:STATE_MANITOBA
+				is_incorporated = yes
+				any_scope_building = {
+					is_building_type = building_food_industry
+				}
+			}
+			any_scope_state = {
+				state_region = s:STATE_MICHIGAN
+				is_incorporated = yes
+				any_scope_building = {
+					is_building_type = building_food_industry
+				}
 			}
 		}
 	}
