@@ -1077,7 +1077,6 @@ movement_communalist = {
 		movement_support_machinists
 		movement_support_peasants
 		movement_support_rural
-		movement_support_soldiers_conscripts
 		movement_support_clergymen
 	}
 	
@@ -1103,14 +1102,17 @@ movement_communalist = {
 		if = {
 			limit = { 
 				owner = {
-					ig:ig_devout = {
+					any_interest_group = {
 						is_powerful = yes
+						leader = {
+							has_ideology = ideology:ideology_communalism
+						}
 					} 
 				}
 			}
 			add = {
 				value = 5
-				desc = "RELIGIOUS_SOCIETY"
+				desc = "COMMUNALIST_IG"
 			}
 		}
 	
@@ -1208,6 +1210,22 @@ movement_communalist = {
 			multiply = {
 				value = 1.2
 				desc = "RELIGIOUS_SOCIETY"
+			}
+		}
+		if = {
+			limit = { 
+				owner = {
+					ig:ig_trade_unions = {
+						is_powerful = yes
+						leader = {
+							has_ideology = ideology:ideology_communalism
+						}
+					} 
+				}
+			}
+			multiply = {
+				value = 1.2
+				desc = "RELIGIOUS_UNION"
 			}
 		}
 		if = {
