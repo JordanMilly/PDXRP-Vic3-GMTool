@@ -1314,6 +1314,8 @@
  UOM_BRIT_ADJ:0 "New Cambrian"
 
   # Dynamic countries
+ dyn_c_piedmont:0 "Piedmont"
+ dyn_c_piedmont_adj:0 "Piedmontese"
  dyn_c_united_sovereign_archduchy:0 "United Sovereign Archduchy"
  dyn_c_united_sovereign_archduchy_adj:0 "Archducal American"
  dyn_c_united_senators:0 "United Senators of America"

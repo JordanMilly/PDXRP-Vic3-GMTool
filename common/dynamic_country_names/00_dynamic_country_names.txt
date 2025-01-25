@@ -44,6 +44,24 @@ DEFAULT = {
 			}			
 		}
 	}
+	dynamic_country_name = {
+		name = FSA
+		adjective = FSA_ADJ
+		
+		priority = 100
+		is_revolutionary = no
+		
+		trigger = {
+			exists = c:NEN
+			exists = scope:actor
+			scope:actor ?= {
+				this = c:NEN
+			}
+			NOT = {
+				exists = c:FSA
+			}
+		}
+	}
 	# San Marco
 	dynamic_country_name = {
 		name = rsm_revolt_name
@@ -2342,6 +2360,24 @@ SEQ = { # Indian Territory
 		
 		trigger = {
 			coa_def_independent_trigger = yes
+		}
+	}
+}
+
+SAR = { # Sardinia-Piedmont
+	dynamic_country_name = {
+		name = dyn_c_piedmont
+		adjective = dyn_c_piedmont_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				owns_entire_state_region = STATE_PIEDMONT
+				NOT = { owns_entire_state_region = STATE_SARDINIA }
+			}
 		}
 	}
 }
