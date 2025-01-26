@@ -725,3 +725,75 @@ increased_influence_of_the_industrialist_saf_mod = {
 	interest_group_ig_landowners_pol_str_mult = -0.20
 	interest_group_ig_industrialists_pol_str_mult = 0.50
 }
+
+army_bonus_balt_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_army_offense_mult = 0.15
+}
+
+familly_subsidies_fsa_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_birth_rate_mult = 0.05
+}
+
+fahappy_id_sia_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_intelligentsia_approval_add = 2
+	interest_group_ig_rural_folk_approval_add = 2
+}
+
+japanese_healthcare_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_mortality_mult = -0.02
+}
+
+japanese_healthcare_reform_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = -1500
+}
+
+familly_subsidies_jap_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_minting_mult = -0.10
+	state_birth_rate_mult = 0.02
+}
+
+opposition_to_mass_circonscript_bel_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = -4
+	interest_group_ig_trade_unions_approval_add = -4
+	interest_group_ig_intelligentsia_approval_add = -4
+	interest_group_ig_industrialists_approval_add = -4
+	interest_group_ig_armed_forces_approval_add = -4
+}
+
+funding_fortress_belgium_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 10000
+}
+
+fortress_belgium_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_expenses_add = 10000
+	battle_defense_owned_province_mult = 0.25
+}
+
+electoral_participation_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_trade_unions_pol_str_mult = 0.50
+	interest_group_ig_armed_forces_pol_str_mult = 0.50
+}
+
+catholics_conversion_jap_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_devout_approval_add = -3
+	state_conversion_mult = -2
+}
+
+encouraged_conversion_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_institution_cost_institution_health_system_mult = 0.10
+	country_institution_cost_institution_police_mult = 0.20
+	state_conversion_mult = 0.40
+	country_mass_migration_attraction_mult = -0.10
+}
