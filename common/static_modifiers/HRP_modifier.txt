@@ -884,3 +884,8 @@ rosa_familly_program_spa_mod = {
 	state_birth_rate_mult = 0.20
 	country_bureaucracy_add = -500
 }
+
+unhappy_church_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	interest_group_ig_devout_approval_add = -1
+}
