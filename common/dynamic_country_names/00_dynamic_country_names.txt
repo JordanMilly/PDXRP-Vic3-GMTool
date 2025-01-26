@@ -44,6 +44,7 @@ DEFAULT = {
 			}			
 		}
 	}
+NEN = { # New England
 	dynamic_country_name = {
 		name = FSA
 		adjective = FSA_ADJ
@@ -62,6 +63,7 @@ DEFAULT = {
 			}
 		}
 	}
+}
 	# San Marco
 	dynamic_country_name = {
 		name = rsm_revolt_name
@@ -1595,6 +1597,44 @@ GER = { # Germany
 		
 		trigger = {
 			coa_def_nihilist_flag_trigger = yes
+		}
+	}
+	
+	dynamic_country_name = {
+		name = dyn_c_german_reich
+		adjective = dyn_c_german_reich_adj
+		
+		is_main_tag_only = yes
+		priority = 20
+		
+		trigger = {
+			exists = c:GER
+			exists = scope:actor
+			scope:actor ?= {
+				this = c:GER
+				has_law = law_type:law_single_party_state
+				has_law = law_type:law_ethnostate
+			}
+		}
+	}
+}
+
+NGF = { # NGF
+	dynamic_country_name = {
+		name = dyn_c_german_reich
+		adjective = dyn_c_german_reich_adj
+		
+		is_main_tag_only = yes
+		priority = 20
+		
+		trigger = {
+			exists = c:NGF
+			exists = scope:actor
+			scope:actor ?= {
+				this = c:NGF
+				has_law = law_type:law_single_party_state
+				has_law = law_type:law_ethnostate
+			}
 		}
 	}
 }

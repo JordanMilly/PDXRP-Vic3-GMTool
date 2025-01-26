@@ -15817,6 +15817,15 @@ NGF_fascist = {
 		instance = { scale = { 0.66 0.66 } position = { 0.5 0.5 } }
 	}	
 }
+NGF_reich = {
+	pattern  = "pattern_solid.tga"
+	color1 = "red"
+	
+	textured_emblem = {
+		texture = "NGF_fascist_monarchy.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
 
 NIC = { # Nicaragua
 	# design adopted 1838 

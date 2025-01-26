@@ -1387,6 +1387,8 @@
  dyn_c_hereroland:0 "Hereroland"
  dyn_c_hereroland_adj:0 "Hererolander"
  dyn_c_german_empire:0 "German Empire"
+ dyn_c_german_reich:0 "Deutsches Reich"
+ dyn_c_german_reich_adj:0 "Germanic"
  dyn_c_british_raj:0 "Raj"
  dyn_c_british_raj_adj:0 "Indian"
  dyn_c_east_india_company:0 "East India Company"

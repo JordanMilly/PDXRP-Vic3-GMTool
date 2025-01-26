@@ -3862,6 +3862,20 @@ GER = { # Germany
 		}
 	}
 	flag_definition = {
+		coa = NGF_reich
+		subject_canton = NGF_reich
+		priority = 1500
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+					c:GER ?= this
+					has_law = law_type:law_ethnostate
+					has_law = law_type:law_single_party_state
+			}
+		}
+	}
+	
+	flag_definition = {
 		coa = GER_fascist
 		subject_canton = GER_fascist
 		priority = 1250
@@ -7022,11 +7036,25 @@ NGF = { # North Germany
 	flag_definition = {
 		coa = NGF_fascist
 		subject_canton = NGF_fascist
-		priority = 1500
+		priority = 100
 		trigger = { 
 			coa_def_fascist_flag_trigger = yes
 		}
-	}	
+	}
+	flag_definition = {
+		coa = NGF_reich
+		subject_canton = NGF_reich
+		priority = 1500
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+					c:NGF ?= this
+					has_law = law_type:law_ethnostate
+					has_law = law_type:law_single_party_state
+			}
+		}
+	}
+			
 }
 
 NIC = { # Nicaragua
