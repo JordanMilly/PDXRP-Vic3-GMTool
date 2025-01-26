@@ -889,3 +889,14 @@ unhappy_church_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	interest_group_ig_devout_approval_add = -1
 }
+
+food_security_ngf_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_food_security_add = 0.05
+	country_prestige_add = 20
+}
+
+korean_acceptance_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_acceptance_culture_base_add = 10
+}
