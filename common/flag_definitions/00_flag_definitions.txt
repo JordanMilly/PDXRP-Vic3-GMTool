@@ -6923,7 +6923,22 @@ NEN = { # New England
 		trigger = { 
 			coa_def_republic_flag_trigger = yes
 		}
-	}	
+	}
+	flag_definition = {
+		coa = FSA
+		subject_canton = FSA
+		priority = 25
+		trigger = {
+			exists = c:NEN
+			exists = scope:actor
+			scope:actor ?= {
+				this = c:NEN
+			}
+			NOT = {
+				exists = c:FSA
+			}
+		}
+	}
 }
 
 NEP = { # Nepal
