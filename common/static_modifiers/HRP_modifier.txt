@@ -797,3 +797,25 @@ encouraged_conversion_mod = {
 	state_conversion_mult = 0.40
 	country_mass_migration_attraction_mult = -0.10
 }
+
+enabling_act_ger_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.50
+	interest_group_ig_trade_unions_pol_str_mult = -0.50
+}
+
+enabling_act_ger_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.50
+	interest_group_ig_trade_unions_pol_str_mult = -0.50
+}
+
+enabling_act_move_ger_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_pop_attraction_mult = 4
+}
+
+tirptiz_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.50
+}
