@@ -47,6 +47,23 @@ fennoscandia = {
 	}
 }
 
+ngf_reich = {
+	color = { 30 0 0 }
+	
+	possible = {
+		OR = {
+			exists = c:NGF
+			exists = c:GER
+		}
+		OR = {
+			THIS = c:NGF
+			THIS = c:GER
+		}
+		has_law = law_type:law_single_party_state
+		has_law = law_type:law_ethnostate
+	}
+}
+
 yellow_prussia = {
 	color = "yellow"
 
