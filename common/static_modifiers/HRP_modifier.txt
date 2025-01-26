@@ -651,11 +651,6 @@ unhappy_aristocrats_mod = {
 	interest_group_ig_landowners_approval_add = -3
 }
 
-happy_missionary_mod = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	interest_group_ig_devout_approval_add = 1
-}
-
 saving_anhui_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 2000
@@ -688,15 +683,6 @@ population_exchange_mod = {
 supremacy_of_the_church_gre_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	interest_group_ig_devout_pol_str_mult = 0.10
-}
-
-familly_program_gre_mod = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	country_institution_cost_institution_health_system_mult = 0.50
-	country_institution_cost_institution_schools_mult = 0.50
-	country_authority_mult = -0.10
-	state_birth_rate_mult = 0.18
-	interest_group_ig_devout_pop_attraction_mult = 0.08
 }
 
 promotion_of_christian_union_mod = {
@@ -818,4 +804,83 @@ enabling_act_move_ger_mod = {
 tirptiz_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.50
+}
+
+rosa_speech_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.11
+}
+
+familly_program_gre_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_institution_cost_institution_health_system_mult = 0.50
+	country_institution_cost_institution_schools_mult = 0.50
+	country_authority_mult = 0.15
+	state_birth_rate_mult = 0.21
+}
+
+communalist_success_gre_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	political_movement_pop_attraction_mult = 0.09
+}
+
+institutionalized_charity_gre_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_institution_cost_institution_health_system_mult = 0.80
+	country_institution_health_system_max_investment_add = 1
+	state_upper_strata_standard_of_living_add = -3
+	state_lower_strata_standard_of_living_add = 2
+}
+
+institutionalized_charity_implementation_time_gre_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	state_lower_strata_standard_of_living_add = -2
+}
+
+accelerate_reforms_gre_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_law_enactment_time_mult = -0.09
+	country_law_enactment_success_add = -0.05
+	country_bureaucracy_mult = -0.03
+}
+
+rascanu_influence_gre_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_industrialists_approval_add = 9
+}
+
+reform_failure_sia_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_trade_unions_approval_add = -1
+	interest_group_ig_trade_unions_pol_str_mult = -0.20
+}
+
+happy_missionary_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_devout_approval_add = 1
+}
+
+mission_to_china_gre_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_bureaucracy_add = -109
+}
+
+greek_charity_chi_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_food_security_add = 0.02
+	state_mortality_mult = -0.04
+	state_pollution_reduction_health_mult = -0.02
+	state_education_access_add = 0.04
+}
+
+chinese_casino_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_trade_route_cost_mult = -0.5
+	country_minting_mult = 0.05
+}
+
+rosa_familly_program_spa_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_birth_rate_mult = 0.20
+	country_bureaucracy_add = -500
 }
