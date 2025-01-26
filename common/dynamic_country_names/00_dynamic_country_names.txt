@@ -44,26 +44,7 @@ DEFAULT = {
 			}			
 		}
 	}
-NEN = { # New England
-	dynamic_country_name = {
-		name = FSA
-		adjective = FSA_ADJ
-		
-		priority = 100
-		is_revolutionary = no
-		
-		trigger = {
-			exists = c:NEN
-			exists = scope:actor
-			scope:actor ?= {
-				this = c:NEN
-			}
-			NOT = {
-				exists = c:FSA
-			}
-		}
-	}
-}
+
 	# San Marco
 	dynamic_country_name = {
 		name = rsm_revolt_name
@@ -786,6 +767,27 @@ NEN = { # New England
 			exists = scope:actor
 			scope:actor ?= {
 				has_variable = senegal_subject_var
+			}
+		}
+	}
+}
+
+NEN = { # New England
+	dynamic_country_name = {
+		name = FSA
+		adjective = FSA_ADJ
+		
+		priority = 100
+		is_revolutionary = no
+		
+		trigger = {
+			exists = c:NEN
+			exists = scope:actor
+			scope:actor ?= {
+				this = c:NEN
+			}
+			NOT = {
+				exists = c:FSA
 			}
 		}
 	}
