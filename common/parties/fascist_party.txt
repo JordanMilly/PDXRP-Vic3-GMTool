@@ -268,7 +268,7 @@
 		default = "/gfx/interface/icons/political_parties/fascists.dds"
 	}
 	unlocking_technologies = {
-		mass_propaganda
+		political_agitation
 	}
 	available_for_interest_group = {
 		owner = {
@@ -329,7 +329,7 @@
 				}
 			}
 			add = {
-				value = 10
+				value = 200
 				desc = "from_fascism_powerful"
 			}
 		}
