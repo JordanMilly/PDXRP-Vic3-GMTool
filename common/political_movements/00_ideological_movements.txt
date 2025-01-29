@@ -2234,7 +2234,6 @@ movement_communist = {
 	character_ideologies = {
 		ideology_communist
 		ideology_vanguardist
-		ideology_communalism
 	}
 	
 	creation_trigger = {
