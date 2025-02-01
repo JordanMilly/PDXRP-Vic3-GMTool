@@ -2501,7 +2501,7 @@ ideology_fascist = {
 	}
 
 	country_trigger = {
-		has_technology_researched = mass_propaganda
+		has_technology_researched = political_agitation
 	}
 
 	interest_group_leader_trigger = {
