@@ -12,12 +12,16 @@
 			country_has_primary_culture = cu:anglo_canadian
 			country_has_primary_culture = cu:australian
 		}
+		game_date < 1887.01.01
 	}
 	creation_weight = {
 		value = 100
 	}	
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
+	}
+	disband_trigger = {
+		has_modifier = remove_liberam
 	}
 	
 	character_support_trigger = {

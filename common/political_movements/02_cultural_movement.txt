@@ -6,11 +6,22 @@
 		ideology_ethno_nationalist
 	}
 	
-	creation_trigger = {}
+	creation_trigger = {
+		game_date < 1887.01.01
+	}
+		
 	creation_weight = {
 		value = 100
 	}
 	on_created = {}
+	disband_trigger = {
+		OR = {
+			this = c:UBD
+			this = c:GRE
+			this = c:NGF
+			this = c:GBR
+		}
+	}
 	
 	character_support_trigger = {
 		culture = {

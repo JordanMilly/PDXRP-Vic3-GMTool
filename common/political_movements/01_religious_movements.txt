@@ -12,6 +12,7 @@
 		NOT = {
 			has_law = law_type:law_state_atheism
 		}
+		game_date < 1887.01.01
 	}	
 	creation_weight = {
 		value = 100
@@ -19,10 +20,13 @@
 	on_created = {}
 
 	disband_trigger = {
-		scope:political_movement ?= {
-			religion = {
-				NOT = { is_state_religion = root }
-			}		
+		OR = {
+			scope:political_movement ?= {
+				religion = {
+					NOT = { is_state_religion = root }
+				}		
+			}
+			game_date > 1887.01.01
 		}
 	}
 	
