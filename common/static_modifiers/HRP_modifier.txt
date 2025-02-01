@@ -1,7 +1,7 @@
 tech_adjustement = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_tech_spread_mult = 0.15
-	
+	country_convoys_capacity_mult = 0.20
 }
 rotschild_bank_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
@@ -885,7 +885,7 @@ rosa_familly_program_spa_mod = {
 	country_bureaucracy_add = -500
 }
 
-unhappy_church_mod = {
+unhappy_monk_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	interest_group_ig_devout_approval_add = -1
 }
@@ -899,4 +899,19 @@ food_security_ngf_mod = {
 korean_acceptance_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_acceptance_culture_base_add = 10
+}
+
+ideological_growth_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_society_tech_spread_mult = 0.25
+}
+
+ideological_tension_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_military_tech_spread_mult = 0.50
+	country_military_tech_research_speed_mult = 0.25
+	political_movement_radicalism_add = 0.15
+	political_movement_pop_attraction_mult = 0.15
+	country_law_enactment_time_mult = -0.10
+	country_law_enactment_stall_mult = -0.10
 }
