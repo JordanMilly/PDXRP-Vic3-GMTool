@@ -189,11 +189,11 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
-	#Agitator
+	#Political movement
 	option = {
-		name = gm_actions.84.t
+		name = gm_actions.83.t
 		trigger_event = {
-			id = gm_actions.84
+			id = gm_actions.83
 			days = 0
 			popup = yes
 		}
@@ -1631,6 +1631,792 @@ gm_actions.70 = {
 	}
 }
 
+gm_actions.83 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.83.t
+	#desc = gm_actions.83.d
+	#flavor = gm_actions.83.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.83.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.84.t
+		trigger_event = {
+			id = gm_actions.84
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_fascist
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_fascist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_fascist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_fascist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_cultural_majority
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_cultural_majority
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_cultural_majority }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_cultural_majority
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_positivist
+			scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_positivist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_positivist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_positivist	
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_communist
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_communist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_communist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_communist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_communalist
+			scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_communalist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_communalist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_communalist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_labor
+			scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_labor
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_labor }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_labor
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_radical
+			scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_radical
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_radical }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_radical
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_liberal
+			scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_liberal
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_liberal }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_liberal
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_utilitarian
+			scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_utilitarian
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_utilitarian }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_utilitarian
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_royalist_absolutist
+			scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_royalist_absolutist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_royalist_absolutist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_cultural_majority
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_reactionary
+			scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_reactionary
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_reactionary }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_reactionary
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = modern_elitist_movement
+			scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = modern_elitist_movement
+							}
+						}
+					}
+				}
+				create_political_movement = { type = modern_elitist_movement }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = modern_elitist_movement
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}	
+}
+
+gm_actions.830 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.830.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.100
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.830.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.830.b
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_attraction_10
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.830.c
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_attraction_50
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.830.d
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_attraction_100
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.830.e
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_attraction_-10
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.830.f
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_attraction_-25
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.830.g
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_attraction_delete
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.830.h
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_attraction_10
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_attraction_10
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.830.i
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_attraction_50
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_attraction_50
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.830.j
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_attraction_100
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_attraction_100
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.830.k
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_attraction_-10
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_attraction_-10
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.830.l
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_attraction_-25
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_attraction_-25
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.830.m
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_attraction_delete
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_attraction_delete
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.831.t
+		trigger_event = {
+			id = gm_actions.831
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.831 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.831.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.100
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.831.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.831.b
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_radicalism_10
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.831.c
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_radicalism_25
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.831.d
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_radicalism_50
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.831.e
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_radicalism_-10
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.831.f
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_radicalism_-25
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.831.g
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			add_modifier = GM_movement_radicalism_pacify
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.831.h
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_radicalism_10
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_radicalism_10
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.831.i
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_radicalism_25
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_radicalism_25
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.831.j
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_radicalism_50
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_radicalism_50
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.831.k
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_radicalism_-10
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_radicalism_-10
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.831.l
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_radicalism_-25
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_radicalism_-25
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.831.m
+		trigger = {
+			scope:relevant_movement = {	
+				has_modifier = GM_movement_radicalism_pacify
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:relevant_movement = {
+			remove_modifier = GM_movement_radicalism_pacify
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+}
+
 gm_actions.84 = {
 	type = country_event
 	placement = ROOT
@@ -2630,8 +3416,6 @@ gm_actions.90 = {
 	}
 }
 
-
-
 gm_actions.95 = {
 	type = country_event
 	placement = ROOT
@@ -3515,7 +4299,6 @@ gm_actions.105 = {
 			remove_variable = actionee
 		}
 	}
-
 }
 
 gm_actions.106 = {
