@@ -1956,7 +1956,7 @@ gm_actions.83 = {
 			}
 			every_political_movement = {
 				limit = {
-					is_political_movement_type = movement_cultural_majority
+					is_political_movement_type = movement_royalist_absolutist
 				}
 				save_scope_as = relevant_movement
 			}
