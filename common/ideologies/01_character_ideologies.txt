@@ -2516,10 +2516,10 @@ ideology_vanguardist = {
 	}
 
 	lawgroup_health_system = {
-		law_private_health_insurance = neutral
-		law_no_health_system = disapprove
-		law_charitable_health_system = approve
-		law_public_health_insurance = neutral
+		law_private_health_insurance = disapprove
+		law_no_health_system = strongly_disapprove
+		law_charitable_health_system = neutral
+		law_public_health_insurance = strongly_approve
 	}	
 
 	country_trigger = {
