@@ -188,7 +188,7 @@ religious_party = {
 	}
 	available_for_interest_group = {
 		owner = {
-			country_has_voting_franchise = yes
+			always = yes
 		}
 	}
 	
@@ -198,6 +198,17 @@ religious_party = {
 		value = {
 			value = -5
 			desc = "base_value"
+		}
+		if = {
+			limit = {
+				owner = {
+					c:PAP ?= this
+				}
+			}
+			add = {
+				value = 15
+				desc = "Pope"
+			}
 		}
 		if = {
 			limit = {
@@ -477,7 +488,9 @@ religious_party = {
 		else_if = {
 			limit = {
 				scope:number = 2
-				c:GRE ?= this
+				owner = {
+					NOT = { c:GRE ?= this }
+				}
 			}
 			multiply = {
 				value = 0.5
@@ -487,7 +500,9 @@ religious_party = {
 		else_if = {
 			limit = {
 				scope:number = 3
-				c:GRE ?= this
+				owner = {
+					NOT = { c:GRE ?= this }
+				}
 			}
 			multiply = {
 				value = 0.25
@@ -497,7 +512,9 @@ religious_party = {
 		else_if = {
 			limit = {
 				scope:number > 3
-				c:GRE ?= this
+				owner = {
+					NOT = { c:GRE ?= this }
+				}
 			}
 			multiply = {
 				value = 0.1
