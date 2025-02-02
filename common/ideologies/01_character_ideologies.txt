@@ -10,7 +10,7 @@
 	}
 	
 	interest_group_leader_weight = {
-		value = 50 # moderates are boring
+		value = 10 # moderates are boring
 		
 		# angry IG's more likely to have ideological firebrands
 		if = {
@@ -45,7 +45,7 @@
 	}
 	
 	non_interest_group_leader_weight = {
-		value = 100
+		value = 10
 		if = {
 			limit = {
 				interest_group = {
@@ -153,7 +153,50 @@ ideology_traditionalist = {
 				}
 			}
 			multiply = 0.1
-		}	
+		}
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						any_political_movement = {
+							OR = {
+								is_political_movement_type = movement_royalist_absolutist
+								is_political_movement_type = movement_reactionary
+							}
+						}
+					}
+				}
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_royalist_absolutist
+							is_political_movement_type = movement_reactionary
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_royalist_absolutist
+							is_political_movement_type = movement_reactionary
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
+		}
 	}
 	
 	non_interest_group_leader_weight = {
@@ -421,6 +464,36 @@ ideology_atheist = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_positivist
+							is_political_movement_type = movement_communist
+							is_political_movement_type = movement_radical
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_positivist
+							is_political_movement_type = movement_communist
+							is_political_movement_type = movement_radical
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}	
 	}
 	
@@ -574,6 +647,32 @@ ideology_republican_leader = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_radical
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_radical
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -729,134 +828,134 @@ ideology_radical = {
 	}
 	
 	interest_group_leader_weight = {
-		value = {
-			value = 100
-			# more likely if issues are relevant and people are angry
-			if = {
-				limit = {
-					owner = {
-						OR = {
-							has_law = law_type:law_national_guard
-							has_law = law_type:law_secret_police
-							has_law = law_type:law_outlawed_dissent
-							has_law = law_type:law_autocracy
-							has_law = law_type:law_oligarchy
-						}
-						any_scope_state = {
-							is_incorporated = yes
-							turmoil >= 0.25
-						}
-					}
-				}
-				add = 100
-			}
-			if = {
-				limit = {
-					owner = {
-						OR = {
-							has_law = law_type:law_censorship
-							has_law = law_type:law_landed_voting
-						}
-						any_scope_state = {
-							is_incorporated = yes
-							turmoil >= 0.5
-						}
-					}
-				}
-				add = 50
-			}
-			# less likely if issues are not relevant
-			if = {
-				limit = {
-					owner = {
-						NOR = {
-							has_law = law_type:law_national_guard
-							has_law = law_type:law_secret_police
-							has_law = law_type:law_outlawed_dissent
-							has_law = law_type:law_autocracy
-							has_law = law_type:law_oligarchy
-						}
-					}
-				}
-				add = -75
-			}
-			# very unlikely for trade unions after socialism is researched
-			if = {
-				limit = {
-					is_interest_group_type = ig_trade_unions
-					owner = {
-						has_technology_researched = socialism
-					}
-				}
-				add = -200
-			}
-			if = {
-				limit = {
-					owner = {
-						has_global_variable = peoples_springtime_happening
-						OR = {
-							capital.region = sr:region_north_germany
-							capital.region = sr:region_south_germany
-							capital.region = sr:region_england
-							capital.region = sr:region_iberia
-							capital.region = sr:region_france
-							capital.region = sr:region_occitania
-							capital.region = sr:region_rhine
-							capital.region = sr:region_italy	
-							capital.region = sr:region_poland
-							capital.region = sr:region_danubia
-							capital.region = sr:region_balkans
-							capital.region = sr:region_baltic
-						}
-					}
-				}
-				multiply = {
-					value = 2.5
-				}
-			}
-			if = {
-				limit = {
-					owner = { has_modifier = post_revolutionary_fervor }
-				}
-				multiply = { value = 2 }
-			}
-			if = {
-				limit = {
-					owner = { has_modifier = counter_revolutionary_fervor }
-				}
-				multiply = { value = 0.5 }
-			}
-			# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-			if = {
-				limit = {
-					has_variable = dreyfusard_victory
-				}
-				add = 50
-			}
-			# Pedro JE victory
-			if = {
-				limit = {
-					owner = {
-						has_variable = brz_enduring_empire
-					}
-				}
-				add = -25
-			}
-			if = {
-				limit = {
+		value = 100
+		# more likely if issues are relevant and people are angry
+		if = {
+			limit = {
+				owner = {
 					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_communalism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
-						has_variable = chose_fascism
+						has_law = law_type:law_national_guard
+						has_law = law_type:law_secret_police
+						has_law = law_type:law_outlawed_dissent
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_oligarchy
+					}
+					any_scope_state = {
+						is_incorporated = yes
+						turmoil >= 0.25
 					}
 				}
-				multiply = 0.1
 			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_censorship
+						has_law = law_type:law_landed_voting
+					}
+					any_scope_state = {
+						is_incorporated = yes
+						turmoil >= 0.5
+					}
+				}
+			}
+			add = 50
+		}
+		# less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = {
+					NOR = {
+						has_law = law_type:law_national_guard
+						has_law = law_type:law_secret_police
+						has_law = law_type:law_outlawed_dissent
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_oligarchy
+					}
+				}
+			}
+			add = -75
+		}
+		# very unlikely for trade unions after socialism is researched
+		if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					has_technology_researched = socialism
+				}
+			}
+			add = -200
+		}
+		if = {
+			limit = {
+				owner = { has_modifier = post_revolutionary_fervor }
+			}
+			multiply = { value = 2 }
+		}
+		if = {
+			limit = {
+				owner = { has_modifier = counter_revolutionary_fervor }
+			}
+			multiply = { value = 0.5 }
+		}
+		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
+		if = {
+			limit = {
+				has_variable = dreyfusard_victory
+			}
+			add = 50
+		}
+		# Pedro JE victory
+		if = {
+			limit = {
+				owner = {
+					has_variable = brz_enduring_empire
+				}
+			}
+			add = -25
+		}
+		if = {
+			limit = {
+				OR = {
+				has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_communalism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_radical
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_radical
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -1008,6 +1107,34 @@ ideology_reformer = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_liberal
+							is_political_movement_type = movement_utilitarian
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_liberal
+							is_political_movement_type = movement_utilitarian
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -1644,6 +1771,21 @@ ideology_jingoist_leader = {
 			}
 			add = -100
 		}
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						any_political_movement = {
+							OR = {
+								is_political_movement_type = movement_fascist
+								is_political_movement_type = movement_reactionary
+							}
+						}
+					}
+				}
+			}
+			multiply = 0.1
+		}
 		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
 		if = {
 			limit = {
@@ -1677,6 +1819,34 @@ ideology_jingoist_leader = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_fascist
+							is_political_movement_type = movement_reactionary
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_fascist
+							is_political_movement_type = movement_reactionary
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -1810,6 +1980,32 @@ ideology_royalist = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_royalist_absolutist
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_royalist_absolutist
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -2007,6 +2203,36 @@ ideology_social_democrat = {
 			}
 			multiply = 0.1
 		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_labor
+							is_political_movement_type = movement_radical
+							is_political_movement_type = movement_liberal
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_labor
+							is_political_movement_type = movement_radical
+							is_political_movement_type = movement_liberal
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
+		}
 	}
 	
 	non_interest_group_leader_weight = {
@@ -2188,6 +2414,32 @@ ideology_communist = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_communist
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_communist
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -2422,6 +2674,32 @@ ideology_vanguardist = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_communist
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_communist
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -2676,6 +2954,32 @@ ideology_fascist = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_fascist
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_fascist
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -3025,6 +3329,32 @@ ideology_ethno_nationalist = {
 			}
 			multiply = 0.1
 		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_cultural_majority
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_cultural_majority
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
+		}
 	}
 	
 	non_interest_group_leader_weight = {
@@ -3087,7 +3417,7 @@ ideology_theocrat = {
 	}
 	
 	interest_group_leader_weight = {
-		value = 100
+		value = 200
 		# more likely if devout and angry and issues are relevant
 		if = {
 			limit = {
@@ -3402,6 +3732,32 @@ ideology_market_liberal = {
 			}
 			multiply = 0.1
 		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = modern_elitist_movement
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = modern_elitist_movement
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
+		}
 	}
 	
 	non_interest_group_leader_weight = {
@@ -3685,6 +4041,34 @@ ideology_authoritarian = {
 			}
 			multiply = 0.1
 		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_royalist_absolutist
+							is_political_movement_type = movement_reactionary
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_royalist_absolutist
+							is_political_movement_type = movement_reactionary
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
+		}
 	}
 	
 	non_interest_group_leader_weight = {
@@ -3860,6 +4244,34 @@ ideology_protectionist = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_utilitarian
+							is_political_movement_type = modern_elitist_movement
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_utilitarian
+							is_political_movement_type = modern_elitist_movement
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -4096,6 +4508,36 @@ ideology_humanitarian = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_labor
+							is_political_movement_type = movement_radical
+							is_political_movement_type = movement_liberal
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_labor
+							is_political_movement_type = movement_radical
+							is_political_movement_type = movement_liberal
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -4375,6 +4817,32 @@ ideology_positivist = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_positivist
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_positivist
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -4773,6 +5241,34 @@ ideology_integralist = {
 			}
 			multiply = 0.1
 		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_fascist
+							is_political_movement_type = movement_reactionary
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_fascist
+							is_political_movement_type = movement_reactionary
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
+		}
 	}
 	
 	non_interest_group_leader_weight = {
@@ -4912,6 +5408,32 @@ ideology_liberal_leader = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_liberal
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_liberal
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -5063,6 +5585,32 @@ ideology_corporatist_leader = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = modern_elitist_movement
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = modern_elitist_movement
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -5305,6 +5853,40 @@ ideology_humanitarian_royalist = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_law = law_type:law_monarchy }
+				}
+			}
+			add = 0.01
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_liberal
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_liberal
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
@@ -5592,6 +6174,32 @@ ideology_utilitarian_leader = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_utilitarian
+						}
+						political_movement_support > 0.10
+					}
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_utilitarian
+						}
+						political_movement_support > 0.20
+					}
+				}
+			}
+			multiply = 1.5
 		}
 	}
 	
