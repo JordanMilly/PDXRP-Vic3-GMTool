@@ -434,3 +434,63 @@ GM_convoy_25 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_convoy_contribution_to_market_owner_add = 0.25
 }
+
+GM_movement_attraction_10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+}
+
+GM_movement_attraction_50 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_pop_attraction_mult = 0.50
+}
+
+GM_movement_attraction_100 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_pop_attraction_mult = 1
+}
+
+GM_movement_attraction_-10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	political_movement_pop_attraction_mult = -0.10
+}
+
+GM_movement_attraction_-25 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	political_movement_pop_attraction_mult = -0.50
+}
+
+GM_movement_attraction_delete = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	political_movement_pop_attraction_mult = -10
+}
+
+GM_movement_radicalism_10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_radicalism_add = 0.10
+}
+
+GM_movement_radicalism_25 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_radicalism_add = 0.25
+}
+
+GM_movement_radicalism_50 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_radicalism_add = 0.50
+}
+
+GM_movement_radicalism_-10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_radicalism_add = -0.10
+}
+
+GM_movement_radicalism_-25 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_radicalism_add = -0.50
+}
+
+GM_movement_radicalism_pacify = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_radicalism_add = -1
+}

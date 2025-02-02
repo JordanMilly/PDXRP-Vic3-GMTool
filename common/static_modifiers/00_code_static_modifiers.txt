@@ -160,8 +160,8 @@ opposition_agitator_popularity = {
 in_default = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	building_throughput_add = -0.5
-	unit_offense_mult = -0.5
-	unit_defense_mult = -0.5
+	unit_offense_mult = -1
+	unit_defense_mult = -1
 }
 
 declared_bankruptcy = {
