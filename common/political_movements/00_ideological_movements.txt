@@ -877,7 +877,7 @@ movement_communist = {
 movement_labor = { # SocDem
 	category = movement_category_ideological
 	
-	ideology = ideology_social_democrat
+	ideology = ideology_populism
 	character_ideologies = {
 		ideology_reformer
 		ideology_social_democrat
@@ -1529,6 +1529,7 @@ movement_liberal = {
 	disband_trigger = {
 		OR = {
 			this = c:NGF
+			this = c:JAP
 		}
 	}
 	
@@ -1932,7 +1933,7 @@ movement_royalist_absolutist = {
 		}
 
 		add = {
-			value = 5
+			value = 10
 			desc = "POP_BASE_SUPPORT"
 		}
 
@@ -2035,7 +2036,7 @@ movement_royalist_absolutist = {
 				}
 			}
 			multiply = {
-				value = 0.75
+				value = 1
 				desc = "RULER_IS_LIBERAL"
 			}			
 		}
@@ -2147,12 +2148,11 @@ movement_royalist_absolutist = {
 movement_reactionary = {
 	category = movement_category_ideological
 	
-	ideology = ideology_reactionary
+	ideology = ideology_authoritarian
 	character_ideologies = {
 		ideology_traditionalist
 		ideology_protectionist
 		ideology_authoritarian
-		ideology_luddite
 	}
 	
 	creation_trigger = {
@@ -2183,6 +2183,7 @@ movement_reactionary = {
 			this = c:CHI
 			this = c:JAP
 			this = c:KOR
+			this = c:ASA
 		}
 	}
 	
