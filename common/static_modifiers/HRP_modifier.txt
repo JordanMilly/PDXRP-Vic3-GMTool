@@ -2,6 +2,9 @@ tech_adjustement = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_tech_spread_mult = 0.15
 	country_convoys_capacity_mult = 0.20
+	country_diplomatic_play_maneuvers_add = 500
+	country_military_tech_research_speed_mult = 0.5
+	country_military_tech_spread_mult = 0.5
 }
 rotschild_bank_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
@@ -930,4 +933,19 @@ disatrous_rosia_speech_spa_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_legitimacy_base_add = 10
 	interest_group_ig_petty_bourgeoisie_pol_str_mult = -0.30
+}
+
+great_war_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_military_goods_cost_mult = -0.5
+	building_mobilization_cost_mult = -0.5
+	building_training_rate_mult = 2
+	building_group_bg_military_throughput_add = 0.25
+	building_war_machine_industry_throughput_add = 0.25
+	building_arms_industry_throughput_add = 0.25
+	building_artillery_foundries_throughput_add = 0.25
+	building_military_shipyards_throughput_add = 0.25
+	building_munition_plants_throughput_add = 0.25
+	country_convoys_capacity_mult = 1
+	country_war_exhaustion_casualties_mult = -0.5
 }
