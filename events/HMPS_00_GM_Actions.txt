@@ -3674,13 +3674,6 @@ gm_actions.100 = {
 	
 	option = {
 		name = gm_actions.100.j
-		trigger = {
-			any_country = {
-				NOT = {
-					has_modifier = tech_adjustement
-				}
-			}
-		}
 		scope:recipient = {
 			trigger_event = {
 				id = plague.1 
@@ -3691,6 +3684,15 @@ gm_actions.100 = {
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
 			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.100.k
+		trigger_event = {
+			id = gm_actions.108
+			days = 0
+			popup = yes
 		}
 	}
 	
@@ -4594,6 +4596,63 @@ gm_actions.107 = {
 				remove_modifier = support_katla_worshipper_cult_mod
 			}
 			remove_variable = actionee
+		}
+	}
+}
+
+gm_actions.108 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.108.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.1
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.108.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.108.b
+		remove_global_variable = GM_taking_action
+		every_country = {
+			add_modifier = {
+				name = great_war_mod  
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.108.c
+		remove_global_variable = GM_taking_action
+		every_country = {
+			remove_modifier = great_war_mod 
 		}
 	}
 }
