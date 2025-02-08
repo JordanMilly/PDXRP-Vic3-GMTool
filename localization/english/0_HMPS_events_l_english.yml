@@ -8,7 +8,7 @@
  gm_actions.1.b:0 "Change Infamy"
  gm_actions.1.c:0 "Change Money"
  gm_actions.1.e:0 "Create a Building"
- gm_actions.1.g:0 "Force Capitulation"
+ gm_actions.1.g:0 "Change War Support"
  gm_actions.1.h:0 "Transfer GM Modifier"
  gm_actions.1.i:0 "Disable GM Decision Until MP Resumes"
  gm_actions.1.j:0 "Change Prestige"
@@ -248,12 +248,17 @@
  gm_actions.19.k:0 "£9,000,000"
  
  
- gm_actions.14.t:0 "Force Capitulation"
- gm_actions.14.d:0 "This will force the selected player to capitulate out of one of their wars."
+ gm_actions.14.t:0 "Change war support"
+ gm_actions.14.d:0 "This will change the selected playerwar support in one of their wars."
  gm_actions.14.f:0 "Should the event not have randomly selected the war you desire to end, then reroll."
  gm_actions.14.a:0 "Force [SCOPE.sCountry('recipient').GetName] to capitulate!"
  gm_actions.14.b:0 "Reroll War (It may roll the same war)"
  gm_actions.14.c:0 "Cancel"
+ gm_actions.14.e:0 "Add 10 war support"
+ gm_actions.14.g:0 "Remove 10 war support"
+ 
+ 
+ 
  gm_actions.15.t:0 "Abdicate GM"
  gm_actions.15.d:0 "Are you sure you want to transfer GM powers to [SCOPE.sCountry('recipient').GetName]?"
  gm_actions.15.f:0 "An AI GM will lose the modifier after a month."
@@ -418,6 +423,8 @@
  gm_actions.108.a:0 "Cancel"
  gm_actions.108.b:0 "Add Great War Modifier"
  gm_actions.108.c:0 "Remove Great War Modifier"
+ gm_actions.108.d:0 "Reduce War Exhaustion"
+ gm_actions.108.e:0 "Increase War Exhaustion"
  
  
  ### FAQ
