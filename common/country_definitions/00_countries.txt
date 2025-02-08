@@ -2175,7 +2175,7 @@ HON = {
 }
 
 NEN = {
-	color = { 166  224  85 }
+	color = { 64 224 208 }
 	
 	country_type = recognized
 	
