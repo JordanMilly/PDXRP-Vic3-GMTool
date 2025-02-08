@@ -1310,6 +1310,50 @@ gm_actions.14 = {
 			days = 0
 			popup = yes
 		}
+	}
+	
+	option = {
+		name = gm_actions.14.e
+		trigger = {
+			scope:recipient = {
+				is_at_war = yes
+			}
+		}
+		scope:recipient = {
+			random_scope_war = {
+				add_war_war_support = {
+					target = scope:recipient
+					value = 10
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.14
+			days = 0
+			popup = yes
+		}
+	}	
+	
+	option = {
+		name = gm_actions.14.g
+		trigger = {
+			scope:recipient = {
+				is_at_war = yes
+			}
+		}
+		scope:recipient = {
+			random_scope_war = {
+				add_war_war_support = {
+					target = scope:recipient
+					value = -10
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.14
+			days = 0
+			popup = yes
+		}
 	}		
 	
 	option = {
@@ -4653,6 +4697,9 @@ gm_actions.108 = {
 		remove_global_variable = GM_taking_action
 		every_country = {
 			remove_modifier = great_war_mod 
+		}
+		scope:recipient = {
+			remove_variable = actionee
 		}
 	}
 }
