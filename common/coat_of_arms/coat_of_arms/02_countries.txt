@@ -19281,6 +19281,21 @@ ROM_united_principalities = {
 		color2 = "blue"
 	}
 }
+ROM_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "yellow"
+		color2 = "red"
+	}
+
+	textured_emblem = {
+		texture = "ROM_communist.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
 
 RUS = {
 	pattern = "pattern_solid.tga"

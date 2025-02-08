@@ -8314,7 +8314,19 @@ ROM = { # Romania
 		trigger = { 
 			coa_def_fascist_flag_trigger = yes
 		}
-	}	
+	}
+	flag_definition = {
+		coa = ROM_communist
+		subject_canton = ROM_communist
+		priority = 20
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+			
 }
 
 RUS = { # Russia
