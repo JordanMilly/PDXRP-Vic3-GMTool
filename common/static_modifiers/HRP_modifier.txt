@@ -948,4 +948,5 @@ great_war_mod = {
 	building_munition_plants_throughput_add = 0.25
 	country_convoys_capacity_mult = 1
 	country_war_exhaustion_casualties_mult = -0.5
+	country_infamy_generation_mult = -1
 }
