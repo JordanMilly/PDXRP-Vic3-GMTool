@@ -345,6 +345,7 @@
  gm_actions.100.g:0 "Flu Epidemic"
  gm_actions.100.h:0 "Katla Actions"
  gm_actions.100.j:0 "Start plague"
+ gm_actions.100.k:0 "Great War Actions"
  
  gm_actions.101.t:0 "Change SNEED Modifier"
  gm_actions.101.a:0 "Cancel"
@@ -412,6 +413,11 @@
  gm_actions.107.l:0 "Local End of the Winter"
  gm_actions.107.m:0 "Add Supporting Katla Cult modifier"
  gm_actions.107.n:0 "Remove Supporting Katla Cult modifier"
+ 
+ gm_actions.108.t:0 "Great War Modifier"
+ gm_actions.108.a:0 "Cancel"
+ gm_actions.108.b:0 "Add Great War Modifier"
+ gm_actions.108.c:0 "Remove Great War Modifier"
  
  
  ### FAQ
