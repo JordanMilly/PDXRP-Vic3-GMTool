@@ -950,3 +950,39 @@ great_war_mod = {
 	country_war_exhaustion_casualties_mult = -0.5
 	country_infamy_generation_mult = -1
 }
+
+power_bloc_catching_up_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	power_bloc_mandate_progress_mult = 25500
+	power_bloc_mandate_progress_per_great_power_member_add = 255
+	power_bloc_mandate_progress_per_insignificant_power_member_add = 255
+	power_bloc_mandate_progress_per_major_power_member_add = 255
+}
+
+chinese_civil_war_effect_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_mortality_mult = 0.20
+	building_throughput_add = -0.25
+	country_legitimacy_base_add = -10
+}
+
+australian_throughput_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_throughput_add = -0.10
+}
+
+bulgaria_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	unit_army_experience_gain_mult = 0.40
+	state_birth_rate_mult = 0.10
+	country_tech_spread_mult = 0.25
+	state_mortality_mult = 0.05
+	building_throughput_add = -0.05
+	country_legitimacy_base_add = -5
+}
+
+russian_civil_war_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	unit_army_experience_gain_mult = -0.50
+	country_legitimacy_base_add = -5
+}
