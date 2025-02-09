@@ -1076,8 +1076,13 @@ movement_communalist = {
 			is_pop_type = aristocrats
 			is_pop_type = slaves
 		}
-		religion = {
-			shares_heritage_trait_with_state_religion = prev.owner #Only people of the same religious group will support
+		OR = {
+			religion = {
+				shares_heritage_trait_with_state_religion = prev.owner #Only people of the same religious group will support
+			}
+			owner = {
+				has_law = law_type:law_state_atheism 
+			}
 		}
 	}
 
@@ -1332,7 +1337,14 @@ movement_communalist = {
 					value = 0.1
 					desc = "NO_INSTITUTION_workplace_safety"
 				}		
-			}		
+			}
+			if = {
+				limit = { has_law = law_type:law_state_atheism }
+				add = {
+					value = 0.5	
+					desc = "STATE_ATHEISM"
+				}
+			}
 		}
 	}
 }

@@ -12,7 +12,6 @@
 		NOT = {
 			has_law = law_type:law_state_atheism
 		}
-		game_date < 1887.01.01
 	}	
 	creation_weight = {
 		value = 100
@@ -26,7 +25,6 @@
 					NOT = { is_state_religion = root }
 				}		
 			}
-			game_date > 1887.01.01
 		}
 	}
 	
