@@ -359,7 +359,6 @@
 		}
 		if = { # communists love communism
 			limit = {
-				NOT = { ideology_communist_valid_trigger } #Non communist valid ig communalist prefer religious party
 				leader = {
 					OR = {
 						has_ideology = ideology:ideology_communist
