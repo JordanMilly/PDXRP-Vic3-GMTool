@@ -1,0 +1,45 @@
+﻿l_english:
+ je_HRP_concert_national:0 "National Stability"
+ je_HRP_concert_national_reason:0 "Over on the National Stability bar to know what affect it" 
+ HRP_AoC_national_stability_bar:0 "National stability"
+ HRP_AoC_national_stability_name:0 "National stability : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoC_national_stability_desc: "Current national stability is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ 
+ je_HRP_concert_global_gm:0 "Global stability GM"
+ je_HRP_concert_global_gm_reason:0 "You have to go on the GM tools" 
+ je_HRP_concert_global:0 "Global stability"
+ je_HRP_concert_global_reason:0 ""Total Stability [GetGlobalVariable('total_stability').GetValue|1] \n Stability weight [GetGlobalVariable('stability_weigh').GetValue|1]#!" 
+ HRP_AoC_global_stability_bar:0 "Global stability"
+ HRP_AoC_global_stability_name:0 "Global stability : [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoC_global_stability_desc: "Current global stability is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ 
+ HPR_concert_global:0 "Age of Concert"
+ HPR_concert_national_stability_positive:0 "The Old Order"
+ HPR_concert_national_stability_negative:0 "Brewing Troubles"
+ HPR_concert_global_stability_positive:0 "Concert of Europe"
+ HPR_concert_global_stability_positive:0 "Upcoming Crisis"
+ 
+ HRP_stability_visual_modifier:0 "National Stability"
+ stability_modifier_visual:0 "Stability"
+ 
+ nationalist_claim:0 "Claim our Nationals Homelands"
+ nationalist_claim_desc:0 "Now that we have our national idendity, we mus reunite our peoples"
+ 
+ ## Gilded Age
+ 
+ je_HRP_gilded_age:0 "Infinite Growth"
+ je_HRP_gilded_age_reason:0 "The speculation value increase based on the Global Sotck Exchange growth and the Integration in the Global Stock Exchange \n You have #white #b [ROOT.Var('Gilded_actions').GetValue]#!#! actions" 
+ 
+ 
+ je_HRP_gilded_age_gm:0 "Infinite Growth (GM)"
+ je_HRP_gilded_age_gm_reason:0 "The speculation value increase based on the Global Sotck Exchange growth and the Integration in the Global Stock Exchange \n You have #white #b [ROOT.Var('Gilded_actions').GetValue]#!#! actions" 
+ 
+ HRP_GA_infinite_growth_bar:0 "Global Stock Exchange"
+ HRP_GA_infinite_growth_name:0 "Infinite Growth : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_GA_infinite_growth_desc: "Current Global stock Exchange value is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_GA_national_speculation_bar:0 "Integration into the Global Stock Exchange"
+ HRP_GA_national_speculation_name:0 "Infinite Growth : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_GA_national_speculation_desc: "Current Integration in the Global stock Exchange is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] %"
+ 
+ HRP_speculation:0 "Speculation"
+ HRP_encouraged_speculation:0 "Encouraged Speculation"
